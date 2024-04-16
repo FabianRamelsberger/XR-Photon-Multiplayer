@@ -60,7 +60,7 @@ namespace Fusion.XR.Shared.Grabbing.NetworkHandColliderBased
         Vector3 localPositionOffsetWhileTakingAuthority;
         Quaternion localRotationOffsetWhileTakingAuthority;
         NetworkHandColliderGrabber grabberWhileTakingAuthority;
-
+        
         enum Status { 
             NotGrabbed,
             Grabbed,
@@ -106,11 +106,12 @@ namespace Fusion.XR.Shared.Grabbing.NetworkHandColliderBased
             }
         }
 
+        private int _ownerId = 0;
+
         private void Awake()
         {
             networkTransform = GetComponent<NetworkTransform>();
             networkRigidbody = GetComponent<NetworkRigidbody3D>();
-
         }
 
         public override void Spawned()
@@ -136,6 +137,13 @@ namespace Fusion.XR.Shared.Grabbing.NetworkHandColliderBased
 
         public async void Grab(NetworkHandColliderGrabber newGrabber)
         {
+            //IF Check if id is not set to the user id
+                // IF Set 0 -> no User
+                    //SET NEW user
+                // ELSE
+                // return
+            //ENDIF
+            
             if (onWillGrab != null) onWillGrab.Invoke(newGrabber);
 
             // Find grabbable position/rotation in grabber referential
