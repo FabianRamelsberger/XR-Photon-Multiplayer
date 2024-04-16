@@ -50,7 +50,7 @@ namespace Fusion.Addons.ConnectionManagerAddon
 
         [Header("Local user spawner")]
         public NetworkObject userPrefab;
-
+        
         [Header("Event")]
         public UnityEvent onWillConnect = new UnityEvent();
 
