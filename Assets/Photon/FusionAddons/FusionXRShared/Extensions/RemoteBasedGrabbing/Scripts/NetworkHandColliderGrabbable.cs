@@ -106,8 +106,6 @@ namespace Fusion.XR.Shared.Grabbing.NetworkHandColliderBased
             }
         }
 
-        private int _ownerId = 0;
-
         private void Awake()
         {
             networkTransform = GetComponent<NetworkTransform>();

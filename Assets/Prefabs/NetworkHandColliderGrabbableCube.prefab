@@ -724,7 +724,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   networkTransform: {fileID: 0}
-  networkRigidbody: {fileID: 0}
+  networkRigidbody: {fileID: 6016883772272276159}
   _InitialIsKinematicState:
     _value: 0
   _CurrentGrabber: {fileID: 0}

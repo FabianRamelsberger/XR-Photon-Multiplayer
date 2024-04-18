@@ -4,12 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f246162-8a23-453d-aa9d-98983cbf20c9" name="Changes" comment="feature: added grabbable objects">
+    <list default="true" id="3f246162-8a23-453d-aa9d-98983cbf20c9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.XR Multiplayer Assesment/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XR Multiplayer Assesment/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Photon/FusionAddons/FusionAddons/ConnectionManager/Scripts/ConnectionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/FusionAddons/FusionAddons/ConnectionManager/Scripts/ConnectionManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Photon/FusionAddons/FusionXRShared/Extensions/RemoteBasedGrabbing/Scripts/NetworkHandColliderGrabbable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/FusionAddons/FusionXRShared/Extensions/RemoteBasedGrabbing/Scripts/NetworkHandColliderGrabbable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Photon/FusionAddons/FusionXRShared/Scripts/Rig/NetworkHand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/FusionAddons/FusionXRShared/Scripts/Rig/NetworkHand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Photon/FusionAddons/FusionXRShared/Scripts/Rig/NetworkRig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/FusionAddons/FusionXRShared/Scripts/Rig/NetworkRig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NetworkHandColliderGrabbableCube.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/NetworkHandColliderGrabbableCube.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NetworkRig with NetworkHandCollider grabber.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/NetworkRig with NetworkHandCollider grabber.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Grabbing/NetworkHandColliderGrabbableCube.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Grabbing/NetworkHandColliderGrabbableCube.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OnPlayerJoinedScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OnPlayerJoinedScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,39 +32,29 @@
     &quot;assignee&quot;: &quot;FabianRamelsberger&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/FabianRamelsberger/XR-Photon-Multiplayer.git",
-    "accountId": "d14bc9ed-6d67-4587-bdcd-51a1a19683b3"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/FabianRamelsberger/XR-Photon-Multiplayer.git&quot;,
+    &quot;accountId&quot;: &quot;d14bc9ed-6d67-4587-bdcd-51a1a19683b3&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/6f7018b8b8c149e68c4a65a05ac289be175400/ef/b28b9430/HeaderAttribute.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/a87a815ce9694a5ab7ddf97705612be2ab400/1a/9b680082/SimulationBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/a87a815ce9694a5ab7ddf97705612be2ab400/60/6c533b10/GameMode.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/a87a815ce9694a5ab7ddf97705612be2ab400/6b/4e4dde0f/INetworkRunnerCallbacks.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/a87a815ce9694a5ab7ddf97705612be2ab400/79/03be02b0/Simulation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/a87a815ce9694a5ab7ddf97705612be2ab400/98/00fc8a08/NetworkRunner.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/a87a815ce9694a5ab7ddf97705612be2ab400/b7/7ce9a28c/NetworkBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/a87a815ce9694a5ab7ddf97705612be2ab400/c6/f0309e2b/NetworkObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/a87a815ce9694a5ab7ddf97705612be2ab400/f4/35c8f920/PlayerRef.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/53/2faf956a/Object.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Photon/FusionAddons/FusionAddons/ConnectionManager/Scripts/ConnectionManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Photon/FusionAddons/FusionAddons/ConnectionManager/Scripts/ConnectionManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Photon/FusionAddons/FusionAddons/ConnectionManager/Scripts/ConnectionManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Photon/FusionAddons/FusionAddons/ConnectionManager/Scripts/ConnectionManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Photon/FusionAddons/FusionAddons/ConnectionManager/Scripts/ConnectionManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Photon/FusionAddons/FusionAddons/ConnectionManager/Scripts/ConnectionManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Photon/FusionAddons/FusionAddons/ConnectionManager/Scripts/ConnectionManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Photon/FusionAddons/FusionAddons/ConnectionManager/Scripts/ConnectionManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Photon/FusionAddons/FusionAddons/ConnectionManager/Scripts/ConnectionManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Photon/FusionAddons/FusionAddons/ConnectionManager/Scripts/ConnectionManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Photon/FusionAddons/FusionAddons/ConnectionManager/Scripts/ConnectionManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Photon/FusionAddons/FusionAddons/ConnectionManager/Scripts/ConnectionManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Photon/FusionAddons/FusionAddons/ConnectionManager/Scripts/ConnectionManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Photon/FusionAddons/FusionAddons/ConnectionManager/Scripts/ConnectionManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Photon/FusionAddons/FusionAddons/ConnectionManager/Scripts/ConnectionManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Photon/FusionAddons/FusionAddons/ConnectionManager/Scripts/ConnectionManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Photon/FusionAddons/FusionAddons/ConnectionManager/Scripts/ConnectionManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Photon/FusionAddons/FusionAddons/ConnectionManager/Scripts/ConnectionManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Photon/FusionAddons/FusionAddons/ConnectionManager/Scripts/ConnectionManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Photon/FusionAddons/FusionAddons/ConnectionManager/Scripts/ConnectionManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Photon/Fusion/Editor/Fusion.Unity.Editor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Scripts/Grabbing/NetworkHandColliderGrabbableCube.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Scripts/Grabbing/NetworkHandColliderGrabbableCube.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Scripts/Grabbing/NetworkHandColliderGrabbableCube.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -76,7 +73,7 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "XThreadsFramesViewSplitterKey": "0.64098835",
+    "XThreadsFramesViewSplitterKey": "0.50624293",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "C:/XR-Photon-Multiplayer/XR Multiplayer Assesment",
     "node.js.detected.package.eslint": "true",
@@ -84,6 +81,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -96,7 +94,7 @@
 }]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.24f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.20f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath &quot;C:\XR-Photon-Multiplayer\XR Multiplayer Assesment&quot; -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\XR-Photon-Multiplayer\XR Multiplayer Assesment" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -104,7 +102,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.24f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.20f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath &quot;C:\XR-Photon-Multiplayer\XR Multiplayer Assesment&quot; -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\XR-Photon-Multiplayer\XR Multiplayer Assesment" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -121,10 +119,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="23084">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="28144">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="23084" />
+      <option name="pid" value="28144" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -143,7 +141,9 @@
       <workItem from="1713265510089" duration="216000" />
       <workItem from="1713265753433" duration="1124000" />
       <workItem from="1713269682466" duration="597000" />
-      <workItem from="1713270542697" duration="9256000" />
+      <workItem from="1713270542697" duration="9581000" />
+      <workItem from="1713340004028" duration="1764000" />
+      <workItem from="1713429901018" duration="11187000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit, gitignore">
       <option name="closed" value="true" />
@@ -161,7 +161,23 @@
       <option name="project" value="LOCAL" />
       <updated>1713280333825</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feature: added cube join on player spawn">
+      <option name="closed" value="true" />
+      <created>1713284344082</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1713284344082</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feature: added OnPlayerJoinedScript.cs">
+      <option name="closed" value="true" />
+      <created>1713284591003</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1713284591003</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,36 +197,25 @@
     <MESSAGE value="initial commit" />
     <MESSAGE value="initial commit, gitignore" />
     <MESSAGE value="feature: added grabbable objects" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature: added grabbable objects" />
+    <MESSAGE value="feature: added cube join on player spawn" />
+    <MESSAGE value="feature: added OnPlayerJoinedScript.cs" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature: added OnPlayerJoinedScript.cs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/OnPlayerJoinedScript.cs</url>
-          <line>19</line>
-          <properties documentPath="C:\XR-Photon-Multiplayer\XR Multiplayer Assesment\Assets\Scripts\OnPlayerJoinedScript.cs" containingFunctionPresentation="Method 'SpawnPlayerDependingPrefabs'">
+          <url>file://$PROJECT_DIR$/Assets/Photon/FusionAddons/FusionXRShared/Extensions/RemoteBasedGrabbing/Scripts/NetworkHandColliderGrabbable.cs</url>
+          <line>144</line>
+          <properties documentPath="C:\XR-Photon-Multiplayer\XR Multiplayer Assesment\Assets\Photon\FusionAddons\FusionXRShared\Extensions\RemoteBasedGrabbing\Scripts\NetworkHandColliderGrabbable.cs" containingFunctionPresentation="Method 'Grab'">
             <startOffsets>
-              <option value="671" />
+              <option value="5118" />
             </startOffsets>
             <endOffsets>
-              <option value="712" />
+              <option value="5141" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Photon/FusionAddons/FusionAddons/ConnectionManager/Scripts/ConnectionManager.cs</url>
-          <line>182</line>
-          <properties documentPath="C:\XR-Photon-Multiplayer\XR Multiplayer Assesment\Assets\Photon\FusionAddons\FusionAddons\ConnectionManager\Scripts\ConnectionManager.cs" containingFunctionPresentation="Method 'OnPlayerJoinedSharedMode'">
-            <startOffsets>
-              <option value="7267" />
-            </startOffsets>
-            <endOffsets>
-              <option value="7343" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="3" />
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

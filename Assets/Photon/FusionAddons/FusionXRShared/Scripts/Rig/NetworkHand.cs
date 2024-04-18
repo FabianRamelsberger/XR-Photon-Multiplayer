@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Fusion.XR.Shared.Rig
@@ -29,30 +30,29 @@ namespace Fusion.XR.Shared.Rig
     public class NetworkHand : NetworkBehaviour
     {
         public const int EXECUTION_ORDER = NetworkRig.EXECUTION_ORDER + 10;
-        [HideInInspector]
-        public NetworkTransform networkTransform;
         [Networked]
         public HandCommand HandCommand { get; set; }
-        public RigPart side;
-        NetworkRig rig;
-        IHandRepresentation handRepresentation;
-        ChangeDetector changeDetector;
-
-        public bool IsLocalNetworkRig => rig.IsLocalNetworkRig;
-
-        public HardwareHand LocalHardwareHand => IsLocalNetworkRig ? (side == RigPart.LeftController ? rig.hardwareRig.leftHand : rig.hardwareRig.rightHand) : null;
+        public RigPart Side => _side;
+        [SerializeField] private RigPart _side;
+        [SerializeField, ReadOnly] private NetworkRig _rig;
+        private IHandRepresentation _handRepresentation;
+        private ChangeDetector _changeDetector;
+        public bool IsLocalNetworkRig => _rig.IsLocalNetworkRig;
+        [HideInInspector]
+        public NetworkTransform networkTransform;
+        
+        public HardwareHand LocalHardwareHand => IsLocalNetworkRig ? 
+            (_side == RigPart.LeftController ? _rig.HardwareRig.leftHand : _rig.HardwareRig.rightHand) : null;
 
         private void Awake()
         {
-            rig = GetComponentInParent<NetworkRig>();
-            networkTransform = GetComponent<NetworkTransform>();
-            handRepresentation = GetComponentInChildren<IHandRepresentation>();
+            _rig = GetComponentInParent<NetworkRig>();
+            _handRepresentation = GetComponentInChildren<IHandRepresentation>();   
         }
-
         public override void Spawned()
         {
             base.Spawned();
-            changeDetector = GetChangeDetector(ChangeDetector.Source.SnapshotFrom);
+            _changeDetector = GetChangeDetector(ChangeDetector.Source.SnapshotFrom);
         }
       
         public override void Render()
@@ -65,7 +65,7 @@ namespace Fusion.XR.Shared.Rig
             }
             else
             {
-                foreach (var changedNetworkedVarName in changeDetector.DetectChanges(this))
+                foreach (var changedNetworkedVarName in _changeDetector.DetectChanges(this))
                 {
                     if (changedNetworkedVarName == nameof(HandCommand))
                     {
@@ -80,13 +80,13 @@ namespace Fusion.XR.Shared.Rig
         // Update the hand representation each time the network structure HandCommand is updated
         void UpdateHandRepresentationWithNetworkState()
         {
-            if (handRepresentation != null) handRepresentation.SetHandCommand(HandCommand);
+            if (_handRepresentation != null) _handRepresentation.SetHandCommand(HandCommand);
         }
 
         // Update the hand representation with local hardware HandCommand
         void UpdateRepresentationWithLocalHardwareState()
         {
-            if (handRepresentation != null) handRepresentation.SetHandCommand(LocalHardwareHand.handCommand);
+            if (_handRepresentation != null) _handRepresentation.SetHandCommand(LocalHardwareHand.handCommand);
         }
     }
 }

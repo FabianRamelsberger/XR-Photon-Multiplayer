@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 namespace Fusion.Addons.ConnectionManagerAddon
 {
     /**
-     * 
+     *
      * Handles:
      * - connection launch (either with room name or matchmaking session properties)
      * - user representation spawn on connection
@@ -30,13 +30,14 @@ namespace Fusion.Addons.ConnectionManagerAddon
             public string value;
         }
 
-        [Header("Room configuration")]
-        public GameMode gameMode = GameMode.Shared;
-        public string roomName = "SampleFusion";
-        public bool connectOnStart = true;
-        [Tooltip("Set it to 0 to use the DefaultPlayers value, from the Global NetworkProjectConfig (simulation section)")]
-        public int playerCount = 0;
+        [Header("Room configuration")] public GameMode gameMode = GameMode.Shared;
+        [SerializeField] private string roomName = "";
+        [SerializeField] bool connectOnStart = true;
 
+        [Tooltip(
+            "Set it to 0 to use the DefaultPlayers value, from the Global NetworkProjectConfig (simulation section)")]
+        [SerializeField] private int playerCount = 0;
+        
         [Header("Room selection criteria")]
         public ConnectionCriterias connectionCriterias = ConnectionCriterias.RoomName;
         [Tooltip("If connectionCriterias include SessionProperties, additionalSessionProperties (editable in the inspector) will be added to sessionProperties")]
@@ -49,8 +50,8 @@ namespace Fusion.Addons.ConnectionManagerAddon
         public INetworkSceneManager sceneManager;
 
         [Header("Local user spawner")]
-        public NetworkObject userPrefab;
-        
+        [SerializeField] private NetworkObject userPrefab;
+        [SerializeField] private List<Transform> _playerSpawnTransformList;
         [Header("Event")]
         public UnityEvent onWillConnect = new UnityEvent();
 
@@ -59,7 +60,7 @@ namespace Fusion.Addons.ConnectionManagerAddon
 
         // Dictionary of spawned user prefabs, to store them on the server for host topology, and destroy them on disconnection (for shared topology, use Network Objects's "Destroy When State Authority Leaves" option)
         private Dictionary<PlayerRef, NetworkObject> _spawnedUsers = new Dictionary<PlayerRef, NetworkObject>();
-        public Action<int, bool> OnPlayerJoinedAction;
+        public Action<PlayerRef> OnPlayerJoinedAction;
 
         bool ShouldConnectWithRoomName => (connectionCriterias & ConnectionManager.ConnectionCriterias.RoomName) != 0;
         bool ShouldConnectWithSessionProperties => (connectionCriterias & ConnectionManager.ConnectionCriterias.SessionProperties) != 0;
@@ -177,10 +178,13 @@ namespace Fusion.Addons.ConnectionManagerAddon
         {
             if (player == runner.LocalPlayer && userPrefab != null)
             {
+                Transform spawnTransform = _playerSpawnTransformList[player.PlayerId-1];//-1 because the first player gets the id 1
+                
                 // Spawn the user prefab for the local user
-                NetworkObject networkPlayerObject = runner.Spawn(userPrefab, position: transform.position, rotation: transform.rotation, player, (runner, obj) => {
+                NetworkObject networkPlayerObject =runner.Spawn(userPrefab, spawnTransform.position, spawnTransform.rotation, player, (runner, obj) => {
                 });
-                OnPlayerJoinedAction?.Invoke(player.PlayerId, player == runner.LocalPlayer);
+                Debug.Log("Spawn Position: " + spawnTransform.position + ", NetworkSpawn: " + networkPlayerObject.transform.position);
+                OnPlayerJoinedAction?.Invoke(player);
             }
         }
 
