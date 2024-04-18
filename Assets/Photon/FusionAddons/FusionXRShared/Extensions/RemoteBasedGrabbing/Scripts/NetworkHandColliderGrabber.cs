@@ -1,3 +1,4 @@
+using System;
 using Fusion.XR.Shared.Rig;
 using UnityEngine;
 
@@ -19,6 +20,8 @@ namespace Fusion.XR.Shared.Grabbing.NetworkHandColliderBased
 
         [HideInInspector]
         public NetworkHand hand;
+
+        public Action<NetworkHandColliderGrabbable> OnObjectGrabbedAction;
         private void Awake()
         {
             hand = GetComponentInParent<NetworkHand>();
@@ -62,6 +65,7 @@ namespace Fusion.XR.Shared.Grabbing.NetworkHandColliderBased
         public void Grab(NetworkHandColliderGrabbable grabbable)
         {
             Debug.Log($"Try to grab object {grabbable.gameObject.name} with {gameObject.name}");
+            OnObjectGrabbedAction?.Invoke(grabbable);
             grabbable.Grab(this);
             GrabbedObject = grabbable;
         }

@@ -741,6 +741,7 @@ MonoBehaviour:
       m_Calls: []
   extrapolateWhileTakingAuthority: 1
   isTakingAuthority: 0
+  _meshRenderer: {fileID: 5273346725837451613}
 --- !u!114 &7503777436289292389
 MonoBehaviour:
   m_ObjectHideFlags: 0

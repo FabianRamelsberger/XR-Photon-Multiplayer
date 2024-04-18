@@ -30,6 +30,7 @@ namespace Fusion.XR.Shared.Grabbing.NetworkHandColliderBased
         private Vector3 LocalPositionOffset { get; set; }
         [Networked]
         private Quaternion LocalRotationOffset { get; set; }
+        [SerializeField] private MeshRenderer _meshRenderer;
 
         public bool IsGrabbed => CurrentGrabber != null;
         public bool expectedIsKinematic = true;
@@ -135,13 +136,6 @@ namespace Fusion.XR.Shared.Grabbing.NetworkHandColliderBased
 
         public async void Grab(NetworkHandColliderGrabber newGrabber)
         {
-            //IF Check if id is not set to the user id
-                // IF Set 0 -> no User
-                    //SET NEW user
-                // ELSE
-                // return
-            //ENDIF
-            
             if (onWillGrab != null) onWillGrab.Invoke(newGrabber);
 
             // Find grabbable position/rotation in grabber referential
@@ -299,6 +293,11 @@ namespace Fusion.XR.Shared.Grabbing.NetworkHandColliderBased
         {
             transform.position = followedTransform.TransformPoint(localPositionOffsetToFollowed);
             transform.rotation = followedTransform.rotation * localRotationOffsetTofollowed;
+        }
+
+        public void SetMaterial(Material material)
+        {
+            _meshRenderer.sharedMaterial = material;
         }
     }
 }
