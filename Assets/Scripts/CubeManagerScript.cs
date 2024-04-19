@@ -45,7 +45,7 @@ public class CubeManagerScript : NetworkBehaviour
         }
     }
 
-    public Material GetPlayerMaterial(int playerId, Color playerColor)
+    public Material GetPlayerMaterial(int playerId)
     {
         Player player =  PlayerList.Find(player => player.PlayerIndex == playerId);
         if (player == null)
@@ -53,12 +53,5 @@ public class CubeManagerScript : NetworkBehaviour
             Debug.LogError($"Player with {playerId} could not be found.");
         }
         return player.playerMaterial;
-    }
-    
-    [Rpc]
-    public void Rpc_ChangeMaterialColor(int playerId, Color playerColor)
-    {
-        Player player =  PlayerList.Find(player => player.PlayerIndex == playerId);
-        player.playerMaterial.color = playerColor;
     }
 }

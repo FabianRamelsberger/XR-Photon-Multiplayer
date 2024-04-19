@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using Fusion;
 using Fusion.XR.Shared.Grabbing.NetworkHandColliderBased;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 //<summary>
 //PlayerColorInteractor description
@@ -15,14 +16,15 @@ public class PlayerColorInteractor : NetworkBehaviour
 {
     [SerializeField] private List<NetworkHandColliderGrabber> _networkHands;
     private Material _playerMaterial;
-    [SerializeField] private Color _playerColor;
+    [Networked]
+    public Color NetworkedPlayerColor { get; set; }
     [SerializeField] private List<MeshRenderer> _playerMeshRenderers;
-    private Color PlayerColor
+    private ChangeDetector _changeDetector;
+
+    public override void Spawned()
     {
-        get => _playerColor;
-        set => _playerColor = value;
+        _changeDetector = GetChangeDetector(ChangeDetector.Source.SimulationState);
     }
-    
     void Start()
     {
         _networkHands.ForEach(hand =>
@@ -34,15 +36,36 @@ public class PlayerColorInteractor : NetworkBehaviour
         //This should just generate a new colour when the player sets the color
         if (Object.HasStateAuthority)
         {
-            _playerColor = GetRandomColor();
-            CubeManagerScript.Instance.Rpc_ChangeMaterialColor(playerId,_playerColor);
+            NetworkedPlayerColor = GetRandomColor();
         }
-        _playerMaterial = CubeManagerScript.Instance.GetPlayerMaterial(playerId, _playerColor); 
+        _playerMaterial = CubeManagerScript.Instance.GetPlayerMaterial(playerId);
+        _playerMaterial.color = NetworkedPlayerColor;
 
         _playerMeshRenderers.ForEach(meshRenderer =>
         {
             meshRenderer.sharedMaterial = _playerMaterial;
         });
+    }
+
+    private void Update()
+    {
+        foreach (var change in _changeDetector.DetectChanges(this))
+        {
+            switch (change)
+            {
+                case nameof(NetworkedPlayerColor):
+                {
+                    int playerId = GetComponent<NetworkObject>().InputAuthority.PlayerId;
+                    _playerMaterial = CubeManagerScript.Instance.GetPlayerMaterial(playerId);
+                    _playerMaterial.color = NetworkedPlayerColor;
+                    _playerMeshRenderers.ForEach(meshRenderer =>
+                    {
+                        meshRenderer.sharedMaterial = _playerMaterial;
+                    });
+                    break;
+                }
+            }
+        }
     }
 
     private void OnObjectGrabbedAdjustColorToPlayer(NetworkHandColliderGrabbable grabbable)
@@ -53,5 +76,11 @@ public class PlayerColorInteractor : NetworkBehaviour
     public static Color GetRandomColor()
     {
         return new Color(Random.value, Random.value, Random.value, 1.0f); // 1.0f is for full opacity
+    }
+    
+    void OnColorChanged()
+    {
+        Debug.Log($"Color changed to: {NetworkedPlayerColor} of player {Object.InputAuthority.PlayerId}");
+        //_playerMaterial = CubeManagerScript.Instance.AssignPlayerColor(Object.InputAuthority.PlayerId, _networkedPlayerColor); ;
     }
 }
