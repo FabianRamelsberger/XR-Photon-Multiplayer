@@ -8,7 +8,7 @@ public class NetworkHandColliderGrabbableCube : NetworkBehaviour
 {
     public TextMeshProUGUI authorityText;
     public TextMeshProUGUI debugText;
-
+    public MeshRenderer _cubeMeshRenderer;
     private void Awake()
     {
         debugText.text = "";
@@ -16,6 +16,18 @@ public class NetworkHandColliderGrabbableCube : NetworkBehaviour
         grabbable.onDidGrab.AddListener(OnDidGrab);
         grabbable.onWillGrab.AddListener(OnWillGrab);
         grabbable.onDidUngrab.AddListener(OnDidUngrab);
+        
+    }
+
+    private void Start()
+    {
+        AssignCubeToPlayer();
+    }
+
+    private void AssignCubeToPlayer()
+    {
+        int playerId = GetComponent<NetworkObject>().StateAuthority.PlayerId;
+        CubeManagerScript.Instance.RPC_AddCubeToPlayer(playerId, this);
     }
 
     private void DebugLog(string debug)
@@ -50,6 +62,7 @@ public class NetworkHandColliderGrabbableCube : NetworkBehaviour
 
     void OnDidGrab(NetworkHandColliderGrabber newGrabber)
     {
+        AssignCubeToPlayer();
         DebugLog($"{gameObject.name} grabbed by {newGrabber}");
     }
 }

@@ -16,15 +16,23 @@ using UnityEngine;
 public class CubeManagerScript : NetworkBehaviour
 {
     [Serializable]
+    //TODO own class
     public class Player
     {
         public int PlayerIndex;
         public Material playerMaterial;
         public List<NetworkHandColliderGrabbableCube> PlayerCubes;
+
+        public void UpdatePlayerCubesMaterials()
+        {
+            PlayerCubes.ForEach(cube =>
+            {
+                cube._cubeMeshRenderer.sharedMaterial = playerMaterial;
+            });
+        }
     }
 
     public static CubeManagerScript Instance;
-
     
     [SerializeField] private List<Player> _playerList;
     public List<Player> PlayerList
@@ -47,11 +55,29 @@ public class CubeManagerScript : NetworkBehaviour
 
     public Material GetPlayerMaterial(int playerId)
     {
+        var player = GetPlayerWithId(playerId);
+        return player.playerMaterial;
+    }
+
+    private Player GetPlayerWithId(int playerId)
+    {
         Player player =  PlayerList.Find(player => player.PlayerIndex == playerId);
         if (player == null)
         {
             Debug.LogError($"Player with {playerId} could not be found.");
         }
-        return player.playerMaterial;
+
+        return player;
+    }
+
+    [Rpc] 
+    public void RPC_AddCubeToPlayer(int playerId, NetworkHandColliderGrabbableCube networkHandColliderGrabbableCube)
+    {
+        var player = GetPlayerWithId(playerId);
+        if (!player.PlayerCubes.Contains(networkHandColliderGrabbableCube)) {
+            player.PlayerCubes.Add(networkHandColliderGrabbableCube);
+        }
+
+        player.UpdatePlayerCubesMaterials();
     }
 }

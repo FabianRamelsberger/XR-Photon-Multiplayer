@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f246162-8a23-453d-aa9d-98983cbf20c9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.XR Multiplayer Assesment/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XR Multiplayer Assesment/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="3f246162-8a23-453d-aa9d-98983cbf20c9" name="Changes" comment="feature: specific color to each player">
       <change beforePath="$PROJECT_DIR$/Assets/Materials/Player_Material_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Player_Material_1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Player_Material_2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Player_Material_2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NetworkHandColliderGrabbableCube.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/NetworkHandColliderGrabbableCube.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CubeManagerScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CubeManagerScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerColorInteractor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerColorInteractor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Grabbing/NetworkHandColliderGrabbableCube.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Grabbing/NetworkHandColliderGrabbableCube.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,11 +32,15 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/e2/e6e5235d/Action`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/6f7018b8b8c149e68c4a65a05ac289be175400/0b/397581e2/RPC.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/6f7018b8b8c149e68c4a65a05ac289be175400/ef/b28b9430/HeaderAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/a87a815ce9694a5ab7ddf97705612be2ab400/1a/9b680082/SimulationBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/a87a815ce9694a5ab7ddf97705612be2ab400/60/6c533b10/GameMode.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/a87a815ce9694a5ab7ddf97705612be2ab400/65/0f7daa5e/OnChangedRenderAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/a87a815ce9694a5ab7ddf97705612be2ab400/6b/4e4dde0f/INetworkRunnerCallbacks.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/a87a815ce9694a5ab7ddf97705612be2ab400/79/03be02b0/Simulation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/a87a815ce9694a5ab7ddf97705612be2ab400/98/00fc8a08/NetworkRunner.cs" root0="SKIP_HIGHLIGHTING" />
@@ -47,6 +52,8 @@
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/dc753a1061284f8e971ee88ee4826eee46ac00/af/3b47d2f5/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Photon/Fusion/Editor/Fusion.Unity.Editor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CubeManagerScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Scripts/CubeManagerScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../XR Multiplayer Assesment_clone_0/Assets/Scripts/CubeManagerScript.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -136,7 +143,7 @@
       <workItem from="1713270542697" duration="9581000" />
       <workItem from="1713340004028" duration="1764000" />
       <workItem from="1713429901018" duration="25012000" />
-      <workItem from="1713512757782" duration="2680000" />
+      <workItem from="1713512757782" duration="7908000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit, gitignore">
       <option name="closed" value="true" />
@@ -186,7 +193,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713463056039</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="feature: specific color to each player">
+      <option name="closed" value="true" />
+      <created>1713519177519</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1713519177519</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,49 +225,24 @@
     <MESSAGE value="feature: added OnPlayerJoinedScript.cs" />
     <MESSAGE value="feature: player spawns different objects, if the player interacts with one it sets the authority" />
     <MESSAGE value="feature: started to distribute colours over network" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature: started to distribute colours over network" />
+    <MESSAGE value="feature: specific color to each player" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature: specific color to each player" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Photon/FusionAddons/FusionXRShared/Extensions/RemoteBasedGrabbing/Scripts/NetworkHandColliderGrabber.cs</url>
-          <line>67</line>
-          <properties documentPath="C:\XR-Photon-Multiplayer\XR Multiplayer Assesment\Assets\Photon\FusionAddons\FusionXRShared\Extensions\RemoteBasedGrabbing\Scripts\NetworkHandColliderGrabber.cs" containingFunctionPresentation="Method 'Grab'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Grabbing/NetworkHandColliderGrabbableCube.cs</url>
+          <line>29</line>
+          <properties documentPath="C:\XR-Photon-Multiplayer\XR Multiplayer Assesment\Assets\Scripts\Grabbing\NetworkHandColliderGrabbableCube.cs" containingFunctionPresentation="Method 'AssignCubeToPlayer'">
             <startOffsets>
-              <option value="2295" />
+              <option value="858" />
             </startOffsets>
             <endOffsets>
-              <option value="2336" />
+              <option value="921" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Photon/FusionAddons/FusionXRShared/Extensions/RemoteBasedGrabbing/Scripts/NetworkHandColliderGrabbable.cs</url>
-          <line>299</line>
-          <properties documentPath="C:\XR-Photon-Multiplayer\XR Multiplayer Assesment\Assets\Photon\FusionAddons\FusionXRShared\Extensions\RemoteBasedGrabbing\Scripts\NetworkHandColliderGrabbable.cs" containingFunctionPresentation="Method 'SetMaterial'">
-            <startOffsets>
-              <option value="12521" />
-            </startOffsets>
-            <endOffsets>
-              <option value="12561" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/PlayerColorInteractor.cs</url>
-          <line>37</line>
-          <properties documentPath="C:\XR-Photon-Multiplayer\XR Multiplayer Assesment\Assets\Scripts\PlayerColorInteractor.cs" containingFunctionPresentation="Method 'Start'">
-            <startOffsets>
-              <option value="1352" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1393" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="10" />
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

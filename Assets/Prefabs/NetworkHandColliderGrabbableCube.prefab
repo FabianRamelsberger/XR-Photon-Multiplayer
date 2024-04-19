@@ -728,6 +728,7 @@ MonoBehaviour:
   _InitialIsKinematicState:
     _value: 0
   _CurrentGrabber: {fileID: 0}
+  _meshRenderer: {fileID: 5273346725837451613}
   expectedIsKinematic: 1
   applyVelocityOnRelease: 1
   onDidUngrab:
@@ -741,7 +742,6 @@ MonoBehaviour:
       m_Calls: []
   extrapolateWhileTakingAuthority: 1
   isTakingAuthority: 0
-  _meshRenderer: {fileID: 5273346725837451613}
 --- !u!114 &7503777436289292389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -756,6 +756,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   authorityText: {fileID: 7239357808315104713}
   debugText: {fileID: 644259881034659406}
+  _cubeMeshRenderer: {fileID: 5273346725837451613}
 --- !u!114 &6016883772272276159
 MonoBehaviour:
   m_ObjectHideFlags: 0
