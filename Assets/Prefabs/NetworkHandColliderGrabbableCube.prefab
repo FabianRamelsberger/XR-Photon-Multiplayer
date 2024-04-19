@@ -704,7 +704,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SortKey: 1572655005
-  ObjectInterest: 0
+  ObjectInterest: 1
   Flags: 526593
   NestedObjects: []
   NetworkedBehaviours:
@@ -726,7 +726,7 @@ MonoBehaviour:
   networkTransform: {fileID: 0}
   networkRigidbody: {fileID: 6016883772272276159}
   _InitialIsKinematicState:
-    _value: 0
+    _value: 1
   _CurrentGrabber: {fileID: 0}
   _meshRenderer: {fileID: 5273346725837451613}
   expectedIsKinematic: 1

@@ -5,9 +5,12 @@
 
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Fusion;
+using Fusion.Addons.ConnectionManagerAddon;
+using Fusion.XR.Shared;
 using UnityEngine;
-
+using Random = UnityEngine.Random;
 
 
 //<summary>
@@ -21,6 +24,7 @@ public class CubeManagerScript : NetworkBehaviour
     {
         public int PlayerIndex;
         public Material playerMaterial;
+        //TODO call update materials in seter
         public List<NetworkHandColliderGrabbableCube> PlayerCubes;
 
         public void UpdatePlayerCubesMaterials()
@@ -35,6 +39,8 @@ public class CubeManagerScript : NetworkBehaviour
     public static CubeManagerScript Instance;
     
     [SerializeField] private List<Player> _playerList;
+    [SerializeField] private ConnectionManager _connectionManager;
+
     public List<Player> PlayerList
     {
         get => _playerList;
@@ -51,7 +57,36 @@ public class CubeManagerScript : NetworkBehaviour
         {
             Instance = this;
         }
+        
     }
+
+     // is called on Network Event Component in the Connection Manager GameObject
+    public async void PlayerLeftDistributeCubes(NetworkRunner runner, PlayerRef playerRef)
+    {
+        Debug.Log("Playerleft!");
+        Player player = GetPlayerWithId(playerRef.PlayerId);
+        int ObjectIdStayedBehind = Random.Range(0, player.PlayerCubes.Count);
+        for (int i = 0; i < player.PlayerCubes.Count; i++)
+        {
+            player.PlayerCubes[i].Object.RequestStateAuthority();
+            await player.PlayerCubes[i].Object.EnsureHasStateAuthority();
+
+            if (ObjectIdStayedBehind == i)
+            {
+                Player localPlayer = GetPlayerWithId(runner.LocalPlayer.PlayerId);
+                localPlayer.PlayerCubes.Add(player.PlayerCubes[i]);
+                localPlayer.UpdatePlayerCubesMaterials();
+                Debug.Log(player.PlayerCubes[i].gameObject.name + "was assigned to player");
+            }
+            else
+            {
+                runner.Despawn(player.PlayerCubes[i].Object);
+            }
+        }
+
+        player.PlayerCubes = new List<NetworkHandColliderGrabbableCube>();
+    }
+
 
     public Material GetPlayerMaterial(int playerId)
     {

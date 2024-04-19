@@ -61,6 +61,7 @@ namespace Fusion.Addons.ConnectionManagerAddon
         // Dictionary of spawned user prefabs, to store them on the server for host topology, and destroy them on disconnection (for shared topology, use Network Objects's "Destroy When State Authority Leaves" option)
         private Dictionary<PlayerRef, NetworkObject> _spawnedUsers = new Dictionary<PlayerRef, NetworkObject>();
         public Action<PlayerRef> OnPlayerJoinedAction;
+        public Action<PlayerRef> OnPlayerLeftAction;
 
         bool ShouldConnectWithRoomName => (connectionCriterias & ConnectionManager.ConnectionCriterias.RoomName) != 0;
         bool ShouldConnectWithSessionProperties => (connectionCriterias & ConnectionManager.ConnectionCriterias.SessionProperties) != 0;
@@ -233,6 +234,7 @@ namespace Fusion.Addons.ConnectionManagerAddon
             {
                 OnPlayerLeftHostMode(runner, player);
             }
+            OnPlayerLeftAction?.Invoke(player);
         }
         #endregion
 

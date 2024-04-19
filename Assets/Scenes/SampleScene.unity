@@ -185,7 +185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5273346726097272006, guid: 3efa5b3c8228828499c6d994930e2cf5, type: 3}
       propertyPath: m_Name
-      value: NetworkHandColliderGrabbableCube
+      value: SharedCube
       objectReference: {fileID: 0}
     - target: {fileID: 5273346726097272007, guid: 3efa5b3c8228828499c6d994930e2cf5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1278,6 +1278,7 @@ GameObject:
   - component: {fileID: 1470876663}
   - component: {fileID: 1470876662}
   - component: {fileID: 1470876664}
+  - component: {fileID: 1470876665}
   m_Layer: 0
   m_Name: ConnectionManager
   m_TagString: Untagged
@@ -1353,6 +1354,87 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerCube: {fileID: 880167981752953282, guid: 3efa5b3c8228828499c6d994930e2cf5, type: 3}
   _spawnTransform: {fileID: 717898702}
+--- !u!114 &1470876665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1470876660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -232609262, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnInput:
+    m_PersistentCalls:
+      m_Calls: []
+  OnInputMissing:
+    m_PersistentCalls:
+      m_Calls: []
+  OnConnectedToServer:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDisconnectedFromServer:
+    m_PersistentCalls:
+      m_Calls: []
+  OnConnectRequest:
+    m_PersistentCalls:
+      m_Calls: []
+  OnConnectFailed:
+    m_PersistentCalls:
+      m_Calls: []
+  PlayerJoined:
+    m_PersistentCalls:
+      m_Calls: []
+  PlayerLeft:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1775053757}
+        m_TargetAssemblyTypeName: CubeManagerScript, Assembly-CSharp
+        m_MethodName: PlayerLeftDistributeCubes
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnSimulationMessage:
+    m_PersistentCalls:
+      m_Calls: []
+  OnShutdown:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSessionListUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnCustomAuthenticationResponse:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHostMigration:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSceneLoadDone:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSceneLoadStart:
+    m_PersistentCalls:
+      m_Calls: []
+  OnReliableData:
+    m_PersistentCalls:
+      m_Calls: []
+  OnReliableProgress:
+    m_PersistentCalls:
+      m_Calls: []
+  OnObjectEnterAOI:
+    m_PersistentCalls:
+      m_Calls: []
+  OnObjectExitAOI:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1487904461
 GameObject:
   m_ObjectHideFlags: 0
@@ -1475,6 +1557,7 @@ MonoBehaviour:
   - PlayerIndex: 3
     playerMaterial: {fileID: 2100000, guid: dfa7443025a601f48856913357045152, type: 2}
     PlayerCubes: []
+  _connectionManager: {fileID: 1470876663}
 --- !u!114 &1775053758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1489,7 +1572,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SortKey: 3344807890
   ObjectInterest: 1
-  Flags: 262145
+  Flags: 524289
   NestedObjects: []
   NetworkedBehaviours:
   - {fileID: 1775053757}
