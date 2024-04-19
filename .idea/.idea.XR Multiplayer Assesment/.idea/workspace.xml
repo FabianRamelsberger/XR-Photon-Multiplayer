@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f246162-8a23-453d-aa9d-98983cbf20c9" name="Changes" comment="feature: specific color to each player">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.XR Multiplayer Assesment/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XR Multiplayer Assesment/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="3f246162-8a23-453d-aa9d-98983cbf20c9" name="Changes" comment="feature: playerLeaves one cube behind">
       <change beforePath="$PROJECT_DIR$/Assets/Materials/Player_Material_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Player_Material_1.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materials/Player_Material_2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Player_Material_2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Photon/Fusion/Resources/NetworkProjectConfig.fusion" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/Fusion/Resources/NetworkProjectConfig.fusion" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Photon/FusionAddons/FusionAddons/ConnectionManager/Scripts/ConnectionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/FusionAddons/FusionAddons/ConnectionManager/Scripts/ConnectionManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NetworkHandColliderGrabbableCube.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/NetworkHandColliderGrabbableCube.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CubeManagerScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CubeManagerScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +45,10 @@
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/e2/e6e5235d/Action`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/6f7018b8b8c149e68c4a65a05ac289be175400/0b/397581e2/RPC.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/6f7018b8b8c149e68c4a65a05ac289be175400/ef/b28b9430/HeaderAttribute.cs" root0="SKIP_HIGHLIGHTING" />
@@ -56,13 +59,17 @@
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/a87a815ce9694a5ab7ddf97705612be2ab400/6b/4e4dde0f/INetworkRunnerCallbacks.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/a87a815ce9694a5ab7ddf97705612be2ab400/79/03be02b0/Simulation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/a87a815ce9694a5ab7ddf97705612be2ab400/98/00fc8a08/NetworkRunner.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/a87a815ce9694a5ab7ddf97705612be2ab400/9f/c6e63eec/ShutdownReason.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/a87a815ce9694a5ab7ddf97705612be2ab400/b7/7ce9a28c/NetworkBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/a87a815ce9694a5ab7ddf97705612be2ab400/c6/f0309e2b/NetworkObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/a87a815ce9694a5ab7ddf97705612be2ab400/f4/35c8f920/PlayerRef.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/53/2faf956a/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/dc753a1061284f8e971ee88ee4826eee46ac00/8f/b9c9a0cc/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/dc753a1061284f8e971ee88ee4826eee46ac00/af/3b47d2f5/List`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/16017b47-5a67-454e-afaf-b72679043eb1_fusion-quiz-network-2.0.0.zip.eb1/Assets/Scripts/TriviaEndGame.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/f541781e-9184-4aa0-9792-1d66dbb23274_fusion-quiz-network-2.0.0.zip.274/Assets/Scripts/TriviaManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Photon/Fusion/Editor/Fusion.Unity.Editor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Photon/FusionAddons/FusionAddons/ConnectionManager/Scripts/ConnectionManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Prefabs/NetworkHandColliderGrabbableCube.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Prefabs/NetworkHandColliderGrabbableCube.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Scripts/CubeManagerScript.cs" root0="SKIP_HIGHLIGHTING" />
@@ -220,7 +227,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713519177519</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feature: playerLeaves one cube behind">
+      <option name="closed" value="true" />
+      <created>1713535911630</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1713535911630</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,23 +260,37 @@
     <MESSAGE value="feature: player spawns different objects, if the player interacts with one it sets the authority" />
     <MESSAGE value="feature: started to distribute colours over network" />
     <MESSAGE value="feature: specific color to each player" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature: specific color to each player" />
+    <MESSAGE value="feature: playerLeaves one cube behind" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature: playerLeaves one cube behind" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/CubeManagerScript.cs</url>
-          <line>78</line>
-          <properties documentPath="C:\XR-Photon-Multiplayer\XR Multiplayer Assesment\Assets\Scripts\CubeManagerScript.cs" containingFunctionPresentation="Method 'PlayerLeftDistributeCubes'">
+          <url>file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/a87a815ce9694a5ab7ddf97705612be2ab400/98/00fc8a08/NetworkRunner.cs</url>
+          <line>1828</line>
+          <properties documentPath="C:\Users\fabia\AppData\Local\JetBrains\Shared\vAny\DecompilerCache\decompiler\a87a815ce9694a5ab7ddf97705612be2ab400\98\00fc8a08\NetworkRunner.cs" containingFunctionPresentation="Method 'Despawn'">
             <startOffsets>
-              <option value="2355" />
+              <option value="76013" />
             </startOffsets>
             <endOffsets>
-              <option value="2400" />
+              <option value="76148" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="17" />
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Photon/FusionAddons/FusionAddons/ConnectionManager/Scripts/ConnectionManager.cs</url>
+          <line>99</line>
+          <properties documentPath="C:\XR-Photon-Multiplayer\XR Multiplayer Assesment\Assets\Photon\FusionAddons\FusionAddons\ConnectionManager\Scripts\ConnectionManager.cs" containingFunctionPresentation="Method 'OnDisconnectExternally'">
+            <startOffsets>
+              <option value="3846" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3888" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

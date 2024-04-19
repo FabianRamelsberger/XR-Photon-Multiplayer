@@ -68,6 +68,11 @@ namespace Fusion.Addons.ConnectionManagerAddon
 
         private void Awake()
         {
+            CheckRunner();
+        }
+
+        private void CheckRunner()
+        {
             // Check if a runner exist on the same game object
             if (runner == null) runner = GetComponent<NetworkRunner>();
 
@@ -80,6 +85,20 @@ namespace Fusion.Addons.ConnectionManagerAddon
         {
             // Launch the connection at start
             if (connectOnStart) await Connect();
+        }
+
+        // we launch via a button
+        public async void OnConnectExternally()
+        {
+            CheckRunner();
+            await Connect();
+        }
+        
+        // disconnect via button
+        public void OnDisconnectExternally()
+        {
+            runner.Shutdown(false, ShutdownReason.Ok);
+            SceneManager.LoadScene(0);
         }
 
         Dictionary<string, SessionProperty> AllConnectionSessionProperties
