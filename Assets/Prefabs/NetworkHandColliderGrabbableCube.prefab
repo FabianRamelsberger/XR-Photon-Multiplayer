@@ -417,7 +417,7 @@ GameObject:
   - component: {fileID: 5273346724952933241}
   - component: {fileID: 5273346724952933246}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -471,7 +471,7 @@ GameObject:
   - component: {fileID: 5273346725837451586}
   - component: {fileID: 5273346725837451613}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: MeshRenderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
