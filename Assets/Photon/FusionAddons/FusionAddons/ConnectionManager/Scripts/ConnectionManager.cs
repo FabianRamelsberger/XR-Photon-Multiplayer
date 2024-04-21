@@ -2,6 +2,7 @@ using Fusion.Sockets;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Fusion.XR.Shared.Rig;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -198,12 +199,12 @@ namespace Fusion.Addons.ConnectionManagerAddon
         {
             if (player == runner.LocalPlayer && userPrefab != null)
             {
-                Transform spawnTransform = _playerSpawnTransformList[player.PlayerId-1];//-1 because the first player gets the id 1
                 
                 // Spawn the user prefab for the local user
-                NetworkObject networkPlayerObject =runner.Spawn(userPrefab, spawnTransform.position, spawnTransform.rotation, player, (runner, obj) => {
+                NetworkObject networkPlayerObject =runner.Spawn(userPrefab, Vector3.zero, Quaternion.identity,player, (runner, obj) => {
                 });
-                Debug.Log("Spawn Position: " + spawnTransform.position + ", NetworkSpawn: " + networkPlayerObject.transform.position);
+                CubeManagerScript.Instance.TeleportToStartPosition(
+                    networkPlayerObject.GetComponent<NetworkRig>(), player.PlayerId);
                 OnPlayerJoinedAction?.Invoke(player);
             }
         }
@@ -217,7 +218,7 @@ namespace Fusion.Addons.ConnectionManagerAddon
                 // We make sure to give the input authority to the connecting player for their user's object
                 NetworkObject networkPlayerObject = runner.Spawn(userPrefab, position: transform.position, rotation: transform.rotation, inputAuthority: player, (runner, obj) => {
                 });
-
+    
                 // Keep track of the player avatars so we can remove it when they disconnect
                 _spawnedUsers.Add(player, networkPlayerObject);
             }

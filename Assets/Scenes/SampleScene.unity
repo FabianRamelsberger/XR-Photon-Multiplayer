@@ -504,7 +504,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4119735069849007215, guid: d14ccad9a6cb98343abc69e41b5db873, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.91
+      value: -2.63
       objectReference: {fileID: 0}
     - target: {fileID: 4119735069849007215, guid: d14ccad9a6cb98343abc69e41b5db873, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2737,7 +2737,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4208948369037581450, guid: 72aacf5ad018ef84f8c2f1796da09345, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -3.806
       objectReference: {fileID: 0}
     - target: {fileID: 4208948369037581450, guid: 72aacf5ad018ef84f8c2f1796da09345, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2855,7 +2855,7 @@ Transform:
   m_GameObject: {fileID: 1470876660}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.76072, z: -3.78}
+  m_LocalPosition: {x: 0, y: -0.76072, z: -2.128}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3191,14 +3191,14 @@ MonoBehaviour:
     CubeSpawnPoints:
     - {fileID: 717898702}
     - {fileID: 1501110626}
-    PlayerSpawnPoint: {fileID: 0}
+    PlayerSpawnPoint: {fileID: 546470601}
   - PlayerIndex: 2
     playerMaterial: {fileID: 2100000, guid: b5444e5acd1b7014fb17a8bd988b2edd, type: 2}
     PlayerCubes: []
     CubeSpawnPoints:
     - {fileID: 2122864872}
     - {fileID: 1530565743}
-    PlayerSpawnPoint: {fileID: 0}
+    PlayerSpawnPoint: {fileID: 1881025803}
   - PlayerIndex: 3
     playerMaterial: {fileID: 2100000, guid: dfa7443025a601f48856913357045152, type: 2}
     PlayerCubes: []
@@ -3586,13 +3586,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1881025802}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -0.2, y: 0, z: 3.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 83796068}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &2033256308
 GameObject:
   m_ObjectHideFlags: 0

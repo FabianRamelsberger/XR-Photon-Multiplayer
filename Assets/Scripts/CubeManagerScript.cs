@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using Fusion;
 using Fusion.Addons.ConnectionManagerAddon;
 using Fusion.XR.Shared;
+using Fusion.XR.Shared.Rig;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -37,6 +38,14 @@ public class CubeManagerScript : NetworkBehaviour
             Instance = this;
         }
         
+    }
+
+    public void TeleportToStartPosition(NetworkRig networkRig, int playerId)
+    {
+        networkRig.HardwareRig.Teleport(GetPlayerWithId
+            (playerId).PlayerSpawnPoint.position);
+        networkRig.HardwareRig.Rotate(GetPlayerWithId
+            (playerId).PlayerSpawnPoint.eulerAngles.y);
     }
 
      // is called on Network Event Component in the Connection Manager GameObject
