@@ -3,6 +3,7 @@
 # Created Date: 2024
 # --------------------------------------------------------------------------------*/
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Fusion;
 using Fusion.Addons.ConnectionManagerAddon;
 using Fusion.XR.Shared;
@@ -49,14 +50,13 @@ public class CubeManagerScript : NetworkBehaviour
     }
 
      // is called on Network Event Component in the Connection Manager GameObject
-    public async void PlayerLeftDistributeCubes(NetworkRunner runner, PlayerRef playerRef)
+    public void PlayerLeftDistributeCubes(NetworkRunner runner, PlayerRef playerRef)
     {
         Player player = GetPlayerWithId(playerRef.PlayerId);
         int ObjectIdStayedBehind = Random.Range(0, player.PlayerCubes.Count);
         for (int i = 0; i < player.PlayerCubes.Count; i++)
         {
             player.PlayerCubes[i].Object.RequestStateAuthority();
-            await player.PlayerCubes[i].Object.EnsureHasStateAuthority();
 
             if (ObjectIdStayedBehind == i)
             {
@@ -66,11 +66,18 @@ public class CubeManagerScript : NetworkBehaviour
             }
             else
             {
-                runner.Despawn(player.PlayerCubes[i].Object);
+                WaitUntilHasAuthorityAndDespawn(runner, player.PlayerCubes[i].Object, playerRef);
             }
         }
 
         player.PlayerCubes = new List<NetworkHandColliderGrabbableCube>();
+    }
+
+    private async void WaitUntilHasAuthorityAndDespawn(NetworkRunner runner, NetworkObject networkObject,
+        PlayerRef playerRef)
+    {
+        await networkObject.EnsureHasStateAuthority(playerRef);
+        runner.Despawn(networkObject);
     }
 
     public Material GetPlayerMaterial(int playerId)
