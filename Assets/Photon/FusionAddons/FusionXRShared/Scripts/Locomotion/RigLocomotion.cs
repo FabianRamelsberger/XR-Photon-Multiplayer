@@ -38,7 +38,7 @@ namespace Fusion.XR.Shared.Locomotion
 
         HardwareRig rig;
 
-        public LayerMask locomotionLayerMask = 0;
+        [SerializeField] public LayerMask locomotionLayerMask = 0;
 
         // If locomotion constraints are needed, a ILocomotionValidationHandler can restrict them
         ILocomotionValidationHandler locomotionValidationHandler;
