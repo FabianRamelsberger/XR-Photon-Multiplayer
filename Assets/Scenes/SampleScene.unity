@@ -255,6 +255,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7503777436289292389, guid: 3efa5b3c8228828499c6d994930e2cf5, type: 3}
+      propertyPath: _cubeIsFromAPlayer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2873,9 +2877,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3b2dfec39f015045b1dbe3b2d68d390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameMode: 2
   roomName: FusionGrabRoom
-  connectOnStart: 0
   playerCount: 0
   connectionCriterias: 1
   additionalSessionProperties: []
@@ -2951,6 +2953,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1775053757}
         m_TargetAssemblyTypeName: CubeManagerScript, Assembly-CSharp
         m_MethodName: PlayerLeftDistributeCubes
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1775053757}
+        m_TargetAssemblyTypeName: CubeManagerScript, Assembly-CSharp
+        m_MethodName: RemovePlayer
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3185,27 +3199,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerList:
-  - PlayerIndex: 1
+  - DebugPlayerRef: 
     playerMaterial: {fileID: 2100000, guid: a575a24b0d688ce4bb1718ed10594200, type: 2}
     PlayerCubes: []
     CubeSpawnPoints:
     - {fileID: 717898702}
     - {fileID: 1501110626}
     PlayerSpawnPoint: {fileID: 546470601}
-  - PlayerIndex: 2
+  - DebugPlayerRef: 
     playerMaterial: {fileID: 2100000, guid: b5444e5acd1b7014fb17a8bd988b2edd, type: 2}
     PlayerCubes: []
     CubeSpawnPoints:
     - {fileID: 2122864872}
     - {fileID: 1530565743}
     PlayerSpawnPoint: {fileID: 1881025803}
-  - PlayerIndex: 3
-    playerMaterial: {fileID: 2100000, guid: dfa7443025a601f48856913357045152, type: 2}
-    PlayerCubes: []
-    CubeSpawnPoints:
-    - {fileID: 717898702}
-    - {fileID: 1501110626}
-    PlayerSpawnPoint: {fileID: 0}
   _connectionManager: {fileID: 1470876663}
 --- !u!114 &1775053758
 MonoBehaviour:

@@ -34,7 +34,7 @@ public class CubeSpawnerScript : MonoBehaviour
 
     private void SpawnPlayerDependingPrefabs(PlayerRef playerRef)
     {
-        Player player = _cubeManagerScript.GetPlayerWithId(playerRef.PlayerId);
+        Player player = _cubeManagerScript.GetPlayerWithId(playerRef);
         List<Transform> cubeSpawnPoints = player.CubeSpawnPoints;
         for (int i = 0; i < _amountOfCubesPerPlayerToSpawn; i++)
         {

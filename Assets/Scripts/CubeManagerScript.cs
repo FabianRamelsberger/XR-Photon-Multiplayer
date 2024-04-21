@@ -3,14 +3,14 @@
 # Created Date: 2024
 # --------------------------------------------------------------------------------*/
 using System.Collections.Generic;
-using System.Threading.Tasks;
+using System.Linq;
 using Fusion;
 using Fusion.Addons.ConnectionManagerAddon;
 using Fusion.XR.Shared;
 using Fusion.XR.Shared.Rig;
+using FusionHelpers;
 using UnityEngine;
 using Random = UnityEngine.Random;
-
 
 //<summary>
 //CubeManagerScript description
@@ -21,6 +21,14 @@ public class CubeManagerScript : NetworkBehaviour
     
     [SerializeField] private List<Player> _playerList;
     [SerializeField] private ConnectionManager _connectionManager;
+    
+    public struct NetworkStructExample : INetworkStruct
+    {
+        [Networked, Capacity(16)]
+        public NetworkDictionary<PlayerRef, int> DictOfInt => default;
+    }
+
+    [Networked] public ref NetworkStructExample NetworkedStructRef => ref MakeRef<NetworkStructExample>();
 
     public List<Player> PlayerList
     {
@@ -38,21 +46,26 @@ public class CubeManagerScript : NetworkBehaviour
         {
             Instance = this;
         }
-        
     }
 
-    public void TeleportToStartPosition(NetworkRig networkRig, int playerId)
+    public override void Spawned()
+    {
+        Debug.Log($"Spawned Network Session for Runner: {Runner}");
+        Runner.RegisterSingleton(this);
+    }
+     
+    public void TeleportToStartPosition(NetworkRig networkRig, PlayerRef playerRef)
     {
         networkRig.HardwareRig.Teleport(GetPlayerWithId
-            (playerId).PlayerSpawnPoint.position);
+            (playerRef).PlayerSpawnPoint.position);
         networkRig.HardwareRig.Rotate(GetPlayerWithId
-            (playerId).PlayerSpawnPoint.eulerAngles.y);
+            (playerRef).PlayerSpawnPoint.eulerAngles.y);
     }
 
      // is called on Network Event Component in the Connection Manager GameObject
     public void PlayerLeftDistributeCubes(NetworkRunner runner, PlayerRef playerRef)
     {
-        Player player = GetPlayerWithId(playerRef.PlayerId);
+        Player player = GetPlayerWithId(playerRef);
         int ObjectIdStayedBehind = Random.Range(0, player.PlayerCubes.Count);
         for (int i = 0; i < player.PlayerCubes.Count; i++)
         {
@@ -60,7 +73,7 @@ public class CubeManagerScript : NetworkBehaviour
 
             if (ObjectIdStayedBehind == i)
             {
-                Player localPlayer = GetPlayerWithId(runner.LocalPlayer.PlayerId);
+                Player localPlayer = GetPlayerWithId(runner.LocalPlayer);
                 localPlayer.PlayerCubes.Add(player.PlayerCubes[i]);
                 localPlayer.UpdatePlayerCubesMaterials();
             }
@@ -80,31 +93,84 @@ public class CubeManagerScript : NetworkBehaviour
         runner.Despawn(networkObject);
     }
 
-    public Material GetPlayerMaterial(int playerId)
+    public Material GetPlayerMaterial(PlayerRef playerRef)
     {
-        var player = GetPlayerWithId(playerId);
+        var player = GetPlayerWithId(playerRef);
         return player.playerMaterial;
     }
 
-    public Player GetPlayerWithId(int playerId)
+    public Player GetPlayerWithId(PlayerRef playerRef)
     {
-        Player player =  PlayerList.Find(player => player.PlayerIndex == playerId);
+        Player player =  PlayerList.Find(player => player.playerRef == playerRef);
         if (player == null)
         {
-            Debug.LogError($"Player with {playerId} could not be found.");
+            Debug.LogError($"Player with {playerRef} could not be found.");
         }
 
         return player;
     }
 
     [Rpc] 
-    public void RPC_AddCubeToPlayer(int playerId, NetworkHandColliderGrabbableCube networkHandColliderGrabbableCube)
+    public void RPC_AddCubeToPlayer(PlayerRef playerRef, NetworkHandColliderGrabbableCube networkHandColliderGrabbableCube)
     {
-        var player = GetPlayerWithId(playerId);
+        var player = GetPlayerWithId(playerRef);
         if (!player.PlayerCubes.Contains(networkHandColliderGrabbableCube)) {
             player.PlayerCubes.Add(networkHandColliderGrabbableCube);
         }
 
         player.UpdatePlayerCubesMaterials();
+    }
+
+    public void SetPlayerToFreeSpot(PlayerRef player)
+    {
+        int assignedPlace = 0;
+        if (NetworkedStructRef.DictOfInt.TryGet(player, out int value))
+        {
+            if(value != 0) //because the default value is 0, we start with 1
+            {
+                assignedPlace = NetworkedStructRef.DictOfInt[player];
+            }
+        }
+        
+        if (assignedPlace != 0)
+        {
+            _playerList[assignedPlace].playerRef = player;
+            _playerList[assignedPlace].DebugPlayerRef = player.ToString();
+        }
+        else
+        {
+            PlayerRef nonePlayer = PlayerRef.None;
+            Player freePlayer =AssignPlayerToList(player, nonePlayer);
+            if (freePlayer != null)
+            {
+                 int index = _playerList.IndexOf(freePlayer);
+                 NetworkedStructRef.DictOfInt.Set(player, index);
+            }
+           
+            
+        }
+    }
+    public void RemovePlayer(NetworkRunner runner, PlayerRef player)
+    {
+        PlayerRef nonePlayer = PlayerRef.None;
+        Player playerToBeRemoved =AssignPlayerToList(nonePlayer, player);
+        if (playerToBeRemoved != null)
+        {
+            NetworkedStructRef.DictOfInt.Remove(player);
+        }
+    }
+
+    private Player AssignPlayerToList(PlayerRef newPlayerRef, PlayerRef toBeReplacedPlayerRef)
+    {
+        Player freePlayer = _playerList.FirstOrDefault(
+            playerCollection => playerCollection.playerRef == toBeReplacedPlayerRef);
+
+        if (freePlayer != null)
+        {
+            freePlayer.playerRef = newPlayerRef;
+            freePlayer.DebugPlayerRef = newPlayerRef.ToString();
+            return freePlayer;
+        }
+        return null;
     }
 }

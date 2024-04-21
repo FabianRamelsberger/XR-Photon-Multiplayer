@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Fusion.XR.Shared.Rig;
+using FusionHelpers;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -10,7 +11,6 @@ using UnityEngine.SceneManagement;
 namespace Fusion.Addons.ConnectionManagerAddon
 {
     /**
-     *
      * Handles:
      * - connection launch (either with room name or matchmaking session properties)
      * - user representation spawn on connection
@@ -31,9 +31,9 @@ namespace Fusion.Addons.ConnectionManagerAddon
             public string value;
         }
 
-        [Header("Room configuration")] public GameMode gameMode = GameMode.Shared;
+        [Header("Room configuration")] private GameMode gameMode = GameMode.Shared;
         [SerializeField] private string roomName = "";
-        [SerializeField] bool connectOnStart = true;
+        bool connectOnStart = false;
 
         [Tooltip(
             "Set it to 0 to use the DefaultPlayers value, from the Global NetworkProjectConfig (simulation section)")]
@@ -60,7 +60,6 @@ namespace Fusion.Addons.ConnectionManagerAddon
         public List<StringSessionProperty> actualSessionProperties = new List<StringSessionProperty>();
 
         // Dictionary of spawned user prefabs, to store them on the server for host topology, and destroy them on disconnection (for shared topology, use Network Objects's "Destroy When State Authority Leaves" option)
-        private Dictionary<PlayerRef, NetworkObject> _spawnedUsers = new Dictionary<PlayerRef, NetworkObject>();
         public Action<PlayerRef> OnPlayerJoinedAction;
         public Action<PlayerRef> OnPlayerLeftAction;
 
@@ -129,7 +128,7 @@ namespace Fusion.Addons.ConnectionManagerAddon
             }
         }
 
-        public virtual NetworkSceneInfo CurrentSceneInfo()
+        protected virtual NetworkSceneInfo CurrentSceneInfo()
         {
             var activeScene = SceneManager.GetActiveScene();
             SceneRef sceneRef = default;
@@ -199,61 +198,32 @@ namespace Fusion.Addons.ConnectionManagerAddon
         {
             if (player == runner.LocalPlayer && userPrefab != null)
             {
-                
                 // Spawn the user prefab for the local user
                 NetworkObject networkPlayerObject =runner.Spawn(userPrefab, Vector3.zero, Quaternion.identity,player, (runner, obj) => {
                 });
-                CubeManagerScript.Instance.TeleportToStartPosition(
-                    networkPlayerObject.GetComponent<NetworkRig>(), player.PlayerId);
-                OnPlayerJoinedAction?.Invoke(player);
-            }
-        }
-
-        public void OnPlayerJoinedHostMode(NetworkRunner runner, PlayerRef player)
-        {
-            // The user's prefab has to be spawned by the host
-            if (runner.IsServer && userPrefab != null)
-            {
-                Debug.Log($"OnPlayerJoined. PlayerId: {player.PlayerId}");
-                // We make sure to give the input authority to the connecting player for their user's object
-                NetworkObject networkPlayerObject = runner.Spawn(userPrefab, position: transform.position, rotation: transform.rotation, inputAuthority: player, (runner, obj) => {
+                runner.WaitForSingleton<CubeManagerScript>(
+                   cubeManager =>
+                   {
+                       cubeManager.SetPlayerToFreeSpot(player);
+                       cubeManager.TeleportToStartPosition(
+                           networkPlayerObject.GetComponent<NetworkRig>(), player);
+                       OnPlayerJoinedAction?.Invoke(player);
                 });
-    
-                // Keep track of the player avatars so we can remove it when they disconnect
-                _spawnedUsers.Add(player, networkPlayerObject);
             }
-        }
-
-        // Despawn the user object upon disconnection
-        public void OnPlayerLeftHostMode(NetworkRunner runner, PlayerRef player)
-        {
-            // Find and remove the players avatar (only the host would have stored the spawned game object)
-            if (_spawnedUsers.TryGetValue(player, out NetworkObject networkObject))
+            else
             {
-                runner.Despawn(networkObject);
-                _spawnedUsers.Remove(player);
+                runner.WaitForSingleton<CubeManagerScript>(
+                    cubeManager => { cubeManager.SetPlayerToFreeSpot(player); });
             }
         }
-
         #endregion
 
         #region INetworkRunnerCallbacks
         public void OnPlayerJoined(NetworkRunner runner, PlayerRef player)
         {
-            if(runner.Topology == Topologies.ClientServer)
-            {
-                OnPlayerJoinedHostMode(runner, player);
-            }
-            else
-            {
-                OnPlayerJoinedSharedMode(runner, player);
-            }
+            OnPlayerJoinedSharedMode(runner, player);
         }
         public void OnPlayerLeft(NetworkRunner runner, PlayerRef player) {
-            if (runner.Topology == Topologies.ClientServer)
-            {
-                OnPlayerLeftHostMode(runner, player);
-            }
             OnPlayerLeftAction?.Invoke(player);
         }
         #endregion

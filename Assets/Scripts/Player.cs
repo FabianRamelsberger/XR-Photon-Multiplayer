@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using Fusion;
 using UnityEngine;
 
 [Serializable]
 public class Player
 {
-    public int PlayerIndex;
+    public string DebugPlayerRef;
+    public PlayerRef playerRef;
     public Material playerMaterial;
     public List<NetworkHandColliderGrabbableCube> PlayerCubes;
     public List<Transform> CubeSpawnPoints;
@@ -14,7 +16,7 @@ public class Player
     {
         PlayerCubes.ForEach(cube =>
         {
-            cube._cubeMeshRenderer.sharedMaterial = playerMaterial;
+            cube.CubeMeshRenderer.sharedMaterial = playerMaterial;
         });
     }
 }

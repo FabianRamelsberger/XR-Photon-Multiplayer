@@ -6,6 +6,7 @@
 using System.Collections.Generic;
 using Fusion;
 using Fusion.XR.Shared.Grabbing.NetworkHandColliderBased;
+using FusionHelpers;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -32,19 +33,23 @@ public class PlayerColorInteractor : NetworkBehaviour
             hand.OnObjectGrabbedAction += OnObjectGrabbedAdjustColorToPlayer;
         });
 
-        int playerId = GetComponent<NetworkObject>().InputAuthority.PlayerId;
+        PlayerRef playerRef = GetComponent<NetworkObject>().InputAuthority;
         //This should just generate a new colour when the player sets the color
         if (Object.HasStateAuthority)
         {
             NetworkedPlayerColor = GetRandomColor();
         }
-        _playerMaterial = CubeManagerScript.Instance.GetPlayerMaterial(playerId);
-        _playerMaterial.color = NetworkedPlayerColor;
 
-        _playerMeshRenderers.ForEach(meshRenderer =>
-        {
-            meshRenderer.sharedMaterial = _playerMaterial;
-        });
+        Runner.WaitForSingleton<CubeManagerScript>(
+            cubeManager => {
+                _playerMaterial = cubeManager.GetPlayerMaterial(playerRef);
+                _playerMaterial.color = NetworkedPlayerColor;
+
+                _playerMeshRenderers.ForEach(meshRenderer =>
+                {
+                    meshRenderer.sharedMaterial = _playerMaterial;
+                }); });
+        
     }
 
     private void Update()
@@ -55,13 +60,16 @@ public class PlayerColorInteractor : NetworkBehaviour
             {
                 case nameof(NetworkedPlayerColor):
                 {
-                    int playerId = GetComponent<NetworkObject>().InputAuthority.PlayerId;
-                    _playerMaterial = CubeManagerScript.Instance.GetPlayerMaterial(playerId);
-                    _playerMaterial.color = NetworkedPlayerColor;
-                    _playerMeshRenderers.ForEach(meshRenderer =>
-                    {
-                        meshRenderer.sharedMaterial = _playerMaterial;
-                    });
+                    Runner.WaitForSingleton<CubeManagerScript>(
+                        cubeManager => { 
+                            PlayerRef playerRef = GetComponent<NetworkObject>().InputAuthority;
+                            _playerMaterial = cubeManager.GetPlayerMaterial(playerRef);
+                            _playerMaterial.color = NetworkedPlayerColor;
+                            _playerMeshRenderers.ForEach(meshRenderer =>
+                            {
+                                meshRenderer.sharedMaterial = _playerMaterial;
+                            }); });
+                   
                     break;
                 }
             }

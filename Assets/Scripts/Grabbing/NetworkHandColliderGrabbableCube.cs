@@ -2,13 +2,16 @@ using UnityEngine;
 using TMPro;
 using Fusion;
 using Fusion.XR.Shared.Grabbing.NetworkHandColliderBased;
+using FusionHelpers;
 
 [RequireComponent(typeof(NetworkHandColliderGrabbable))]
 public class NetworkHandColliderGrabbableCube : NetworkBehaviour
 {
-    public TextMeshProUGUI authorityText;
-    public TextMeshProUGUI debugText;
-    public MeshRenderer _cubeMeshRenderer;
+    public MeshRenderer CubeMeshRenderer => _cubeMeshRenderer;
+    [SerializeField] private TextMeshProUGUI authorityText;
+    [SerializeField] private TextMeshProUGUI debugText;
+    [SerializeField] private MeshRenderer _cubeMeshRenderer;
+    [SerializeField] private bool _cubeIsFromAPlayer = true;
     private void Awake()
     {
         debugText.text = "";
@@ -21,13 +24,21 @@ public class NetworkHandColliderGrabbableCube : NetworkBehaviour
 
     private void Start()
     {
-        AssignCubeToPlayer();
+        if (_cubeIsFromAPlayer)
+        {
+            AssignCubeToPlayer();
+        }
     }
 
     private void AssignCubeToPlayer()
     {
-        int playerId = GetComponent<NetworkObject>().StateAuthority.PlayerId;
-        CubeManagerScript.Instance.RPC_AddCubeToPlayer(playerId, this);
+        PlayerRef playerId = GetComponent<NetworkObject>().StateAuthority;
+        Runner.WaitForSingleton<CubeManagerScript>(
+            cubeManager =>
+            {
+                cubeManager.RPC_AddCubeToPlayer(playerId, this);
+
+            });
     }
 
     private void DebugLog(string debug)
