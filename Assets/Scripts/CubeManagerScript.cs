@@ -29,7 +29,9 @@ public class CubeManagerScript : NetworkBehaviour
     }
 
     [Networked] public ref NetworkStructExample NetworkedStructRef => ref MakeRef<NetworkStructExample>();
-
+    [Networked] public bool HasSharedCubeSpawned { get; set; }
+    [SerializeField] private NetworkHandColliderGrabbableCube _sharedCubePrefab;
+    [SerializeField] private Transform _sharedCubeSpawnPoint;
     public List<Player> PlayerList
     {
         get => _playerList;
@@ -52,8 +54,24 @@ public class CubeManagerScript : NetworkBehaviour
     {
         Debug.Log($"Spawned Network Session for Runner: {Runner}");
         Runner.RegisterSingleton(this);
+
+        SpawnSharedCube();
     }
-     
+
+    private void SpawnSharedCube()
+    {
+        if (HasSharedCubeSpawned == false)
+        {
+            HasSharedCubeSpawned = true;
+            Runner.Spawn(_sharedCubePrefab, _sharedCubeSpawnPoint.position, _sharedCubeSpawnPoint.rotation,
+                PlayerRef.None, InitializeObjBeforeSpawn);
+        }
+    }
+
+    private void InitializeObjBeforeSpawn(NetworkRunner runner, NetworkObject obj)
+    {
+    }
+
     public void TeleportToStartPosition(NetworkRig networkRig, PlayerRef playerRef)
     {
         networkRig.HardwareRig.Teleport(GetPlayerWithId
