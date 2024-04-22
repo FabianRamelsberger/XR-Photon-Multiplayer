@@ -6,7 +6,7 @@ using UnityEngine;
 [Serializable]
 public class Player
 {
-    public string DebugPlayerRef;
+    [ReadOnly] public string DebugPlayerRef;
     public PlayerRef playerRef;
     public Material playerMaterial;
     public List<NetworkHandColliderGrabbableCube> PlayerCubes;

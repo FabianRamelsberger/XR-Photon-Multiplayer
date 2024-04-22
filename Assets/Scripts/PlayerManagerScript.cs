@@ -15,30 +15,40 @@ using Random = UnityEngine.Random;
 //<summary>
 //CubeManagerScript description
 //	</summary>
-public class CubeManagerScript : NetworkBehaviour
+public class PlayerManagerScript : NetworkBehaviour
 {
-   public static CubeManagerScript Instance;
+    public static PlayerManagerScript Instance;
     
+    [Header("PlayerList with properties")]
+    [Tooltip("List of player properties, like colours, grabbed/owned cubes, " +
+             "spawn positions. Networked is only the PlayerRef and there place at PlayerRefPlaceInPlayerListNetworkStruct")]
     [SerializeField] private List<Player> _playerList;
-    [SerializeField] private ConnectionManager _connectionManager;
+
+    [Header("Shared Cube")]
     
-    public struct NetworkStructExample : INetworkStruct
+    [SerializeField] private Transform _sharedCubeSpawnPoint;
+   
+    [Networked] private bool HasSharedCubeSpawned { get; set; }
+    [Tooltip("The shared cube can only be spawned once." +
+             "It is initialized as PlayerRef.None -> so every Player can grab it." +
+             "Only after one Player grabbed it could he hold it.")]
+    [SerializeField] private NetworkHandColliderGrabbableCube _sharedCubePrefab;
+
+    
+    [Header("References")]
+    [SerializeField] private ConnectionManager _connectionManager;
+
+    private struct PlayerRefPlaceInPlayerListNetworkStruct : INetworkStruct
     {
         [Networked, Capacity(16)]
-        public NetworkDictionary<PlayerRef, int> DictOfInt => default;
+        public NetworkDictionary<PlayerRef, int> DictOfPlaces => default;
     }
+    [Networked] private ref PlayerRefPlaceInPlayerListNetworkStruct PlayerPlaceStructRef => 
+        ref MakeRef<PlayerRefPlaceInPlayerListNetworkStruct>();
 
-    [Networked] public ref NetworkStructExample NetworkedStructRef => ref MakeRef<NetworkStructExample>();
-    [Networked] public bool HasSharedCubeSpawned { get; set; }
-    [SerializeField] private NetworkHandColliderGrabbableCube _sharedCubePrefab;
-    [SerializeField] private Transform _sharedCubeSpawnPoint;
-    public List<Player> PlayerList
-    {
-        get => _playerList;
-        set => _playerList = value;
-    }
-    
-     public void Awake()
+    #region UnityFunctions
+
+    public void Awake()
     {
         if (Instance)
         {
@@ -50,11 +60,12 @@ public class CubeManagerScript : NetworkBehaviour
         }
     }
 
+    #endregion
+    
+
     public override void Spawned()
     {
-        Debug.Log($"Spawned Network Session for Runner: {Runner}");
         Runner.RegisterSingleton(this);
-
         SpawnSharedCube();
     }
 
@@ -84,12 +95,12 @@ public class CubeManagerScript : NetworkBehaviour
     public void PlayerLeftDistributeCubes(NetworkRunner runner, PlayerRef playerRef)
     {
         Player player = GetPlayerWithId(playerRef);
-        int ObjectIdStayedBehind = Random.Range(0, player.PlayerCubes.Count);
+        int objectIdStayedBehind = Random.Range(0, player.PlayerCubes.Count);
         for (int i = 0; i < player.PlayerCubes.Count; i++)
         {
             player.PlayerCubes[i].Object.RequestStateAuthority();
 
-            if (ObjectIdStayedBehind == i)
+            if (objectIdStayedBehind == i)
             {
                 Player localPlayer = GetPlayerWithId(runner.LocalPlayer);
                 localPlayer.PlayerCubes.Add(player.PlayerCubes[i]);
@@ -119,12 +130,11 @@ public class CubeManagerScript : NetworkBehaviour
 
     public Player GetPlayerWithId(PlayerRef playerRef)
     {
-        Player player =  PlayerList.Find(player => player.playerRef == playerRef);
+        Player player =  _playerList.Find(player => player.playerRef == playerRef);
         if (player == null)
         {
             Debug.LogError($"Player with {playerRef} could not be found.");
         }
-
         return player;
     }
 
@@ -142,11 +152,11 @@ public class CubeManagerScript : NetworkBehaviour
     public void SetPlayerToFreeSpot(PlayerRef player)
     {
         int assignedPlace = 0;
-        if (NetworkedStructRef.DictOfInt.TryGet(player, out int value))
+        if (PlayerPlaceStructRef.DictOfPlaces.TryGet(player, out int value))
         {
             if(value != 0) //because the default value is 0, we start with 1
             {
-                assignedPlace = NetworkedStructRef.DictOfInt[player];
+                assignedPlace = PlayerPlaceStructRef.DictOfPlaces[player];
             }
         }
         
@@ -162,10 +172,8 @@ public class CubeManagerScript : NetworkBehaviour
             if (freePlayer != null)
             {
                  int index = _playerList.IndexOf(freePlayer);
-                 NetworkedStructRef.DictOfInt.Set(player, index);
+                 PlayerPlaceStructRef.DictOfPlaces.Set(player, index);
             }
-           
-            
         }
     }
     public void RemovePlayer(NetworkRunner runner, PlayerRef player)
@@ -174,7 +182,7 @@ public class CubeManagerScript : NetworkBehaviour
         Player playerToBeRemoved =AssignPlayerToList(nonePlayer, player);
         if (playerToBeRemoved != null)
         {
-            NetworkedStructRef.DictOfInt.Remove(player);
+            PlayerPlaceStructRef.DictOfPlaces.Remove(player);
         }
     }
 

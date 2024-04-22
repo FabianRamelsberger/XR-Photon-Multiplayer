@@ -40,7 +40,7 @@ public class PlayerColorInteractor : NetworkBehaviour
             NetworkedPlayerColor = GetRandomColor();
         }
 
-        Runner.WaitForSingleton<CubeManagerScript>(
+        Runner.WaitForSingleton<PlayerManagerScript>(
             cubeManager => {
                 _playerMaterial = cubeManager.GetPlayerMaterial(playerRef);
                 _playerMaterial.color = NetworkedPlayerColor;
@@ -60,7 +60,7 @@ public class PlayerColorInteractor : NetworkBehaviour
             {
                 case nameof(NetworkedPlayerColor):
                 {
-                    Runner.WaitForSingleton<CubeManagerScript>(
+                    Runner.WaitForSingleton<PlayerManagerScript>(
                         cubeManager => { 
                             PlayerRef playerRef = GetComponent<NetworkObject>().InputAuthority;
                             _playerMaterial = cubeManager.GetPlayerMaterial(playerRef);

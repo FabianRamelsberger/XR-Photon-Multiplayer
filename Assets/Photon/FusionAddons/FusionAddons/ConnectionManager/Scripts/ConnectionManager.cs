@@ -201,7 +201,7 @@ namespace Fusion.Addons.ConnectionManagerAddon
                 // Spawn the user prefab for the local user
                 NetworkObject networkPlayerObject =runner.Spawn(userPrefab, Vector3.zero, Quaternion.identity,player, (runner, obj) => {
                 });
-                runner.WaitForSingleton<CubeManagerScript>(
+                runner.WaitForSingleton<PlayerManagerScript>(
                    cubeManager =>
                    {
                        cubeManager.SetPlayerToFreeSpot(player);
@@ -212,7 +212,7 @@ namespace Fusion.Addons.ConnectionManagerAddon
             }
             else
             {
-                runner.WaitForSingleton<CubeManagerScript>(
+                runner.WaitForSingleton<PlayerManagerScript>(
                     cubeManager => { cubeManager.SetPlayerToFreeSpot(player); });
             }
         }

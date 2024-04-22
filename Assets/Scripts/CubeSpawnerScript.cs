@@ -3,6 +3,7 @@ using Fusion;
 using Fusion.Addons.ConnectionManagerAddon;
 using Fusion.XR.Shared.Grabbing.NetworkHandColliderBased;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 public class CubeSpawnerScript : MonoBehaviour
@@ -13,7 +14,7 @@ public class CubeSpawnerScript : MonoBehaviour
     [SerializeField] private List<NetworkHandColliderGrabbable> _independentCubeToSpawnList;
     
     [SerializeField] private ConnectionManager _connectionManager;
-    [SerializeField] private CubeManagerScript _cubeManagerScript;
+    [FormerlySerializedAs("_cubeManagerScript")] [SerializeField] private PlayerManagerScript playerManagerScript;
     
     public delegate void OnBeforeSpawned(NetworkRunner runner, NetworkObject obj);
 
@@ -34,7 +35,7 @@ public class CubeSpawnerScript : MonoBehaviour
 
     private void SpawnPlayerDependingPrefabs(PlayerRef playerRef)
     {
-        Player player = _cubeManagerScript.GetPlayerWithId(playerRef);
+        Player player = playerManagerScript.GetPlayerWithId(playerRef);
         List<Transform> cubeSpawnPoints = player.CubeSpawnPoints;
         for (int i = 0; i < _amountOfCubesPerPlayerToSpawn; i++)
         {

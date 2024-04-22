@@ -33,7 +33,7 @@ public class NetworkHandColliderGrabbableCube : NetworkBehaviour
     private void AssignCubeToPlayer()
     {
         PlayerRef playerId = GetComponent<NetworkObject>().StateAuthority;
-        Runner.WaitForSingleton<CubeManagerScript>(
+        Runner.WaitForSingleton<PlayerManagerScript>(
             cubeManager =>
             {
                 cubeManager.RPC_AddCubeToPlayer(playerId, this);
