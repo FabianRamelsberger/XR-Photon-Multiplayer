@@ -28,9 +28,9 @@ public class RigSelection : MonoBehaviour, IRigSelection
     public bool IsRigSelected => rigSelected;
     public bool IsVRRigSelected => vrRig && vrRig.isActiveAndEnabled;
 
-    public const string RIGMODE_VR = "VR";
-    public const string RIGMODE_DESKTOP = "Desktop";
-    public const string SETTING_RIGMODE = "RigMode";
+    private const string RIGMODE_VR = "VR";
+    private const string RIGMODE_DESKTOP = "Desktop";
+    private const string SETTING_RIGMODE = "RigMode";
 
     public GameObject connexionHandler;
     public HardwareRig vrRig;

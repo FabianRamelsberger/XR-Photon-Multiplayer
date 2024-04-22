@@ -2,7 +2,6 @@
 # Created by: Fabian Ramelsberger
 # Created Date: 2024
 # --------------------------------------------------------------------------------*/
-
 using Fusion.Sockets;
 using System;
 using System.Collections.Generic;
