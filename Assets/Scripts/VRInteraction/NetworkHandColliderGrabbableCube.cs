@@ -2,6 +2,7 @@
 # Created by: Fabian Ramelsberger
 # Created Date: 2024
 # --------------------------------------------------------------------------------*/
+
 using UnityEngine;
 using TMPro;
 using Fusion;
@@ -16,6 +17,7 @@ public class NetworkHandColliderGrabbableCube : NetworkBehaviour
     [SerializeField] private TextMeshProUGUI debugText;
     [SerializeField] private MeshRenderer _cubeMeshRenderer;
     [SerializeField] private bool _cubeIsFromAPlayer = true;
+
     private void Awake()
     {
         debugText.text = "";
@@ -37,10 +39,7 @@ public class NetworkHandColliderGrabbableCube : NetworkBehaviour
     {
         PlayerRef playerId = GetComponent<NetworkObject>().StateAuthority;
         Runner.WaitForSingleton<PlayerManagerScript>(
-            cubeManager =>
-            {
-                cubeManager.RPC_AddCubeToPlayer(playerId, this);
-            });
+            cubeManager => { cubeManager.RPC_AddCubeToPlayer(playerId, this); });
     }
 
     private void DebugLog(string debug)

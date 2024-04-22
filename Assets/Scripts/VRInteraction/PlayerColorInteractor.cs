@@ -2,7 +2,6 @@
 # Created by: Fabian Ramelsberger
 # Created Date: 2024
 # --------------------------------------------------------------------------------*/
-
 using System.Collections.Generic;
 using Fusion;
 using Fusion.XR.Shared.Grabbing.NetworkHandColliderBased;
@@ -17,8 +16,7 @@ using Random = UnityEngine.Random;
 public class PlayerColorInteractor : NetworkBehaviour
 {
     [SerializeField] private List<NetworkHandColliderGrabber> _networkHands;
-    [Networked]
-    public Color NetworkedPlayerColor { get; set; }
+    [Networked] public Color NetworkedPlayerColor { get; set; }
     private Material _playerMaterial;
     [SerializeField] private List<MeshRenderer> _playerMeshRenderers;
     private ChangeDetector _changeDetector;
@@ -27,12 +25,10 @@ public class PlayerColorInteractor : NetworkBehaviour
     {
         _changeDetector = GetChangeDetector(ChangeDetector.Source.SimulationState);
     }
+
     private void Start()
     {
-        _networkHands.ForEach(hand =>
-        {
-            hand.OnObjectGrabbedAction += OnObjectGrabbedAdjustColorToPlayer;
-        });
+        _networkHands.ForEach(hand => { hand.OnObjectGrabbedAction += OnObjectGrabbedAdjustColorToPlayer; });
 
         PlayerRef playerRef = GetComponent<NetworkObject>().InputAuthority;
         //This should just generate a new colour when the player sets the color
@@ -43,14 +39,13 @@ public class PlayerColorInteractor : NetworkBehaviour
         }
 
         Runner.WaitForSingleton<PlayerManagerScript>(
-            cubeManager => {
+            cubeManager =>
+            {
                 _playerMaterial = cubeManager.GetPlayerMaterial(playerRef);
                 _playerMaterial.color = NetworkedPlayerColor;
 
-                _playerMeshRenderers.ForEach(meshRenderer =>
-                {
-                    meshRenderer.sharedMaterial = _playerMaterial;
-                }); });
+                _playerMeshRenderers.ForEach(meshRenderer => { meshRenderer.sharedMaterial = _playerMaterial; });
+            });
     }
 
     private void Update()
@@ -62,14 +57,16 @@ public class PlayerColorInteractor : NetworkBehaviour
                 case nameof(NetworkedPlayerColor):
                 {
                     Runner.WaitForSingleton<PlayerManagerScript>(
-                        cubeManager => { 
+                        cubeManager =>
+                        {
                             PlayerRef playerRef = GetComponent<NetworkObject>().InputAuthority;
                             _playerMaterial = cubeManager.GetPlayerMaterial(playerRef);
                             _playerMaterial.color = NetworkedPlayerColor;
                             _playerMeshRenderers.ForEach(meshRenderer =>
                             {
                                 meshRenderer.sharedMaterial = _playerMaterial;
-                            }); });
+                            });
+                        });
                     break;
                 }
             }

@@ -66,9 +66,7 @@ public class PlayerManagerScript : NetworkBehaviour
             Instance = this;
         }
     }
-
     #endregion
-    
 
     public override void Spawned()
     {

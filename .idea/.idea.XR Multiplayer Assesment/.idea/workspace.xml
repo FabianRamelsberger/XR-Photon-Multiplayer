@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f246162-8a23-453d-aa9d-98983cbf20c9" name="Changes" comment="refactor: folder cleanup">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.XR Multiplayer Assesment/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XR Multiplayer Assesment/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PlayerCubeSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PlayerCubeSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PlayerManagerScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PlayerManagerScript.cs" afterDir="false" />
+    <list default="true" id="3f246162-8a23-453d-aa9d-98983cbf20c9" name="Changes" comment="refactored: ConnectionManager.cs">
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/ConnectionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/ConnectionManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VRInteraction/NetworkHandColliderGrabbableCube.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VRInteraction/NetworkHandColliderGrabbableCube.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VRInteraction/RigSelection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VRInteraction/RigSelection.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +70,8 @@
     <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Scripts/CubeManagerScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/PlayerManagerScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Scripts/Network/ConnectionManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Scripts/Network/ConnectionManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Scripts/PlayerManagerScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Scripts/VRInteraction/PlayerColorInteractor.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -176,7 +172,7 @@
       <workItem from="1713707116799" duration="15902000" />
       <workItem from="1713723741314" duration="1588000" />
       <workItem from="1713729878924" duration="3779000" />
-      <workItem from="1713774184306" duration="12264000" />
+      <workItem from="1713774184306" duration="12662000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit, gitignore">
       <option name="closed" value="true" />
@@ -378,7 +374,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713787950557</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="refactored: ConnectionManager.cs">
+      <option name="closed" value="true" />
+      <created>1713788920986</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1713788920987</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -408,7 +412,6 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="SHELVE_DETAILS_PREVIEW_SHOWN" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="initial commit, gitignore" />
     <MESSAGE value="feature: added grabbable objects" />
     <MESSAGE value="feature: added cube join on player spawn" />
     <MESSAGE value="feature: added OnPlayerJoinedScript.cs" />
@@ -433,7 +436,8 @@
     <MESSAGE value="refactor: refactored folders, refactored Player.cs" />
     <MESSAGE value="refactor: PlayerColorInteractor.cs" />
     <MESSAGE value="refactor: folder cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: folder cleanup" />
+    <MESSAGE value="refactored: ConnectionManager.cs" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactored: ConnectionManager.cs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

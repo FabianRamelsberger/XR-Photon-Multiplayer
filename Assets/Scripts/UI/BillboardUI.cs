@@ -3,25 +3,24 @@
 # Created Date: 2024
 # --------------------------------------------------------------------------------*/
 
-using System;
-using Fusion.XR.Shared.Desktop;
 using UnityEngine;
 
-///<summary>
-///ConstantSizedUI description
-//	</summary>
-using UnityEngine;
+//<summary>
+//BillboardUI ensures that a UI element remains facing the player's camera,
+//adjusting its position smoothly based on the camera's movements.
+//It utilizes the RigSelection component to update the camera reference dynamically.
+//</summary>
 
-using UnityEngine;
-
-public class ConstantSizeUI : MonoBehaviour
+public class BillboardUI : MonoBehaviour
 {
     [SerializeField] private RigSelection _rigSelection;
+    [Header("Settings")]
+    [SerializeField] private float _cameraDistance = 3.0F;
+    [SerializeField] private float _smoothTime = 0.3F;
+
+    private Vector3 _velocity = Vector3.zero;
+    private Transform _target;
     private Camera _playerCamera;
-    public float CameraDistance = 3.0F;
-    public float smoothTime = 0.3F;
-    private Vector3 velocity = Vector3.zero;
-    private Transform target;
 
     private void Start()
     {
@@ -46,9 +45,8 @@ public class ConstantSizeUI : MonoBehaviour
         {
             return;
         }
-       
-        Vector3 targetPosition = _playerCamera.transform.TransformPoint(new Vector3(0, 0, CameraDistance));
-        transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
+        Vector3 targetPosition = _playerCamera.transform.TransformPoint(new Vector3(0, 0, _cameraDistance));
+        transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref _velocity, _smoothTime);
         var lookAtPos = new Vector3(_playerCamera.transform.position.x, transform.position.y, _playerCamera.transform.position.z);
         transform.LookAt(lookAtPos);  
     }
