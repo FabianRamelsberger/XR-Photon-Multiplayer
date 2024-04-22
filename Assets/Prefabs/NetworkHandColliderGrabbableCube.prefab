@@ -685,7 +685,7 @@ Rigidbody:
     serializedVersion: 2
     m_Bits: 0
   m_ImplicitCom: 1
-  m_ImplicitTensor: 1
+  m_ImplicitTensor: 0
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -757,6 +757,7 @@ MonoBehaviour:
   authorityText: {fileID: 7239357808315104713}
   debugText: {fileID: 644259881034659406}
   _cubeMeshRenderer: {fileID: 5273346725837451613}
+  _cubeIsFromAPlayer: 1
 --- !u!114 &6016883772272276159
 MonoBehaviour:
   m_ObjectHideFlags: 0
