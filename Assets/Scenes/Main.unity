@@ -5780,7 +5780,7 @@ MonoBehaviour:
   desktopRig: {fileID: 91440377}
   forceVROnAndroid: 1
   rigSelected: 0
-  mode: 2
+  mode: 3
   _desktopCamera: {fileID: 2015979963}
   _vrCamera: {fileID: 1233288610}
 --- !u!1 &2038376870
