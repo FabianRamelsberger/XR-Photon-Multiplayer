@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: expectedIsKinematic
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4052357561692304179, guid: 3efa5b3c8228828499c6d994930e2cf5, type: 3}
+      propertyPath: m_text
+      value: Shared cube
+      objectReference: {fileID: 0}
     - target: {fileID: 5273346724329899860, guid: 3efa5b3c8228828499c6d994930e2cf5, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
