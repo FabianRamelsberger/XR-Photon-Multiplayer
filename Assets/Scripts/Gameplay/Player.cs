@@ -1,8 +1,11 @@
-﻿using System;
+﻿/* --------------------------------------------------------------------------------
+# Created by: Fabian Ramelsberger
+# Created Date: 2024
+# --------------------------------------------------------------------------------*/
+using System;
 using System.Collections.Generic;
 using Fusion;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 [Serializable]
 public class Player

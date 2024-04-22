@@ -1,3 +1,7 @@
+/* --------------------------------------------------------------------------------
+# Created by: Fabian Ramelsberger
+# Created Date: 2024
+# --------------------------------------------------------------------------------*/
 using Fusion;
 using Fusion.XR.Shared.Rig;
 using UnityEngine;

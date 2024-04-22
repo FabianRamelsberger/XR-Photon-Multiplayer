@@ -5,7 +5,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using Fusion;
-using Fusion.Addons.ConnectionManagerAddon;
 using Fusion.XR.Shared;
 using Fusion.XR.Shared.Rig;
 using FusionHelpers;

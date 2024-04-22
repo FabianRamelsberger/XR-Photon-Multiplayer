@@ -4,7 +4,6 @@
 # --------------------------------------------------------------------------------*/
 using System.Collections.Generic;
 using Fusion;
-using Fusion.Addons.ConnectionManagerAddon;
 using Fusion.XR.Shared.Grabbing.NetworkHandColliderBased;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -42,7 +41,7 @@ public class PlayerCubeSpawner : MonoBehaviour
         {
             if (cubeSpawnPoints.Count < i) return;
             NetworkHandColliderGrabbable randomPlayerCube = GetRandomCube();
-            _connectionManager.runner.Spawn(
+            _connectionManager.Runner.Spawn(
                 randomPlayerCube, cubeSpawnPoints[i].position, Quaternion.identity, playerRef, InitializeObjBeforeSpawn);
         }
     }
