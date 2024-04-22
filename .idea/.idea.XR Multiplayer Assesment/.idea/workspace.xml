@@ -4,8 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f246162-8a23-453d-aa9d-98983cbf20c9" name="Changes" comment="refactored: ConnectionManager.cs">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/ConnectionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/ConnectionManager.cs" afterDir="false" />
+    <list default="true" id="3f246162-8a23-453d-aa9d-98983cbf20c9" name="Changes" comment="refactor: RigSelection.cs">
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Environment_NotWalkable_Ground_Material.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Environment_NotWalkable_Ground_Material.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ColorManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ColorManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.XR Multiplayer Assesment/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XR Multiplayer Assesment/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Environment_Ground_Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Environment_Ground_Material.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Player_Material_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Player_Material_1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Player_Material_2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Player_Material_2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Materials/Concrete Grey.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Materials/Concrete Grey.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Materials/Telport Anchor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Materials/Telport Anchor.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VRInteraction/PlayerColorInteractor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VRInteraction/PlayerColorInteractor.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +83,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/PlayerManagerScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Scripts/Network/ConnectionManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Scripts/Network/ConnectionManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Scripts/Network/ConnectionManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Scripts/PlayerManagerScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/ColorManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Scripts/VRInteraction/PlayerColorInteractor.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -92,7 +105,7 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "XThreadsFramesViewSplitterKey": "0.50574714",
+    "XThreadsFramesViewSplitterKey": "0.39954597",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "C:/XR-Photon-Multiplayer/XR Multiplayer Assesment",
     "node.js.detected.package.eslint": "true",
@@ -138,10 +151,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="63580">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="69920">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="63580" />
+      <option name="pid" value="69920" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -172,7 +185,7 @@
       <workItem from="1713707116799" duration="15902000" />
       <workItem from="1713723741314" duration="1588000" />
       <workItem from="1713729878924" duration="3779000" />
-      <workItem from="1713774184306" duration="12662000" />
+      <workItem from="1713774184306" duration="15222000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit, gitignore">
       <option name="closed" value="true" />
@@ -382,7 +395,23 @@
       <option name="project" value="LOCAL" />
       <updated>1713788920987</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="refactor: formatted code">
+      <option name="closed" value="true" />
+      <created>1713789201107</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1713789201107</updated>
+    </task>
+    <task id="LOCAL-00028" summary="refactor: RigSelection.cs">
+      <option name="closed" value="true" />
+      <created>1713789304775</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1713789304775</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -412,8 +441,6 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="SHELVE_DETAILS_PREVIEW_SHOWN" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="feature: added grabbable objects" />
-    <MESSAGE value="feature: added cube join on player spawn" />
     <MESSAGE value="feature: added OnPlayerJoinedScript.cs" />
     <MESSAGE value="feature: player spawns different objects, if the player interacts with one it sets the authority" />
     <MESSAGE value="feature: started to distribute colours over network" />
@@ -437,7 +464,9 @@
     <MESSAGE value="refactor: PlayerColorInteractor.cs" />
     <MESSAGE value="refactor: folder cleanup" />
     <MESSAGE value="refactored: ConnectionManager.cs" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactored: ConnectionManager.cs" />
+    <MESSAGE value="refactor: formatted code" />
+    <MESSAGE value="refactor: RigSelection.cs" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: RigSelection.cs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -460,10 +489,10 @@
           <line>112</line>
           <properties documentPath="C:\XR-Photon-Multiplayer\XR Multiplayer Assesment\Assets\Scripts\CubeManagerScript.cs" containingFunctionPresentation="Method 'WaitUntilHasAuthorityAndDespawn'">
             <startOffsets>
-              <option value="4576" />
+              <option value="4570" />
             </startOffsets>
             <endOffsets>
-              <option value="4606" />
+              <option value="4600" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="33" />
@@ -473,23 +502,23 @@
           <line>175</line>
           <properties documentPath="C:\XR-Photon-Multiplayer\XR Multiplayer Assesment\Assets\Scripts\CubeManagerScript.cs" containingFunctionPresentation="Method 'RemovePlayer'">
             <startOffsets>
-              <option value="6457" />
+              <option value="6451" />
             </startOffsets>
             <endOffsets>
-              <option value="6522" />
+              <option value="6516" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="47" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/UI/ConstantSizeUI.cs</url>
+          <url>file://$PROJECT_DIR$/Assets/Scripts/UI/BillboardUI.cs</url>
           <line>27</line>
           <properties documentPath="C:\XR-Photon-Multiplayer\XR Multiplayer Assesment\Assets\Scripts\ConstantSizeUI.cs" containingFunctionPresentation="Method 'Start'">
             <startOffsets>
-              <option value="717" />
+              <option value="890" />
             </startOffsets>
             <endOffsets>
-              <option value="749" />
+              <option value="922" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="53" />

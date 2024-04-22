@@ -31,11 +31,9 @@ public class PlayerColorInteractor : NetworkBehaviour
         _networkHands.ForEach(hand => { hand.OnObjectGrabbedAction += OnObjectGrabbedAdjustColorToPlayer; });
 
         PlayerRef playerRef = GetComponent<NetworkObject>().InputAuthority;
-        //This should just generate a new colour when the player sets the color
-        // we only want to generate a new random colour if we are the player
         if (Object.HasStateAuthority)
         {
-            NetworkedPlayerColor = GetRandomColor();
+            NetworkedPlayerColor = ColorManager.Instance.SelectedColor;
         }
 
         Runner.WaitForSingleton<PlayerManagerScript>(
@@ -78,8 +76,4 @@ public class PlayerColorInteractor : NetworkBehaviour
         grabbable.SetMaterial(_playerMaterial);
     }
 
-    private static Color GetRandomColor()
-    {
-        return new Color(Random.value, Random.value, Random.value, 1.0f); // 1.0f is for full opacity
-    }
 }
