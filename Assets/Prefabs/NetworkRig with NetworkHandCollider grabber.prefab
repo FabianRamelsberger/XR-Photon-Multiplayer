@@ -343,7 +343,7 @@ MonoBehaviour:
   _networkHands:
   - {fileID: 6993757039136866813}
   - {fileID: 5182901967358130638}
-  _playerColor: {r: 0, g: 0, b: 0, a: 0}
+  _NetworkedPlayerColor: {r: 0, g: 0, b: 0, a: 0}
   _playerMeshRenderers:
   - {fileID: 1205924282877959990}
 --- !u!1001 &5374100038085029782

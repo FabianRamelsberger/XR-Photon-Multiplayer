@@ -4,7 +4,647 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f246162-8a23-453d-aa9d-98983cbf20c9" name="Changes" comment="refactor: refactored folders, refactored Player.cs" />
+    <list default="true" id="3f246162-8a23-453d-aa9d-98983cbf20c9" name="Changes" comment="refactor: PlayerColorInteractor.cs">
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/.sample.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/AffordanceThemes.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/AffordanceThemes/ControllerPokeSphereScaleTheme.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/AffordanceThemes/ControllerPokeSphereScaleTheme.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/AffordanceThemes/HighlightInteractionColorAffordanceTheme.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/AffordanceThemes/HighlightInteractionColorAffordanceTheme.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/AffordanceThemes/HighlightStrengthInteractionAffordanceTheme.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/AffordanceThemes/HighlightStrengthInteractionAffordanceTheme.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/AffordanceThemes/PokeSphereColorAffordanceTheme.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/AffordanceThemes/PokeSphereColorAffordanceTheme.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/AffordanceThemes/PokeSphereInteractionAffordanceTheme.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/AffordanceThemes/PokeSphereInteractionAffordanceTheme.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Animations.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Animations/ArrowBounce.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Animations/ArrowBounce.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Animations/Climb Teleport Arrow.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Animations/Climb Teleport Arrow.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/AffordanceThemes.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/AffordanceThemes/InteractionColorAffordanceTheme.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/AffordanceThemes/InteractionColorAffordanceTheme.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Audio.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Audio/Button Pop.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Audio/Button Pop.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Materials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Materials/Concrete Dark Blue.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Materials/Concrete Dark Blue.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Materials/Concrete Grey.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Materials/Concrete Grey.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Materials/Concrete Light Blue.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Materials/Concrete Light Blue.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Materials/Lit White.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Materials/Lit White.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Materials/MaterialPipelineHandler.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Materials/MaterialPipelineHandler.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Models.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Models/Primitive_Blaster.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Models/Primitive_Blaster.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Models/Primitive_Blaster_Long.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Models/Primitive_Blaster_Long.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Models/Primitive_Cylinder.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Models/Primitive_Cylinder.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Models/Primitive_Pyramid.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Models/Primitive_Pyramid.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Models/Primitive_Tapered_Cylinder.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Models/Primitive_Tapered_Cylinder.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Models/Primitive_Torus.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Models/Primitive_Torus.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Models/Primitive_Torus_Cut.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Models/Primitive_Torus_Cut.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Models/PushButton.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Models/PushButton.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Climb.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Climb/Climb Sample.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Climb/Climb Sample.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Climb/Climbing Wall.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Climb/Climbing Wall.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Climb/Ladder.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Climb/Ladder.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Climb/Multi Floor Ladder.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Climb/Multi Floor Ladder.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Climb/Multi-Anchor Teleport Reticle.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Climb/Multi-Anchor Teleport Reticle.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Climb/Single Floor Ladder.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Climb/Single Floor Ladder.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Far Grab Samples.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Far Grab Samples.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables Sample.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables Sample.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Blaser-Long.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Blaser-Long.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Blaser.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Blaser.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Confetti.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Confetti.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Dynamic Attach Torus.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Dynamic Attach Torus.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Gaze Interactables.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Gaze Interactables.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Interactable Instant Cylinder.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Interactable Instant Cylinder.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Interactable Kinematic Torus.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Interactable Kinematic Torus.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Interactable Simple Cube.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Interactable Simple Cube.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Interactable Velocity Tapered Cylinder.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Interactable Velocity Tapered Cylinder.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Interaction Affordance.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Interaction Affordance.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Push Button.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Push Button.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Poke Interactions Sample.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Poke Interactions Sample.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Teleport.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Teleport/Snapping Teleport Anchor.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Teleport/Snapping Teleport Anchor.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Teleport/Teleport Anchor.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Teleport/Teleport Anchor.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Teleport/Teleport Area.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Teleport/Teleport Area.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Teleportation Environment.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Teleportation Environment.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/UI Sample.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/UI Sample.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/UI.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/UI/Dropdown.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/UI/Dropdown.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/UI/Icon Button.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/UI/Icon Button.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/UI/Icon Toggle.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/UI/Icon Toggle.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/UI/Interactive Controls.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/UI/Interactive Controls.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/UI/MinMaxSlider.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/UI/MinMaxSlider.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/UI/ModalSingleButton.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/UI/ModalSingleButton.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/UI/Scroll UI Sample.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/UI/Scroll UI Sample.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/UI/Text Toggle.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/UI/Text Toggle.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/UI/TextButton.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/UI/TextButton.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Scripts.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Scripts/IncrementUIText.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Scripts/IncrementUIText.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Scripts/MultiAnchorTeleportReticle.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Scripts/MultiAnchorTeleportReticle.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Scripts/TeleportVolumeAnchorAffordanceStateLink.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Scripts/TeleportVolumeAnchorAffordanceStateLink.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Settings.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Settings/FurthestGazedAtTeleportAnchorFilter.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Settings/FurthestGazedAtTeleportAnchorFilter.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Settings/MultiFloorTeleportVolumeDestinationSettings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Settings/MultiFloorTeleportVolumeDestinationSettings.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Sprites.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Sprites/Asset.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Sprites/Asset.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Sprites/Checkmark.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Sprites/Checkmark.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Sprites/Circle_60x60 Outline 4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Sprites/Circle_60x60 Outline 4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Sprites/Circle_60x60_Horizontal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Sprites/Circle_60x60_Horizontal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Sprites/Forward.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Sprites/Forward.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Sprites/LegibilityMask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Sprites/LegibilityMask.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Sprites/Round Radius 4 Outline.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Sprites/Round Radius 4 Outline.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Sprites/Round Radius 4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Sprites/Round Radius 4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Textures.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Textures/Concrete_Albedo.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Textures/Concrete_Albedo.tif.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Textures/Concrete_Metallic.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Textures/Concrete_Metallic.tif.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Textures/Concrete_Normal.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Textures/Concrete_Normal.tif.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Editor.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Editor/Scripts.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Editor/Scripts/StarterAssetsSampleProjectValidation.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Editor/Scripts/StarterAssetsSampleProjectValidation.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Editor/Unity.XR.Interaction.Toolkit.Samples.StarterAssets.Editor.asmdef" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Editor/Unity.XR.Interaction.Toolkit.Samples.StarterAssets.Editor.asmdef.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Filters.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Filters/AnyGazedAtTeleportAnchorFilter.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Filters/AnyGazedAtTeleportAnchorFilter.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Materials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Materials/Controller_Grey.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Materials/Controller_Grey.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Materials/Controller_White.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Materials/Controller_White.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Materials/Flat Blue.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Materials/Flat Blue.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Materials/FresnelHighlight.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Materials/FresnelHighlight.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Materials/Interactable.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Materials/Interactable.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Materials/MaterialPipelineHandler.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Materials/MaterialPipelineHandler.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Materials/Telport Anchor.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Materials/Telport Anchor.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Materials/UI-NoZTest.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Materials/UI-NoZTest.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Models.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Models/BlinkVisual.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Models/BlinkVisual.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Models/Pinch_Pointer_LOD0.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Models/Pinch_Pointer_LOD0.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Models/Primitive_Cylinder.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Models/Primitive_Cylinder.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Models/Primitive_Wedge.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Models/Primitive_Wedge.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Models/Reticle_Torus.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Models/Reticle_Torus.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Models/UniversalController.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Models/UniversalController.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Affordances.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Affordances/Highlight Interaction Affordance.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Affordances/Highlight Interaction Affordance.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Affordances/Poke Pointer.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Affordances/Poke Pointer.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Controllers.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Controllers/XR Controller Left.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Controllers/XR Controller Left.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Controllers/XR Controller Right.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Controllers/XR Controller Right.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Interactors.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Interactors/Direct Interactor.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Interactors/Direct Interactor.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Interactors/Gaze Interactor.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Interactors/Gaze Interactor.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Interactors/Left_NearFarInteractor.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Interactors/Left_NearFarInteractor.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Interactors/Poke Interactor.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Interactors/Poke Interactor.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Interactors/Ray Interactor.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Interactors/Ray Interactor.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Interactors/Right_NearFarInteractor.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Interactors/Right_NearFarInteractor.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Interactors/Teleport Interactor.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Interactors/Teleport Interactor.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Teleport.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Teleport/Blocking Teleport Reticle.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Teleport/Blocking Teleport Reticle.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Teleport/Climb Teleport Arrow.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Teleport/Climb Teleport Arrow.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Teleport/Directional Teleport Reticle.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Teleport/Directional Teleport Reticle.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/XR Origin (XR Rig).prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/XR Origin (XR Rig).prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Presets.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Presets/XRI Default Continuous Move.preset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Presets/XRI Default Continuous Move.preset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Presets/XRI Default Continuous Turn.preset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Presets/XRI Default Continuous Turn.preset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Presets/XRI Default Dynamic Move.preset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Presets/XRI Default Dynamic Move.preset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Presets/XRI Default Left Controller Input Action Manager.preset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Presets/XRI Default Left Controller Input Action Manager.preset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Presets/XRI Default Left Grab Move.preset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Presets/XRI Default Left Grab Move.preset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Presets/XRI Default Right Controller Input Action Manager.preset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Presets/XRI Default Right Controller Input Action Manager.preset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Presets/XRI Default Right Grab Move.preset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Presets/XRI Default Right Grab Move.preset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Presets/XRI Default Snap Turn.preset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Presets/XRI Default Snap Turn.preset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Presets/XRI Default XR UI Input Module.preset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Presets/XRI Default XR UI Input Module.preset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Scripts.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Scripts/ClimbTeleportDestinationIndicator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Scripts/ClimbTeleportDestinationIndicator.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Scripts/ControllerAnimator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Scripts/ControllerAnimator.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Scripts/ControllerInputActionManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Scripts/ControllerInputActionManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Scripts/DestroySelf.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Scripts/DestroySelf.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Scripts/DynamicMoveProvider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Scripts/DynamicMoveProvider.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Scripts/GazeInputManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Scripts/GazeInputManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Scripts/MaterialPipelineHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Scripts/MaterialPipelineHandler.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Scripts/ObjectSpawner.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Scripts/ObjectSpawner.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Scripts/XRPokeFollowAffordance.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Scripts/XRPokeFollowAffordance.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Shaders.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Shaders/BiRP_Fresnel.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Shaders/BiRP_Fresnel.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Shaders/Interactable.shadergraph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Shaders/Interactable.shadergraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Shaders/UI-NoZTest.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Shaders/UI-NoZTest.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Shaders/Unlit_Fresnel.shadergraph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Shaders/Unlit_Fresnel.shadergraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Shaders/Unlit_ShaderGraph.shadergraph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Shaders/Unlit_ShaderGraph.shadergraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Textures.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Textures/DefaultMaterial_AO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Textures/DefaultMaterial_AO.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Tunneling Vignette.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Tunneling Vignette/TunnelingVignette.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Tunneling Vignette/TunnelingVignette.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Tunneling Vignette/TunnelingVignette.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Tunneling Vignette/TunnelingVignette.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Tunneling Vignette/TunnelingVignette.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Tunneling Vignette/TunnelingVignette.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Tunneling Vignette/TunnelingVignetteHemisphere.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Tunneling Vignette/TunnelingVignetteHemisphere.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Tunneling Vignette/TunnelingVignetteSG.shadergraph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Tunneling Vignette/TunnelingVignetteSG.shadergraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Unity.XR.Interaction.Toolkit.Samples.StarterAssets.asmdef" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Unity.XR.Interaction.Toolkit.Samples.StarterAssets.asmdef.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/XRI Default Input Actions.inputactions" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/XRI Default Input Actions.inputactions.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Network.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Network/ConnectionManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Network/ConnectionManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.XR Multiplayer Assesment/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XR Multiplayer Assesment/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Player_Material_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Player_Material_1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Player_Material_2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Player_Material_2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Photon/FusionAddons/FusionAddons/ConnectionManager.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Photon/FusionAddons/FusionAddons/ConnectionManager/Demo.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Photon/FusionAddons/FusionAddons/ConnectionManager/Demo/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Photon/FusionAddons/FusionAddons/ConnectionManager/Demo/Prefabs/CMDPlayer.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Photon/FusionAddons/FusionAddons/ConnectionManager/Demo/Prefabs/CMDPlayer.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Photon/FusionAddons/FusionAddons/ConnectionManager/Demo/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Photon/FusionAddons/FusionAddons/ConnectionManager/Demo/Scenes/RoomNameConnection.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Photon/FusionAddons/FusionAddons/ConnectionManager/Demo/Scenes/RoomNameConnection.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Photon/FusionAddons/FusionAddons/ConnectionManager/Demo/Scenes/SessionPropertiesConnection.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Photon/FusionAddons/FusionAddons/ConnectionManager/Demo/Scenes/SessionPropertiesConnection.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Photon/FusionAddons/FusionAddons/ConnectionManager/ReadMe.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Photon/FusionAddons/FusionAddons/ConnectionManager/ReadMe.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Photon/FusionAddons/FusionAddons/ConnectionManager/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Photon/FusionAddons/FusionAddons/ConnectionManager/Scripts/ConnectionManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Photon/FusionAddons/FusionAddons/ConnectionManager/Scripts/ConnectionManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Photon/FusionDemos.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Photon/FusionDemos/Photon-Fusion-Intro-Sample-2.0.0-RC5-824.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Photon/FusionMenu.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Photon/FusionMenu/Photon-Fusion-Menu-2.0.0-RC5-824.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NetworkRig with NetworkHandCollider grabber.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/NetworkRig with NetworkHandCollider grabber.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/.sample.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/AffordanceThemes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/AffordanceThemes/ControllerPokeSphereScaleTheme.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/AffordanceThemes/ControllerPokeSphereScaleTheme.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/AffordanceThemes/HighlightInteractionColorAffordanceTheme.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/AffordanceThemes/HighlightInteractionColorAffordanceTheme.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/AffordanceThemes/HighlightStrengthInteractionAffordanceTheme.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/AffordanceThemes/HighlightStrengthInteractionAffordanceTheme.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/AffordanceThemes/PokeSphereColorAffordanceTheme.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/AffordanceThemes/PokeSphereColorAffordanceTheme.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/AffordanceThemes/PokeSphereInteractionAffordanceTheme.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/AffordanceThemes/PokeSphereInteractionAffordanceTheme.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Animations.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Animations/ArrowBounce.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Animations/ArrowBounce.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Animations/Climb Teleport Arrow.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Animations/Climb Teleport Arrow.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/AffordanceThemes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/AffordanceThemes/InteractionColorAffordanceTheme.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/AffordanceThemes/InteractionColorAffordanceTheme.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Audio.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Audio/Button Pop.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Audio/Button Pop.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Materials/Concrete Dark Blue.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Materials/Concrete Dark Blue.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Materials/Concrete Grey.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Materials/Concrete Grey.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Materials/Concrete Light Blue.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Materials/Concrete Light Blue.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Materials/Lit White.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Materials/Lit White.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Materials/MaterialPipelineHandler.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Materials/MaterialPipelineHandler.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Models.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Models/Primitive_Blaster.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Models/Primitive_Blaster.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Models/Primitive_Blaster_Long.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Models/Primitive_Blaster_Long.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Models/Primitive_Cylinder.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Models/Primitive_Cylinder.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Models/Primitive_Pyramid.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Models/Primitive_Pyramid.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Models/Primitive_Tapered_Cylinder.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Models/Primitive_Tapered_Cylinder.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Models/Primitive_Torus.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Models/Primitive_Torus.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Models/Primitive_Torus_Cut.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Models/Primitive_Torus_Cut.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Models/PushButton.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Models/PushButton.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Climb.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Climb/Climb Sample.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Climb/Climb Sample.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Climb/Climbing Wall.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Climb/Climbing Wall.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Climb/Ladder.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Climb/Ladder.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Climb/Multi Floor Ladder.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Climb/Multi Floor Ladder.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Climb/Multi-Anchor Teleport Reticle.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Climb/Multi-Anchor Teleport Reticle.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Climb/Single Floor Ladder.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Climb/Single Floor Ladder.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Far Grab Samples.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Far Grab Samples.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables Sample.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables Sample.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Blaser-Long.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Blaser-Long.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Blaser.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Blaser.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Confetti.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Confetti.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Dynamic Attach Torus.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Dynamic Attach Torus.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Gaze Interactables.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Gaze Interactables.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Interactable Instant Cylinder.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Interactable Instant Cylinder.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Interactable Kinematic Torus.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Interactable Kinematic Torus.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Interactable Simple Cube.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Interactable Simple Cube.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Interactable Velocity Tapered Cylinder.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Interactable Velocity Tapered Cylinder.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Interaction Affordance.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Interaction Affordance.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Push Button.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Interactables/Push Button.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Poke Interactions Sample.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Poke Interactions Sample.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Teleport.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Teleport/Snapping Teleport Anchor.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Teleport/Snapping Teleport Anchor.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Teleport/Teleport Anchor.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Teleport/Teleport Anchor.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Teleport/Teleport Area.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Teleport/Teleport Area.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Teleportation Environment.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/Teleportation Environment.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/UI Sample.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/UI Sample.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/UI.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/UI/Dropdown.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/UI/Dropdown.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/UI/Icon Button.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/UI/Icon Button.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/UI/Icon Toggle.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/UI/Icon Toggle.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/UI/Interactive Controls.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/UI/Interactive Controls.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/UI/MinMaxSlider.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/UI/MinMaxSlider.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/UI/ModalSingleButton.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/UI/ModalSingleButton.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/UI/Scroll UI Sample.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/UI/Scroll UI Sample.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/UI/Text Toggle.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/UI/Text Toggle.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/UI/TextButton.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Prefabs/UI/TextButton.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Scripts/IncrementUIText.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Scripts/IncrementUIText.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Scripts/MultiAnchorTeleportReticle.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Scripts/MultiAnchorTeleportReticle.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Scripts/TeleportVolumeAnchorAffordanceStateLink.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Scripts/TeleportVolumeAnchorAffordanceStateLink.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Settings.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Settings/FurthestGazedAtTeleportAnchorFilter.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Settings/FurthestGazedAtTeleportAnchorFilter.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Settings/MultiFloorTeleportVolumeDestinationSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Settings/MultiFloorTeleportVolumeDestinationSettings.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Sprites.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Sprites/Asset.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Sprites/Asset.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Sprites/Checkmark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Sprites/Checkmark.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Sprites/Circle_60x60 Outline 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Sprites/Circle_60x60 Outline 4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Sprites/Circle_60x60_Horizontal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Sprites/Circle_60x60_Horizontal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Sprites/Forward.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Sprites/Forward.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Sprites/LegibilityMask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Sprites/LegibilityMask.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Sprites/Round Radius 4 Outline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Sprites/Round Radius 4 Outline.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Sprites/Round Radius 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Sprites/Round Radius 4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Textures/Concrete_Albedo.tif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Textures/Concrete_Albedo.tif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Textures/Concrete_Metallic.tif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Textures/Concrete_Metallic.tif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Textures/Concrete_Normal.tif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Textures/Concrete_Normal.tif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Editor/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Editor/Scripts/StarterAssetsSampleProjectValidation.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Editor/Scripts/StarterAssetsSampleProjectValidation.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Editor/Unity.XR.Interaction.Toolkit.Samples.StarterAssets.Editor.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Editor/Unity.XR.Interaction.Toolkit.Samples.StarterAssets.Editor.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Filters.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Filters/AnyGazedAtTeleportAnchorFilter.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Filters/AnyGazedAtTeleportAnchorFilter.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Materials/Controller_Grey.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Materials/Controller_Grey.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Materials/Controller_White.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Materials/Controller_White.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Materials/Flat Blue.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Materials/Flat Blue.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Materials/FresnelHighlight.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Materials/FresnelHighlight.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Materials/Interactable.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Materials/Interactable.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Materials/MaterialPipelineHandler.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Materials/MaterialPipelineHandler.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Materials/Telport Anchor.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Materials/Telport Anchor.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Materials/UI-NoZTest.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Materials/UI-NoZTest.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Models.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Models/BlinkVisual.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Models/BlinkVisual.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Models/Pinch_Pointer_LOD0.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Models/Pinch_Pointer_LOD0.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Models/Primitive_Cylinder.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Models/Primitive_Cylinder.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Models/Primitive_Wedge.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Models/Primitive_Wedge.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Models/Reticle_Torus.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Models/Reticle_Torus.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Models/UniversalController.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Models/UniversalController.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Affordances.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Affordances/Highlight Interaction Affordance.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Affordances/Highlight Interaction Affordance.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Affordances/Poke Pointer.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Affordances/Poke Pointer.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Controllers.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Controllers/XR Controller Left.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Controllers/XR Controller Left.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Controllers/XR Controller Right.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Controllers/XR Controller Right.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Interactors.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Interactors/Direct Interactor.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Interactors/Direct Interactor.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Interactors/Gaze Interactor.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Interactors/Gaze Interactor.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Interactors/Left_NearFarInteractor.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Interactors/Left_NearFarInteractor.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Interactors/Poke Interactor.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Interactors/Poke Interactor.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Interactors/Ray Interactor.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Interactors/Ray Interactor.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Interactors/Right_NearFarInteractor.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Interactors/Right_NearFarInteractor.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Interactors/Teleport Interactor.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Interactors/Teleport Interactor.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Teleport.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Teleport/Blocking Teleport Reticle.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Teleport/Blocking Teleport Reticle.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Teleport/Climb Teleport Arrow.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Teleport/Climb Teleport Arrow.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Teleport/Directional Teleport Reticle.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Teleport/Directional Teleport Reticle.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/XR Origin (XR Rig).prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/XR Origin (XR Rig).prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Presets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Presets/XRI Default Continuous Move.preset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Presets/XRI Default Continuous Move.preset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Presets/XRI Default Continuous Turn.preset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Presets/XRI Default Continuous Turn.preset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Presets/XRI Default Dynamic Move.preset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Presets/XRI Default Dynamic Move.preset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Presets/XRI Default Left Controller Input Action Manager.preset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Presets/XRI Default Left Controller Input Action Manager.preset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Presets/XRI Default Left Grab Move.preset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Presets/XRI Default Left Grab Move.preset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Presets/XRI Default Right Controller Input Action Manager.preset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Presets/XRI Default Right Controller Input Action Manager.preset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Presets/XRI Default Right Grab Move.preset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Presets/XRI Default Right Grab Move.preset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Presets/XRI Default Snap Turn.preset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Presets/XRI Default Snap Turn.preset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Presets/XRI Default XR UI Input Module.preset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Presets/XRI Default XR UI Input Module.preset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Scripts/ClimbTeleportDestinationIndicator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Scripts/ClimbTeleportDestinationIndicator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Scripts/ControllerAnimator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Scripts/ControllerAnimator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Scripts/ControllerInputActionManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Scripts/ControllerInputActionManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Scripts/DestroySelf.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Scripts/DestroySelf.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Scripts/DynamicMoveProvider.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Scripts/DynamicMoveProvider.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Scripts/GazeInputManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Scripts/GazeInputManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Scripts/MaterialPipelineHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Scripts/MaterialPipelineHandler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Scripts/ObjectSpawner.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Scripts/ObjectSpawner.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Scripts/XRPokeFollowAffordance.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Scripts/XRPokeFollowAffordance.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Shaders.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Shaders/BiRP_Fresnel.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Shaders/BiRP_Fresnel.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Shaders/Interactable.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Shaders/Interactable.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Shaders/UI-NoZTest.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Shaders/UI-NoZTest.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Shaders/Unlit_Fresnel.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Shaders/Unlit_Fresnel.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Shaders/Unlit_ShaderGraph.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Shaders/Unlit_ShaderGraph.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Textures/DefaultMaterial_AO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Textures/DefaultMaterial_AO.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Tunneling Vignette.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Tunneling Vignette/TunnelingVignette.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Tunneling Vignette/TunnelingVignette.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Tunneling Vignette/TunnelingVignette.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Tunneling Vignette/TunnelingVignette.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Tunneling Vignette/TunnelingVignette.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Tunneling Vignette/TunnelingVignette.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Tunneling Vignette/TunnelingVignetteHemisphere.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Tunneling Vignette/TunnelingVignetteHemisphere.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Tunneling Vignette/TunnelingVignetteSG.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Tunneling Vignette/TunnelingVignetteSG.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Unity.XR.Interaction.Toolkit.Samples.StarterAssets.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Unity.XR.Interaction.Toolkit.Samples.StarterAssets.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/XRI Default Input Actions.inputactions" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/XRI Default Input Actions.inputactions.meta" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,6 +678,7 @@
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/a87a815ce9694a5ab7ddf97705612be2ab400/0b/eb80a649/NetworkBehaviourUtils.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/a87a815ce9694a5ab7ddf97705612be2ab400/1a/9b680082/SimulationBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/a87a815ce9694a5ab7ddf97705612be2ab400/31/d3162407/NetworkLinkedList`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/a87a815ce9694a5ab7ddf97705612be2ab400/42/06ae3e6a/NetworkEvents.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/a87a815ce9694a5ab7ddf97705612be2ab400/60/6c533b10/GameMode.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/a87a815ce9694a5ab7ddf97705612be2ab400/65/0f7daa5e/OnChangedRenderAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/a87a815ce9694a5ab7ddf97705612be2ab400/6b/4e4dde0f/INetworkRunnerCallbacks.cs" root0="SKIP_HIGHLIGHTING" />
@@ -57,6 +698,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Photon/Fusion/Editor/Fusion.Unity.Editor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Prefabs/NetworkHandColliderGrabbableCube.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Prefabs/NetworkHandColliderGrabbableCube.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Prefabs/NetworkRig with NetworkHandCollider grabber.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Samples/XR Interaction Toolkit/3.0.1/Starter Assets/Prefabs/Interactors/Teleport Interactor.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
@@ -64,8 +706,9 @@
     <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Scripts/CubeManagerScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/PlayerManagerScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Scripts/PlayerManagerScript.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerManagerScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Scripts/VRInteraction/PlayerColorInteractor.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -164,7 +807,7 @@
       <workItem from="1713707116799" duration="15902000" />
       <workItem from="1713723741314" duration="1588000" />
       <workItem from="1713729878924" duration="3779000" />
-      <workItem from="1713774184306" duration="10907000" />
+      <workItem from="1713774184306" duration="11552000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit, gitignore">
       <option name="closed" value="true" />
@@ -350,7 +993,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713787132054</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="refactor: PlayerColorInteractor.cs">
+      <option name="closed" value="true" />
+      <created>1713787445032</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1713787445032</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -404,7 +1055,8 @@
     <MESSAGE value="refactor: PlayerCubeSpawner.cs" />
     <MESSAGE value="refactor: scene" />
     <MESSAGE value="refactor: refactored folders, refactored Player.cs" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: refactored folders, refactored Player.cs" />
+    <MESSAGE value="refactor: PlayerColorInteractor.cs" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: PlayerColorInteractor.cs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
