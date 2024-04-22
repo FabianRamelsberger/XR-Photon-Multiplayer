@@ -1,6 +1,7 @@
 using Fusion.XR.Shared.Rig;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 
 namespace Fusion.XR.Shared.Desktop
@@ -128,7 +129,7 @@ namespace Fusion.XR.Shared.Desktop
             gameObject.SetActive(false);
             vrRig.gameObject.SetActive(true);
             SetVRPreference();
-            OnRigSelected();
+            OnConnectRigSelected();
         }
 
         void EnableDesktopRig()
@@ -136,10 +137,10 @@ namespace Fusion.XR.Shared.Desktop
             gameObject.SetActive(false);
             desktopRig.gameObject.SetActive(true);
             SetDesktopPreference();
-            OnRigSelected();
+            OnConnectRigSelected();
         }
 
-        void OnRigSelected()
+        void OnConnectRigSelected()
         {
             if (connexionHandler && connexionHandler.gameObject.activeSelf == false)
             {            

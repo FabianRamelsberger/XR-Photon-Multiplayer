@@ -310,6 +310,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 88580823}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &41990033 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1670256625, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+  m_PrefabInstance: {fileID: 711512760}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &53641238
 GameObject:
   m_ObjectHideFlags: 0
@@ -1092,12 +1097,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 272990339}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.18437773, y: -0.54363364, z: -0.8170935, w: -0.053156808}
-  m_LocalPosition: {x: -0.0332, y: -0.0126, z: 0.01}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.8170935, y: -0.053156808, z: -0.18437773, w: -0.54363364}
+  m_LocalPosition: {x: -0.0332, y: -0.012599945, z: -0.059999943}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1194495356}
+  m_Father: {fileID: 41990033}
   m_LocalEulerAnglesHint: {x: 245.231, y: 144.464, z: 15.731995}
 --- !u!114 &272990342
 MonoBehaviour:
@@ -1184,6 +1189,11 @@ MonoBehaviour:
   grabThreshold: 0.3
   updateGrabWithAction: 1
   networkTransform: {fileID: 0}
+--- !u!1 &354495613 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5895826684305351068, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+  m_PrefabInstance: {fileID: 711512760}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &423683973
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1719,11 +1729,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 3742546662540764109, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
-      insertIndex: -1
+    - targetCorrespondingSourceObject: {fileID: 202364688, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      insertIndex: 3
       addedObject: {fileID: 1930646328}
-    - targetCorrespondingSourceObject: {fileID: 5870790035848123411, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
-      insertIndex: -1
+    - targetCorrespondingSourceObject: {fileID: 1670256625, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      insertIndex: 3
       addedObject: {fileID: 272990340}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1717954561962503725, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
@@ -1841,11 +1851,6 @@ Transform:
   - {fileID: 83796068}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &882506462 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3742546662540764109, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
-  m_PrefabInstance: {fileID: 711512760}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &906031673
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2066,6 +2071,16 @@ RectTransform:
   m_AnchoredPosition: {x: 147.05, y: -115.450005}
   m_SizeDelta: {x: 161, y: 62.3}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1068367219 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9173983156334026967, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+  m_PrefabInstance: {fileID: 711512760}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1113564934 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 202364688, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+  m_PrefabInstance: {fileID: 711512760}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1171258047
 GameObject:
   m_ObjectHideFlags: 0
@@ -2099,11 +2114,6 @@ Transform:
   - {fileID: 1211476701}
   m_Father: {fileID: 227709619}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1194495356 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5870790035848123411, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
-  m_PrefabInstance: {fileID: 711512760}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1200373420
 GameObject:
   m_ObjectHideFlags: 0
@@ -2712,6 +2722,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1068367219}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 354495613}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnDisconnectedFromServer:
     m_PersistentCalls:
       m_Calls: []
@@ -2756,7 +2790,31 @@ MonoBehaviour:
       m_Calls: []
   OnShutdown:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1068367219}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 354495613}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   OnSessionListUpdate:
     m_PersistentCalls:
       m_Calls: []
@@ -3428,12 +3486,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1930646327}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.18437773, y: -0.54363364, z: -0.8170935, w: -0.053156808}
-  m_LocalPosition: {x: -0.0332, y: -0.0126, z: 0.01}
+  m_LocalRotation: {x: -0.8170935, y: -0.053156808, z: -0.18437773, w: 0.54363364}
+  m_LocalPosition: {x: 0.0332, y: -0.012599945, z: -0.059999943}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 882506462}
+  m_Father: {fileID: 1113564934}
   m_LocalEulerAnglesHint: {x: 245.231, y: 144.464, z: 15.731995}
 --- !u!114 &1930646329
 MonoBehaviour:
@@ -3572,7 +3630,7 @@ MonoBehaviour:
   desktopRig: {fileID: 91440377}
   forceVROnAndroid: 1
   rigSelected: 0
-  mode: 0
+  mode: 1
 --- !u!1 &2122864871
 GameObject:
   m_ObjectHideFlags: 0
