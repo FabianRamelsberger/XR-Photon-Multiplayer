@@ -4,29 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f246162-8a23-453d-aa9d-98983cbf20c9" name="Changes" comment="refactor: scene">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/VRInteraction.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.XR Multiplayer Assesment/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XR Multiplayer Assesment/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Player_Material_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Player_Material_1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Player_Material_2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Player_Material_2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/FusionAddons/FusionXRShared/Scripts/Desktop/RigSelection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VRInteraction/RigSelection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/FusionAddons/FusionXRShared/Scripts/Desktop/RigSelection.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VRInteraction/RigSelection.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ConstantSizeUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ConstantSizeUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ConstantSizeUI.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ConstantSizeUI.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Grabbing.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Grabbing/NetworkHandColliderGrabbableCube.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VRInteraction/NetworkHandColliderGrabbableCube.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Grabbing/NetworkHandColliderGrabbableCube.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VRInteraction/NetworkHandColliderGrabbableCube.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Player.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerColorInteractor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VRInteraction/PlayerColorInteractor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerColorInteractor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VRInteraction/PlayerColorInteractor.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerCubeSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PlayerCubeSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerCubeSpawner.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PlayerCubeSpawner.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerManagerScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PlayerManagerScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerManagerScript.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PlayerManagerScript.cs.meta" afterDir="false" />
-    </list>
+    <list default="true" id="3f246162-8a23-453d-aa9d-98983cbf20c9" name="Changes" comment="refactor: refactored folders, refactored Player.cs" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -186,7 +164,7 @@
       <workItem from="1713707116799" duration="15902000" />
       <workItem from="1713723741314" duration="1588000" />
       <workItem from="1713729878924" duration="3779000" />
-      <workItem from="1713774184306" duration="10590000" />
+      <workItem from="1713774184306" duration="10907000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit, gitignore">
       <option name="closed" value="true" />
@@ -364,7 +342,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713786344984</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="refactor: refactored folders, refactored Player.cs">
+      <option name="closed" value="true" />
+      <created>1713787132054</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1713787132054</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -417,7 +403,8 @@
     <MESSAGE value="refactoring: PlayerManagerScript.cs" />
     <MESSAGE value="refactor: PlayerCubeSpawner.cs" />
     <MESSAGE value="refactor: scene" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: scene" />
+    <MESSAGE value="refactor: refactored folders, refactored Player.cs" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: refactored folders, refactored Player.cs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

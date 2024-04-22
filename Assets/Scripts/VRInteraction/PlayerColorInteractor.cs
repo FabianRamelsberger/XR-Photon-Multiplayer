@@ -11,14 +11,15 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 
 //<summary>
-//PlayerColorInteractor description
+// This is used in the Network rig. It set the colour to the Player color.
+// Additionally, it sets a random colour and syncs it over the network
 //	/summary>
 public class PlayerColorInteractor : NetworkBehaviour
 {
     [SerializeField] private List<NetworkHandColliderGrabber> _networkHands;
-    private Material _playerMaterial;
     [Networked]
     public Color NetworkedPlayerColor { get; set; }
+    private Material _playerMaterial;
     [SerializeField] private List<MeshRenderer> _playerMeshRenderers;
     private ChangeDetector _changeDetector;
 
@@ -26,7 +27,7 @@ public class PlayerColorInteractor : NetworkBehaviour
     {
         _changeDetector = GetChangeDetector(ChangeDetector.Source.SimulationState);
     }
-    void Start()
+    private void Start()
     {
         _networkHands.ForEach(hand =>
         {
@@ -35,6 +36,7 @@ public class PlayerColorInteractor : NetworkBehaviour
 
         PlayerRef playerRef = GetComponent<NetworkObject>().InputAuthority;
         //This should just generate a new colour when the player sets the color
+        // we only want to generate a new random colour if we are the player
         if (Object.HasStateAuthority)
         {
             NetworkedPlayerColor = GetRandomColor();
@@ -68,7 +70,6 @@ public class PlayerColorInteractor : NetworkBehaviour
                             {
                                 meshRenderer.sharedMaterial = _playerMaterial;
                             }); });
-                   
                     break;
                 }
             }
@@ -80,14 +81,8 @@ public class PlayerColorInteractor : NetworkBehaviour
         grabbable.SetMaterial(_playerMaterial);
     }
 
-    public static Color GetRandomColor()
+    private static Color GetRandomColor()
     {
         return new Color(Random.value, Random.value, Random.value, 1.0f); // 1.0f is for full opacity
-    }
-    
-    void OnColorChanged()
-    {
-        Debug.Log($"Color changed to: {NetworkedPlayerColor} of player {Object.InputAuthority.PlayerId}");
-        //_playerMaterial = CubeManagerScript.Instance.AssignPlayerColor(Object.InputAuthority.PlayerId, _networkedPlayerColor); ;
     }
 }
