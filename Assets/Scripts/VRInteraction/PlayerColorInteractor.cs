@@ -28,8 +28,6 @@ public class PlayerColorInteractor : NetworkBehaviour
 
     private void Start()
     {
-        _networkHands.ForEach(hand => { hand.OnObjectGrabbedAction += OnObjectGrabbedAdjustColorToPlayer; });
-
         PlayerRef playerRef = GetComponent<NetworkObject>().InputAuthority;
         if (Object.HasStateAuthority)
         {
@@ -69,11 +67,6 @@ public class PlayerColorInteractor : NetworkBehaviour
                 }
             }
         }
-    }
-
-    private void OnObjectGrabbedAdjustColorToPlayer(NetworkHandColliderGrabbable grabbable)
-    {
-        grabbable.SetMaterial(_playerMaterial);
     }
 
 }

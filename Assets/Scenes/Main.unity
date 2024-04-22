@@ -920,7 +920,7 @@ GameObject:
   - component: {fileID: 227063176}
   - component: {fileID: 227063177}
   m_Layer: 5
-  m_Name: ContinueLobbyModal
+  m_Name: 2. ContinueLobbyModal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -991,9 +991,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1171258048}
   - {fileID: 1496016878}
   - {fileID: 227063176}
+  - {fileID: 1171258048}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &244965226
@@ -3808,7 +3808,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1171258048}
   m_Layer: 0
-  m_Name: --- LeaveLobbyModals
+  m_Name: 3. LeaveLobbyModals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4760,7 +4760,7 @@ GameObject:
   - component: {fileID: 1496016878}
   - component: {fileID: 1496016879}
   m_Layer: 5
-  m_Name: StartLobbyModal
+  m_Name: 1. StartLobbyModal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5780,7 +5780,7 @@ MonoBehaviour:
   desktopRig: {fileID: 91440377}
   forceVROnAndroid: 1
   rigSelected: 0
-  mode: 3
+  mode: 2
   _desktopCamera: {fileID: 2015979963}
   _vrCamera: {fileID: 1233288610}
 --- !u!1 &2038376870

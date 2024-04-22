@@ -18,7 +18,7 @@ using Random = UnityEngine.Random;
 //The class also facilitates teleportation of players to start positions, distributes cubes when players leave,
 //and dynamically updates player positions within a networked list structure.
 //Additionally, it supports RPCs to add cubes to players and manages the lifecycle of player references
-//and cube objects within the game.
+//and cube objects within the game.+
 //</summary>
 
 //	</summary>

@@ -8,6 +8,7 @@ using TMPro;
 using Fusion;
 using Fusion.XR.Shared.Grabbing.NetworkHandColliderBased;
 using FusionHelpers;
+using UnityEditor;
 
 [RequireComponent(typeof(NetworkHandColliderGrabbable))]
 public class NetworkHandColliderGrabbableCube : NetworkBehaviour
@@ -16,6 +17,9 @@ public class NetworkHandColliderGrabbableCube : NetworkBehaviour
     [SerializeField] private TextMeshProUGUI authorityText;
     [SerializeField] private TextMeshProUGUI debugText;
     [SerializeField] private MeshRenderer _cubeMeshRenderer;
+    [SerializeField, ReadOnly] private bool _cubeIsAlreadyOwnedByPlayer = false;
+
+    [Networked] public bool OwnershipIsGiven { get; set; }
     [SerializeField] private bool _cubeIsFromAPlayer = true;
 
     private void Awake()
@@ -27,9 +31,9 @@ public class NetworkHandColliderGrabbableCube : NetworkBehaviour
         grabbable.onDidUngrab.AddListener(OnDidUngrab);
     }
 
-    private void Start()
+    public override void Spawned()
     {
-        if (_cubeIsFromAPlayer)
+        if (_cubeIsFromAPlayer || OwnershipIsGiven)
         {
             AssignCubeToPlayer();
         }
@@ -39,7 +43,14 @@ public class NetworkHandColliderGrabbableCube : NetworkBehaviour
     {
         PlayerRef playerId = GetComponent<NetworkObject>().StateAuthority;
         Runner.WaitForSingleton<PlayerManagerScript>(
-            cubeManager => { cubeManager.RPC_AddCubeToPlayer(playerId, this); });
+            cubeManager =>
+            {
+                if (_cubeIsAlreadyOwnedByPlayer == false)
+                {
+                    _cubeIsAlreadyOwnedByPlayer = true;
+                    cubeManager.RPC_AddCubeToPlayer(playerId, this);
+                }
+            });
     }
 
     private void DebugLog(string debug)
@@ -75,6 +86,7 @@ public class NetworkHandColliderGrabbableCube : NetworkBehaviour
     void OnDidGrab(NetworkHandColliderGrabber newGrabber)
     {
         AssignCubeToPlayer();
+        OwnershipIsGiven = true;
         DebugLog($"{gameObject.name} grabbed by {newGrabber}");
     }
 }
