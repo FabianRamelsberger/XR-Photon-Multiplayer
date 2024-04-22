@@ -3,6 +3,7 @@
 # Created Date: 2024
 # --------------------------------------------------------------------------------*/
 
+using System;
 using UnityEngine;
 
 //<summary>
@@ -13,14 +14,21 @@ using UnityEngine;
 
 public class BillboardUI : MonoBehaviour
 {
-    [SerializeField] private RigSelection _rigSelection;
+    private RigSelection _rigSelection;
     [Header("Settings")]
     [SerializeField] private float _cameraDistance = 3.0F;
     [SerializeField] private float _smoothTime = 0.3F;
-
+    [SerializeField] private bool rotateTowardsCamera = true;
+    [SerializeField] private bool moveTowardsCamera = true;
+    
     private Vector3 _velocity = Vector3.zero;
     private Transform _target;
     private Camera _playerCamera;
+
+    private void Awake()
+    {
+        _rigSelection = UIManager.Instance.RigSelection;
+    }
 
     private void Start()
     {
@@ -45,9 +53,18 @@ public class BillboardUI : MonoBehaviour
         {
             return;
         }
-        Vector3 targetPosition = _playerCamera.transform.TransformPoint(new Vector3(0, 0, _cameraDistance));
-        transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref _velocity, _smoothTime);
-        var lookAtPos = new Vector3(_playerCamera.transform.position.x, transform.position.y, _playerCamera.transform.position.z);
-        transform.LookAt(lookAtPos);  
+
+        if (moveTowardsCamera)
+        {
+            Vector3 targetPosition = _playerCamera.transform.TransformPoint(new Vector3(0, 0, _cameraDistance));
+            transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref _velocity, _smoothTime);
+        }
+
+        if (rotateTowardsCamera)
+        {
+            var lookAtPos = new Vector3(_playerCamera.transform.position.x, transform.position.y,
+                _playerCamera.transform.position.z);
+            transform.LookAt(lookAtPos);
+        }
     }
 }

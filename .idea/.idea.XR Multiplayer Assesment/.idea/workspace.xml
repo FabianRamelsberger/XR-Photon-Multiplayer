@@ -4,18 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f246162-8a23-453d-aa9d-98983cbf20c9" name="Changes" comment="refactor: RigSelection.cs">
-      <change afterPath="$PROJECT_DIR$/Assets/Materials/Environment_NotWalkable_Ground_Material.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Materials/Environment_NotWalkable_Ground_Material.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ColorManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ColorManager.cs.meta" afterDir="false" />
+    <list default="true" id="3f246162-8a23-453d-aa9d-98983cbf20c9" name="Changes" comment="feature: player can now choose from 5 different colours">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.XR Multiplayer Assesment/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XR Multiplayer Assesment/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Environment_Ground_Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Environment_Ground_Material.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materials/Player_Material_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Player_Material_1.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materials/Player_Material_2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Player_Material_2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Materials/Concrete Grey.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/DemoSceneAssets/Materials/Concrete Grey.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Materials/Telport Anchor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Materials/Telport Anchor.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NetworkHandColliderGrabbableCube.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/NetworkHandColliderGrabbableCube.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/BillboardUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/BillboardUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ColorManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ColorManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/VRInteraction/PlayerColorInteractor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VRInteraction/PlayerColorInteractor.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -185,7 +182,7 @@
       <workItem from="1713707116799" duration="15902000" />
       <workItem from="1713723741314" duration="1588000" />
       <workItem from="1713729878924" duration="3779000" />
-      <workItem from="1713774184306" duration="15222000" />
+      <workItem from="1713774184306" duration="16645000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit, gitignore">
       <option name="closed" value="true" />
@@ -411,7 +408,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713789304775</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="feature: player can now choose from 5 different colours">
+      <option name="closed" value="true" />
+      <created>1713793301155</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1713793301155</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -441,7 +446,6 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="SHELVE_DETAILS_PREVIEW_SHOWN" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="feature: added OnPlayerJoinedScript.cs" />
     <MESSAGE value="feature: player spawns different objects, if the player interacts with one it sets the authority" />
     <MESSAGE value="feature: started to distribute colours over network" />
     <MESSAGE value="feature: specific color to each player" />
@@ -466,7 +470,8 @@
     <MESSAGE value="refactored: ConnectionManager.cs" />
     <MESSAGE value="refactor: formatted code" />
     <MESSAGE value="refactor: RigSelection.cs" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: RigSelection.cs" />
+    <MESSAGE value="feature: player can now choose from 5 different colours" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature: player can now choose from 5 different colours" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -515,10 +520,10 @@
           <line>27</line>
           <properties documentPath="C:\XR-Photon-Multiplayer\XR Multiplayer Assesment\Assets\Scripts\ConstantSizeUI.cs" containingFunctionPresentation="Method 'Start'">
             <startOffsets>
-              <option value="890" />
+              <option value="1108" />
             </startOffsets>
             <endOffsets>
-              <option value="922" />
+              <option value="1140" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="53" />

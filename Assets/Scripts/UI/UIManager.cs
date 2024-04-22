@@ -14,9 +14,9 @@ using System.Collections.Generic;
 using Unity.Collections;
 using Random = UnityEngine.Random;
 
-public class ColorManager : MonoBehaviour
+public class UIManager : MonoBehaviour
 {
-    public static ColorManager Instance;
+    public static UIManager Instance;
     
     [Serializable]
     public struct TogglesWithImages
@@ -26,7 +26,9 @@ public class ColorManager : MonoBehaviour
     }
     [SerializeField] private List<TogglesWithImages> _toggleImages;
     [SerializeField] private Button _joinButton;
-    
+
+    public RigSelection RigSelection => _rigSelection;
+    [SerializeField] private RigSelection _rigSelection;
     public Color SelectedColor => _selectedColor;
     [SerializeField, ReadOnly] private Color _selectedColor;
 

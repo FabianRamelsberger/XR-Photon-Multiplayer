@@ -33,7 +33,7 @@ public class PlayerColorInteractor : NetworkBehaviour
         PlayerRef playerRef = GetComponent<NetworkObject>().InputAuthority;
         if (Object.HasStateAuthority)
         {
-            NetworkedPlayerColor = ColorManager.Instance.SelectedColor;
+            NetworkedPlayerColor = UIManager.Instance.SelectedColor;
         }
 
         Runner.WaitForSingleton<PlayerManagerScript>(
