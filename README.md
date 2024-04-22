@@ -21,9 +21,9 @@ This document outlines the development and features of a networked VR applicatio
 - I have used the ParrelSync for testing. You can see this in the toolbar
 
 ## Builds
-
-  -  Android: Located in the specified project directory.
+-  Android: Located in the specified project directory.
 -  Desktop: Available in the project directory.
+- For easier testing, the desktop version is windowed
 
 ## Starting the Game
 
