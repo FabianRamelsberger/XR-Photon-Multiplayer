@@ -13,7 +13,15 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 
 //<summary>
-//CubeManagerScript description
+//The PlayerManagerScript manages player instances and interactions in a networked game environment.
+//It handles player properties, such as spawn positions and cube ownership, and manages a shared,
+//grabbable cube that players can interact with once spawned.
+//The class also facilitates teleportation of players to start positions, distributes cubes when players leave,
+//and dynamically updates player positions within a networked list structure.
+//Additionally, it supports RPCs to add cubes to players and manages the lifecycle of player references
+//and cube objects within the game.
+//</summary>
+
 //	</summary>
 public class PlayerManagerScript : NetworkBehaviour
 {
