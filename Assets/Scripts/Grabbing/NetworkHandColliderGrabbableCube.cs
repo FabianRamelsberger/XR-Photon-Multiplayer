@@ -37,7 +37,6 @@ public class NetworkHandColliderGrabbableCube : NetworkBehaviour
             cubeManager =>
             {
                 cubeManager.RPC_AddCubeToPlayer(playerId, this);
-
             });
     }
 

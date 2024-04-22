@@ -34,8 +34,12 @@ namespace Fusion.XR.Shared.Desktop
         public GameObject connexionHandler;
         public HardwareRig vrRig;
         public HardwareRig desktopRig;
-        Camera rigSelectionCamera;
 
+        public Camera RigSelectionCamera => _rigSelectionCamera;
+        private Camera _rigSelectionCamera;
+
+        public Camera RigCamera => _rigCamera;
+        private Camera _rigCamera;
         public bool forceVROnAndroid = true;
 
         public bool rigSelected = false;
@@ -48,10 +52,12 @@ namespace Fusion.XR.Shared.Desktop
             ForceDesktop
         }
         public Mode mode = Mode.SelectedByUI;
+        [SerializeField] private Camera _desktopCamera;
+        [SerializeField] private Camera _vrCamera;
 
         private void Awake()
         {
-            rigSelectionCamera = GetComponentInChildren<Camera>();
+            _rigSelectionCamera = GetComponentInChildren<Camera>();
             if (connexionHandler)
             {
                 connexionHandler.gameObject.SetActive(false);
@@ -128,6 +134,8 @@ namespace Fusion.XR.Shared.Desktop
         {
             gameObject.SetActive(false);
             vrRig.gameObject.SetActive(true);
+            _rigCamera = _vrCamera;
+
             SetVRPreference();
             OnConnectRigSelected();
         }
@@ -136,6 +144,8 @@ namespace Fusion.XR.Shared.Desktop
         {
             gameObject.SetActive(false);
             desktopRig.gameObject.SetActive(true);
+            _rigCamera = _desktopCamera;
+
             SetDesktopPreference();
             OnConnectRigSelected();
         }
@@ -157,7 +167,7 @@ namespace Fusion.XR.Shared.Desktop
             }
 
             if (OnSelectRig != null) OnSelectRig.Invoke();
-            if (rigSelectionCamera) rigSelectionCamera.gameObject.SetActive(false);
+            if (_rigSelectionCamera) _rigSelectionCamera.gameObject.SetActive(false);
             rigSelected = true;
         }
 
