@@ -1,11 +1,7 @@
+using Fusion;
 using Fusion.XR.Shared.Rig;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Serialization;
-
-
-namespace Fusion.XR.Shared.Desktop
-{
     /**
      * 
      * Script to display an overlay UI to select desktop or VR mode, and active the associated rig, alongside the connexion component
@@ -185,4 +181,3 @@ namespace Fusion.XR.Shared.Desktop
             PlayerPrefs.Save();
         }
     }
-}

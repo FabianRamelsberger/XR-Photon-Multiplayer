@@ -103,24 +103,24 @@ public class PlayerManagerScript : NetworkBehaviour
     public void PlayerLeftDistributeCubes(NetworkRunner runner, PlayerRef playerRef)
     {
         Player player = GetPlayerWithId(playerRef);
-        int objectIdStayedBehind = Random.Range(0, player.PlayerCubes.Count);
-        for (int i = 0; i < player.PlayerCubes.Count; i++)
+        int objectIdStayedBehind = Random.Range(0, player.PlayerCubeList.Count);
+        for (int i = 0; i < player.PlayerCubeList.Count; i++)
         {
-            player.PlayerCubes[i].Object.RequestStateAuthority();
+            player.PlayerCubeList[i].Object.RequestStateAuthority();
 
             if (objectIdStayedBehind == i)
             {
                 Player localPlayer = GetPlayerWithId(runner.LocalPlayer);
-                localPlayer.PlayerCubes.Add(player.PlayerCubes[i]);
+                localPlayer.PlayerCubeList.Add(player.PlayerCubeList[i]);
                 localPlayer.UpdatePlayerCubesMaterials();
             }
             else
             {
-                WaitUntilHasAuthorityAndDespawn(runner, player.PlayerCubes[i].Object, playerRef);
+                WaitUntilHasAuthorityAndDespawn(runner, player.PlayerCubeList[i].Object, playerRef);
             }
         }
 
-        player.PlayerCubes = new List<NetworkHandColliderGrabbableCube>();
+        player.PlayerCubeList.Clear();
     }
 
     private async void WaitUntilHasAuthorityAndDespawn(NetworkRunner runner, NetworkObject networkObject,
@@ -133,12 +133,12 @@ public class PlayerManagerScript : NetworkBehaviour
     public Material GetPlayerMaterial(PlayerRef playerRef)
     {
         var player = GetPlayerWithId(playerRef);
-        return player.playerMaterial;
+        return player.PlayerMaterial;
     }
 
     public Player GetPlayerWithId(PlayerRef playerRef)
     {
-        Player player =  _playerList.Find(player => player.playerRef == playerRef);
+        Player player =  _playerList.Find(player => player.PlayerRef == playerRef);
         if (player == null)
         {
             Debug.LogError($"Player with {playerRef} could not be found.");
@@ -150,8 +150,8 @@ public class PlayerManagerScript : NetworkBehaviour
     public void RPC_AddCubeToPlayer(PlayerRef playerRef, NetworkHandColliderGrabbableCube networkHandColliderGrabbableCube)
     {
         var player = GetPlayerWithId(playerRef);
-        if (!player.PlayerCubes.Contains(networkHandColliderGrabbableCube)) {
-            player.PlayerCubes.Add(networkHandColliderGrabbableCube);
+        if (!player.PlayerCubeList.Contains(networkHandColliderGrabbableCube)) {
+            player.PlayerCubeList.Add(networkHandColliderGrabbableCube);
         }
 
         player.UpdatePlayerCubesMaterials();
@@ -170,8 +170,7 @@ public class PlayerManagerScript : NetworkBehaviour
         
         if (assignedPlace != 0)
         {
-            _playerList[assignedPlace].playerRef = player;
-            _playerList[assignedPlace].DebugPlayerRef = player.ToString();
+            _playerList[assignedPlace].SetPlayerRef(player);
         }
         else
         {
@@ -197,12 +196,11 @@ public class PlayerManagerScript : NetworkBehaviour
     private Player AssignPlayerToList(PlayerRef newPlayerRef, PlayerRef toBeReplacedPlayerRef)
     {
         Player freePlayer = _playerList.FirstOrDefault(
-            playerCollection => playerCollection.playerRef == toBeReplacedPlayerRef);
+            playerCollection => playerCollection.PlayerRef == toBeReplacedPlayerRef);
 
         if (freePlayer != null)
         {
-            freePlayer.playerRef = newPlayerRef;
-            freePlayer.DebugPlayerRef = newPlayerRef.ToString();
+            freePlayer.SetPlayerRef(newPlayerRef);
             return freePlayer;
         }
         return null;

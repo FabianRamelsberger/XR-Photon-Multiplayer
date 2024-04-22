@@ -49,7 +49,6 @@ public class PlayerColorInteractor : NetworkBehaviour
                 {
                     meshRenderer.sharedMaterial = _playerMaterial;
                 }); });
-        
     }
 
     private void Update()

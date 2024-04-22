@@ -3003,20 +3003,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerList:
-  - DebugPlayerRef: 
-    playerMaterial: {fileID: 2100000, guid: a575a24b0d688ce4bb1718ed10594200, type: 2}
-    PlayerCubes: []
-    CubeSpawnPoints:
+  - _debugPlayerRef: 
+    _playerMaterial: {fileID: 2100000, guid: a575a24b0d688ce4bb1718ed10594200, type: 2}
+    _playerCubeList: []
+    _cubeSpawnPoints:
     - {fileID: 717898702}
     - {fileID: 1501110626}
-    PlayerSpawnPoint: {fileID: 546470601}
-  - DebugPlayerRef: 
-    playerMaterial: {fileID: 2100000, guid: b5444e5acd1b7014fb17a8bd988b2edd, type: 2}
-    PlayerCubes: []
-    CubeSpawnPoints:
+    _playerSpawnPoint: {fileID: 1881025803}
+  - _debugPlayerRef: 
+    _playerMaterial: {fileID: 2100000, guid: b5444e5acd1b7014fb17a8bd988b2edd, type: 2}
+    _playerCubeList: []
+    _cubeSpawnPoints:
     - {fileID: 2122864872}
     - {fileID: 1530565743}
-    PlayerSpawnPoint: {fileID: 1881025803}
+    _playerSpawnPoint: {fileID: 546470601}
   _sharedCubeSpawnPoint: {fileID: 454312184}
   _sharedCubePrefab: {fileID: 842953290498200545, guid: 0fbb9a06b435e7b419825310df9e948b, type: 3}
   _connectionManager: {fileID: 1470876663}
@@ -3053,9 +3053,7 @@ MonoBehaviour:
   _playerCubeToSpawnList:
   - {fileID: 880167981752953282, guid: 3efa5b3c8228828499c6d994930e2cf5, type: 3}
   _amountOfCubesPerPlayerToSpawn: 2
-  _independentCubeToSpawnList: []
   _connectionManager: {fileID: 1470876663}
-  playerManagerScript: {fileID: 1775053757}
 --- !u!1 &1813620349
 GameObject:
   m_ObjectHideFlags: 0

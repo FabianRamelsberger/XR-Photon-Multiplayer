@@ -4,22 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f246162-8a23-453d-aa9d-98983cbf20c9" name="Changes" comment="feature: camera follow will change depending on selected rig on ConstantSizeUI.cs">
+    <list default="true" id="3f246162-8a23-453d-aa9d-98983cbf20c9" name="Changes" comment="refactor: scene">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/VRInteraction.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.XR Multiplayer Assesment/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XR Multiplayer Assesment/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materials/Player_Material_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Player_Material_1.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materials/Player_Material_2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Player_Material_2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/FusionAddons/FusionAddons/ConnectionManager/Scripts/ConnectionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/FusionAddons/FusionAddons/ConnectionManager/Scripts/ConnectionManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CylinderGrabbable Variant.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CylinderGrabbable Variant.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerInteractionTable.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerInteractionTable.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CubeManagerScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerManagerScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CubeManagerScript.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerManagerScript.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CubeSpawnerScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CubeSpawnerScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Grabbing/NetworkHandColliderGrabbableCube.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Grabbing/NetworkHandColliderGrabbableCube.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerColorInteractor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerColorInteractor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Photon/FusionAddons/FusionXRShared/Scripts/Desktop/RigSelection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VRInteraction/RigSelection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Photon/FusionAddons/FusionXRShared/Scripts/Desktop/RigSelection.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VRInteraction/RigSelection.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ConstantSizeUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ConstantSizeUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ConstantSizeUI.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ConstantSizeUI.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Grabbing.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Grabbing/NetworkHandColliderGrabbableCube.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VRInteraction/NetworkHandColliderGrabbableCube.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Grabbing/NetworkHandColliderGrabbableCube.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VRInteraction/NetworkHandColliderGrabbableCube.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Player.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerColorInteractor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VRInteraction/PlayerColorInteractor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerColorInteractor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VRInteraction/PlayerColorInteractor.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerCubeSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PlayerCubeSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerCubeSpawner.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PlayerCubeSpawner.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerManagerScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PlayerManagerScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerManagerScript.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PlayerManagerScript.cs.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,9 +84,10 @@
     <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Scripts/CubeManagerScript.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CubeManagerScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../XR Multiplayer Assesment_clone_0/Assets/Scripts/CubeManagerScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Scripts/PlayerManagerScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerManagerScript.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -179,7 +186,7 @@
       <workItem from="1713707116799" duration="15902000" />
       <workItem from="1713723741314" duration="1588000" />
       <workItem from="1713729878924" duration="3779000" />
-      <workItem from="1713774184306" duration="8688000" />
+      <workItem from="1713774184306" duration="10590000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit, gitignore">
       <option name="closed" value="true" />
@@ -333,7 +340,31 @@
       <option name="project" value="LOCAL" />
       <updated>1713781590486</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="refactoring: PlayerManagerScript.cs">
+      <option name="closed" value="true" />
+      <created>1713785189836</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1713785189836</updated>
+    </task>
+    <task id="LOCAL-00021" summary="refactor: PlayerCubeSpawner.cs">
+      <option name="closed" value="true" />
+      <created>1713785682354</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1713785682354</updated>
+    </task>
+    <task id="LOCAL-00022" summary="refactor: scene">
+      <option name="closed" value="true" />
+      <created>1713786344984</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1713786344984</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -383,7 +414,10 @@
     <MESSAGE value="bugfix: fixed cube Physics" />
     <MESSAGE value="feature: spawn shared cube by script" />
     <MESSAGE value="feature: camera follow will change depending on selected rig on ConstantSizeUI.cs" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature: camera follow will change depending on selected rig on ConstantSizeUI.cs" />
+    <MESSAGE value="refactoring: PlayerManagerScript.cs" />
+    <MESSAGE value="refactor: PlayerCubeSpawner.cs" />
+    <MESSAGE value="refactor: scene" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: scene" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -402,33 +436,33 @@
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/PlayerManagerScript.cs</url>
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Gameplay/PlayerManagerScript.cs</url>
           <line>112</line>
           <properties documentPath="C:\XR-Photon-Multiplayer\XR Multiplayer Assesment\Assets\Scripts\CubeManagerScript.cs" containingFunctionPresentation="Method 'WaitUntilHasAuthorityAndDespawn'">
             <startOffsets>
-              <option value="4011" />
+              <option value="4620" />
             </startOffsets>
             <endOffsets>
-              <option value="4041" />
+              <option value="4650" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/PlayerManagerScript.cs</url>
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Gameplay/PlayerManagerScript.cs</url>
           <line>175</line>
           <properties documentPath="C:\XR-Photon-Multiplayer\XR Multiplayer Assesment\Assets\Scripts\CubeManagerScript.cs" containingFunctionPresentation="Method 'RemovePlayer'">
             <startOffsets>
-              <option value="5959" />
+              <option value="6501" />
             </startOffsets>
             <endOffsets>
-              <option value="6024" />
+              <option value="6566" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="47" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/ConstantSizeUI.cs</url>
+          <url>file://$PROJECT_DIR$/Assets/Scripts/UI/ConstantSizeUI.cs</url>
           <line>27</line>
           <properties documentPath="C:\XR-Photon-Multiplayer\XR Multiplayer Assesment\Assets\Scripts\ConstantSizeUI.cs" containingFunctionPresentation="Method 'Start'">
             <startOffsets>

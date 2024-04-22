@@ -19,7 +19,6 @@ public class NetworkHandColliderGrabbableCube : NetworkBehaviour
         grabbable.onDidGrab.AddListener(OnDidGrab);
         grabbable.onWillGrab.AddListener(OnWillGrab);
         grabbable.onDidUngrab.AddListener(OnDidUngrab);
-        
     }
 
     private void Start()
