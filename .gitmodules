@@ -1,0 +1,3 @@
+[submodule "Assets/FREngine"]
+	path = Assets/FREngine
+	url = https://github.com/FabianRamelsberger/FREngine.git
