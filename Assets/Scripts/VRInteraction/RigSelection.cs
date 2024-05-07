@@ -23,7 +23,7 @@ public interface IRigSelection
 
 public class RigSelection : MonoBehaviour, IRigSelection
 {
-    public UnityEvent onSelectRig;
+    private UnityEvent onSelectRig;
     public UnityEvent OnSelectRig => onSelectRig;
     public bool IsRigSelected => rigSelected;
     public bool IsVRRigSelected => vrRig && vrRig.isActiveAndEnabled;

@@ -38,7 +38,7 @@ public class BillboardUI : MonoBehaviour
         }
         else
         {
-            _rigSelection.onSelectRig.AddListener(OnUpdateCameraReference);
+            _rigSelection.OnSelectRig.AddListener(OnUpdateCameraReference);
         }
     }
 

@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f246162-8a23-453d-aa9d-98983cbf20c9" name="Changes" comment="feature: added EnableGameObjectListEvent">
+    <list default="true" id="3f246162-8a23-453d-aa9d-98983cbf20c9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.XR Multiplayer Assesment/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XR Multiplayer Assesment/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/FREngine" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FREngine" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,8 +61,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Photon/Fusion/Editor/Fusion.Unity.Editor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/PlayerManagerScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/ProjectSettings/EditorBuildSettings.asset" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/ProjectSettings/EditorBuildSettings.asset" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -412,7 +411,23 @@
       <option name="project" value="LOCAL" />
       <updated>1715092185455</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="feature: added extracted ui events">
+      <option name="closed" value="true" />
+      <created>1715092920870</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1715092920870</updated>
+    </task>
+    <task id="LOCAL-00033" summary="feature: added network events + cleanup">
+      <option name="closed" value="true" />
+      <created>1715096795964</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1715096795964</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -442,8 +457,6 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="SHELVE_DETAILS_PREVIEW_SHOWN" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="feature: playerLeaves one cube behind" />
-    <MESSAGE value="feature: playerGot teleported to start position after spawn" />
     <MESSAGE value="bugfix: left behind cubes gets now properly removed" />
     <MESSAGE value="feature: Players are now referenced in manager via PlayerReference" />
     <MESSAGE value="feature: added ConstantSizeUI" />
@@ -467,7 +480,9 @@
     <MESSAGE value="bugfix: fixed bug on PlayerRef.non cube" />
     <MESSAGE value="feature: added odin and FR engine&#10;feature added EnableGameObjectListEvent to FR Engine" />
     <MESSAGE value="feature: added EnableGameObjectListEvent" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature: added EnableGameObjectListEvent" />
+    <MESSAGE value="feature: added extracted ui events" />
+    <MESSAGE value="feature: added network events + cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature: added network events + cleanup" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
