@@ -920,7 +920,7 @@ GameObject:
   - component: {fileID: 225011586}
   - component: {fileID: 225011587}
   m_Layer: 0
-  m_Name: StartEvent
+  m_Name: UIStartEvent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3492,7 +3492,7 @@ GameObject:
   - component: {fileID: 954145440}
   - component: {fileID: 954145441}
   m_Layer: 0
-  m_Name: EndModalEvents
+  m_Name: UIEndModalEvents
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4704,7 +4704,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1470876661}
   - component: {fileID: 1470876663}
-  - component: {fileID: 1470876665}
+  - component: {fileID: 1470876664}
   m_Layer: 0
   m_Name: ConnectionManager + NetworkEvents
   m_TagString: Untagged
@@ -4746,7 +4746,7 @@ MonoBehaviour:
   _playerSpawnTransformList:
   - {fileID: 1881025803}
   - {fileID: 546470601}
---- !u!114 &1470876665
+--- !u!114 &1470876664
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4755,174 +4755,49 @@ MonoBehaviour:
   m_GameObject: {fileID: 1470876660}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -232609262, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Script: {fileID: 11500000, guid: e178b0f96578450e9bafbc803b761b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnInput:
-    m_PersistentCalls:
-      m_Calls: []
-  OnInputMissing:
-    m_PersistentCalls:
-      m_Calls: []
-  OnConnectedToServer:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 227063175}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1171258047}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1068367219}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 354495613}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnDisconnectedFromServer:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1470876663}
-        m_TargetAssemblyTypeName: ConnectionManager, Assembly-CSharp
-        m_MethodName: OnDisconnectedFromServer
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnConnectRequest:
-    m_PersistentCalls:
-      m_Calls: []
-  OnConnectFailed:
-    m_PersistentCalls:
-      m_Calls: []
-  PlayerJoined:
-    m_PersistentCalls:
-      m_Calls: []
-  PlayerLeft:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1775053757}
-        m_TargetAssemblyTypeName: CubeManagerScript, Assembly-CSharp
-        m_MethodName: PlayerLeftDistributeCubes
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1775053757}
-        m_TargetAssemblyTypeName: CubeManagerScript, Assembly-CSharp
-        m_MethodName: RemovePlayer
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnSimulationMessage:
-    m_PersistentCalls:
-      m_Calls: []
-  OnShutdown:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1068367219}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 354495613}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  OnSessionListUpdate:
-    m_PersistentCalls:
-      m_Calls: []
-  OnCustomAuthenticationResponse:
-    m_PersistentCalls:
-      m_Calls: []
-  OnHostMigration:
-    m_PersistentCalls:
-      m_Calls: []
-  OnSceneLoadDone:
-    m_PersistentCalls:
-      m_Calls: []
-  OnSceneLoadStart:
-    m_PersistentCalls:
-      m_Calls: []
-  OnReliableData:
-    m_PersistentCalls:
-      m_Calls: []
-  OnReliableProgress:
-    m_PersistentCalls:
-      m_Calls: []
-  OnObjectEnterAOI:
-    m_PersistentCalls:
-      m_Calls: []
-  OnObjectExitAOI:
-    m_PersistentCalls:
-      m_Calls: []
+  _connectedEvents:
+  - rid: 5169710331737669643
+  _disconnectedEvents:
+  - rid: -2
+  _playerLeftEvents:
+  - rid: 5169710331737669640
+  - rid: 5169710331737669641
+  _onShutDownEvents:
+  - rid: 5169710331737669644
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 5169710331737669640
+      type: {class: DistributeCubesEvent, ns: , asm: Assembly-CSharp}
+      data: 
+    - rid: 5169710331737669641
+      type: {class: RemoveNetworkPlayerEvent, ns: Gameplay, asm: Assembly-CSharp}
+      data: 
+    - rid: 5169710331737669643
+      type: {class: EnableGameObjectListEvent, ns: FREngine.Events, asm: FREvents}
+      data:
+        _gameObjectList:
+        - GameObject: {fileID: 227063175}
+          Enable: 0
+        - GameObject: {fileID: 1171258047}
+          Enable: 1
+        - GameObject: {fileID: 1068367219}
+          Enable: 0
+        - GameObject: {fileID: 354495613}
+          Enable: 0
+    - rid: 5169710331737669644
+      type: {class: EnableGameObjectListEvent, ns: FREngine.Events, asm: FREvents}
+      data:
+        _gameObjectList:
+        - GameObject: {fileID: 1068367219}
+          Enable: 1
+        - GameObject: {fileID: 354495613}
+          Enable: 1
 --- !u!1 &1487904461
 GameObject:
   m_ObjectHideFlags: 0
