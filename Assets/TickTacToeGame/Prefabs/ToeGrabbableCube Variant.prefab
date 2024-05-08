@@ -96,6 +96,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 880167981752953282, guid: 3efa5b3c8228828499c6d994930e2cf5, type: 3}
+      propertyPath: applyVelocityOnRelease
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 880167981752953282, guid: 3efa5b3c8228828499c6d994930e2cf5, type: 3}
       propertyPath: extrapolateWhileTakingAuthority
       value: 0
       objectReference: {fileID: 0}
