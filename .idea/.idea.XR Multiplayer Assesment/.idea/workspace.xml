@@ -4,8 +4,59 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f246162-8a23-453d-aa9d-98983cbf20c9" name="Changes" comment="">
+    <list default="true" id="3f246162-8a23-453d-aa9d-98983cbf20c9" name="Changes" comment="feature: added new tictactoe assets&#10;feature: added anchor mechanic">
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Materials/Table_Interactables.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/XR Interaction Toolkit/3.0.1/Starter Assets/Materials/Table_Interactables.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Events.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Events/DisableGrabableEvent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Events/DisableGrabableEvent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Events/DistributeCubesEvent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Events/DistributeCubesEvent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Events/RemoveNetworkPlayerEvent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Events/RemoveNetworkPlayerEvent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TickTacToeGame.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TickTacToeGame/Materials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TickTacToeGame/Materials/PlayCubeMaterial.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TickTacToeGame/Materials/PlayCubeMaterial.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TickTacToeGame/Materials/PlayField-Texture.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TickTacToeGame/Materials/PlayField-Texture.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TickTacToeGame/Materials/PlayFieldHover.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TickTacToeGame/Materials/PlayFieldHover.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TickTacToeGame/Materials/TickCubeMaterial.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TickTacToeGame/Materials/TickCubeMaterial.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TickTacToeGame/Materials/ToeCubeMaterial.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TickTacToeGame/Materials/ToeCubeMaterial.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TickTacToeGame/Models.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TickTacToeGame/Prefabs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TickTacToeGame/Prefabs/TickVisualCube Variant.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TickTacToeGame/Prefabs/TickVisualCube Variant.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TickTacToeGame/Prefabs/ToeGrabbableCube Variant.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TickTacToeGame/Prefabs/ToeGrabbableCube Variant.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TickTacToeGame/Prefabs/ToeVisualCube.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TickTacToeGame/Prefabs/ToeVisualCube.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TickTacToeGame/Scripts.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TickTacToeGame/Scripts/CreateToeVisualAndDestroyOld.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TickTacToeGame/Scripts/CreateToeVisualAndDestroyOld.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TickTacToeGame/Scripts/GrabbableIsReleasedCondition.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TickTacToeGame/Scripts/GrabbableIsReleasedCondition.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TickTacToeGame/Scripts/ToeCubeElement.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TickTacToeGame/Scripts/ToeCubeElement.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TickTacToeGame/Textures.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TickTacToeGame/Textures/PlayField-Texture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TickTacToeGame/Textures/PlayField-Texture.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TickTacToeGame/Textures/Tic-Texture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TickTacToeGame/Textures/Tic-Texture.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TickTacToeGame/Textures/Toe-Texture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TickTacToeGame/Textures/Toe-Texture.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.XR Multiplayer Assesment/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XR Multiplayer Assesment/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/FREngine" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FREngine" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Player_Material_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Player_Material_1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NetworkHandColliderGrabbableCube.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/NetworkHandColliderGrabbableCube.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/DistributeCubesEvent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/DistributeCubesEvent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/RemoveNetworkPlayerEvent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/RemoveNetworkPlayerEvent.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,10 +108,13 @@
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/dc753a1061284f8e971ee88ee4826eee46ac00/8f/b9c9a0cc/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/dc753a1061284f8e971ee88ee4826eee46ac00/af/3b47d2f5/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/f67debe1efd242948106f1922bfac1c7176c00/df/89df4246/EventDispatcher.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FREngine/Events/Scripts/Events/EnableComponentEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FREngine/Events/Scripts/Events/SetTransformToAnchorTransformEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Photon/Fusion/Editor/Fusion.Unity.Editor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/PlayerManagerScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Scripts/VRInteraction/RigSelection.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TickTacToeGame/Scripts/GrabbableIsReleasedCondition.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TickTacToeGame/Scripts/ToeCubeElement.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -74,30 +128,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.39954597&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/XR-Photon-Multiplayer/XR Multiplayer Assesment&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "XThreadsFramesViewSplitterKey": "0.39954597",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/XR-Photon-Multiplayer/XR Multiplayer Assesment",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "CodeLensConfigurable",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\fabia\\AppData\\Local\\JetBrains\\Shared\\vAny\\DecompilerCache&quot;,
-      &quot;C:\\Users\\fabia\\AppData\\Local\\JetBrains\\Shared\\vAny\\SourcesCache&quot;,
-      &quot;C:\\Users\\fabia\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\fabia\\AppData\\Local\\JetBrains\\Shared\\vAny\\DecompilerCache",
+      "C:\\Users\\fabia\\AppData\\Local\\JetBrains\\Shared\\vAny\\SourcesCache",
+      "C:\\Users\\fabia\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity 2022.3.21f1\Editor\Unity.exe" />
@@ -163,6 +217,7 @@
       <workItem from="1713798402797" duration="1185000" />
       <workItem from="1713801397125" duration="1733000" />
       <workItem from="1715097204822" duration="172000" />
+      <workItem from="1715163369079" duration="5858000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit, gitignore">
       <option name="closed" value="true" />
@@ -436,7 +491,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715097363279</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="feature: created basic features for tic tac toe">
+      <option name="closed" value="true" />
+      <created>1715163410622</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1715163410622</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -466,9 +529,6 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="SHELVE_DETAILS_PREVIEW_SHOWN" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="feature: Players are now referenced in manager via PlayerReference" />
-    <MESSAGE value="feature: added ConstantSizeUI" />
-    <MESSAGE value="bugfix: cleanup" />
     <MESSAGE value="feature: added xr rig again" />
     <MESSAGE value="feature: adjusted hand position" />
     <MESSAGE value="feature: rig performance optimization" />
@@ -491,7 +551,10 @@
     <MESSAGE value="feature: added extracted ui events" />
     <MESSAGE value="feature: added network events + cleanup" />
     <MESSAGE value="refactored: RigSelection.cs" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactored: RigSelection.cs" />
+    <MESSAGE value="feature: created basic features for tic tac toe" />
+    <MESSAGE value="feature: added new tictactoe assets" />
+    <MESSAGE value="feature: added new tictactoe assets&#10;feature: added anchor mechanic" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature: added new tictactoe assets&#10;feature: added anchor mechanic" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
