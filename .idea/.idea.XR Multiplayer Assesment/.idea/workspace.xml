@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f246162-8a23-453d-aa9d-98983cbf20c9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.XR Multiplayer Assesment/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XR Multiplayer Assesment/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/FREngine" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FREngine" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,6 +60,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Photon/Fusion/Editor/Fusion.Unity.Editor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/PlayerManagerScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Scripts/VRInteraction/RigSelection.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -162,6 +162,7 @@
       <workItem from="1713774184306" duration="16645000" />
       <workItem from="1713798402797" duration="1185000" />
       <workItem from="1713801397125" duration="1733000" />
+      <workItem from="1715097204822" duration="172000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit, gitignore">
       <option name="closed" value="true" />
@@ -427,7 +428,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715096795964</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="refactored: RigSelection.cs">
+      <option name="closed" value="true" />
+      <created>1715097363279</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1715097363279</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -457,7 +466,6 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="SHELVE_DETAILS_PREVIEW_SHOWN" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="bugfix: left behind cubes gets now properly removed" />
     <MESSAGE value="feature: Players are now referenced in manager via PlayerReference" />
     <MESSAGE value="feature: added ConstantSizeUI" />
     <MESSAGE value="bugfix: cleanup" />
@@ -482,7 +490,8 @@
     <MESSAGE value="feature: added EnableGameObjectListEvent" />
     <MESSAGE value="feature: added extracted ui events" />
     <MESSAGE value="feature: added network events + cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature: added network events + cleanup" />
+    <MESSAGE value="refactored: RigSelection.cs" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactored: RigSelection.cs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
