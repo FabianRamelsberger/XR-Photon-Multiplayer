@@ -20,7 +20,14 @@ public class PlayerCubeSpawner : MonoBehaviour
     [Range(1,6)]
     [SerializeField] private int _amountOfCubesPerPlayerToSpawn;
     [SerializeField] private ConnectionManager _connectionManager;
-    private PlayerManagerScript _playerManagerScript;
+    
+     [Header("Tick tock toe")]
+     [SerializeField] private NetworkHandColliderGrabbable _playerToeObject;
+     [SerializeField] private NetworkHandColliderGrabbable _playerTickObject;
+     [Range(1,6)]
+     [SerializeField] private int _amountOfTicksPerPlayerToSpawn;
+
+     private PlayerManagerScript _playerManagerScript;
     public delegate void OnBeforeSpawned(NetworkRunner runner, NetworkObject obj);
 
     private void Awake()
@@ -43,6 +50,15 @@ public class PlayerCubeSpawner : MonoBehaviour
             NetworkHandColliderGrabbable randomPlayerCube = GetRandomCube();
             _connectionManager.Runner.Spawn(
                 randomPlayerCube, cubeSpawnPoints[i].position, Quaternion.identity, playerRef, InitializeObjBeforeSpawn);
+        }
+
+        NetworkHandColliderGrabbable  grabbable = player.PlayerRef.PlayerId % 2 == 0 ? _playerTickObject : _playerToeObject;
+        List<Transform> toeSpawnPoints = player.ToeSpawnPoints;
+        for (int i = 0; i < _amountOfTicksPerPlayerToSpawn; i++)
+        {
+            _connectionManager.Runner.Spawn(
+                grabbable, toeSpawnPoints[i].position, Quaternion.identity, playerRef, InitializeObjBeforeSpawn);
+            if (toeSpawnPoints.Count < i) return;
         }
     }
 

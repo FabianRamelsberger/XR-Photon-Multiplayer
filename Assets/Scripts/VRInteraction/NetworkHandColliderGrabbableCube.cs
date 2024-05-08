@@ -43,12 +43,12 @@ public class NetworkHandColliderGrabbableCube : NetworkBehaviour
     {
         PlayerRef playerId = GetComponent<NetworkObject>().StateAuthority;
         Runner.WaitForSingleton<PlayerManagerScript>(
-            cubeManager =>
+            playerManager =>
             {
                 if (_cubeIsAlreadyOwnedByPlayer == false)
                 {
                     _cubeIsAlreadyOwnedByPlayer = true;
-                    cubeManager.RPC_AddCubeToPlayer(playerId, this);
+                    playerManager.RPC_AddCubeToPlayer(playerId, this);
                 }
             });
     }

@@ -1,4 +1,6 @@
 ﻿using FREngine.Events;
+using Fusion;
+using Fusion.XR.Shared.Grabbing.NetworkHandColliderBased;
 using UnityEngine;
 
 namespace TickTacToeGame.Scripts
@@ -24,7 +26,8 @@ namespace TickTacToeGame.Scripts
 
                 go.transform.position = _parentTransform.position;
                 go.transform.rotation = new Quaternion();
-                GameObject.Destroy(emitter.gameObject);
+                PlayerManagerScript.Instance.DespawnNetworkObject(
+                    toeCubeElement.GetComponent<NetworkObject>());
             }
         }
     }

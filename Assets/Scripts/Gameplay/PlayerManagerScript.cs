@@ -120,6 +120,12 @@ public class PlayerManagerScript : NetworkBehaviour
         player.PlayerCubeList.Clear();
     }
 
+    public void DespawnNetworkObject(NetworkObject networkObject)
+    {
+        WaitUntilHasAuthorityAndDespawn(Runner, networkObject,
+            networkObject.StateAuthority);
+    }
+    
     private async void WaitUntilHasAuthorityAndDespawn(NetworkRunner runner, NetworkObject networkObject,
         PlayerRef playerRef)
     {
