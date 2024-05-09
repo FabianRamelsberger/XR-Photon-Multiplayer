@@ -24,6 +24,7 @@ namespace FREngine.Events
             gameObject.transform.parent = _anchorTransform;
             gameObject.transform.localPosition = Vector3.zero;
             gameObject.gameObject.transform.localRotation = new Quaternion(0,0,0,0);
+            gameObject.transform.parent = null;
             gameObject.GetComponent<NetworkHandColliderGrabbable>().enabled = false;
         }
     }

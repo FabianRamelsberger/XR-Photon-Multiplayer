@@ -32,19 +32,21 @@ public class PlayerManagerScript : NetworkBehaviour
     [SerializeField] private List<Player> _playerList;
 
     [Header("Shared Cube")]
-    
     [SerializeField] private Transform _sharedCubeSpawnPoint;
    
-    [Networked] private bool HasSharedCubeSpawned { get; set; }
+    [Networked] private bool _hasSharedCubeSpawned { get; set; }
     [Tooltip("The shared cube can only be spawned once." +
              "It is initialized as PlayerRef.None -> so every Player can grab it." +
              "Only after one Player grabbed it could he hold it.")]
     [SerializeField] private NetworkHandColliderGrabbableCube _sharedCubePrefab;
-
-    
     [Header("References")]
     [SerializeField] private ConnectionManager _connectionManager;
 
+    [Tooltip("This game can only be played with up to 2 players.")]
+    [Networked] public bool TickPlayerSpot { get; set; }
+    [Networked] public bool ToePlayerSpot { get; set; }
+    [SerializeField, ReadOnly] private bool playerUsesTick = false;
+    [SerializeField, ReadOnly] private bool playerUsesToe = false;
     private struct PlayerRefPlaceInPlayerListNetworkStruct : INetworkStruct
     {
         [Networked, Capacity(16)]
@@ -76,9 +78,9 @@ public class PlayerManagerScript : NetworkBehaviour
 
     private void SpawnSharedCube()
     {
-        if (HasSharedCubeSpawned == false)
+        if (_hasSharedCubeSpawned == false)
         {
-            HasSharedCubeSpawned = true;
+            _hasSharedCubeSpawned = true;
             Runner.Spawn(_sharedCubePrefab, _sharedCubeSpawnPoint.position, _sharedCubeSpawnPoint.rotation,
                 PlayerRef.None, InitializeObjBeforeSpawn);
         }
@@ -116,8 +118,31 @@ public class PlayerManagerScript : NetworkBehaviour
                 WaitUntilHasAuthorityAndDespawn(runner, player.PlayerCubeList[i].Object, playerRef);
             }
         }
-
+        
         player.PlayerCubeList.Clear();
+    }
+    
+    // is called on Network Event Component in the Connection Manager GameObject
+    public void PlayerLeftClearTickTackToe(NetworkRunner runner, PlayerRef playerRef)
+    {
+        if (playerUsesTick)
+        {
+            TickPlayerSpot = false;
+            playerUsesTick = false;
+        } else if (playerUsesToe)
+        {
+            ToePlayerSpot = false;
+            playerUsesToe = false;
+        }
+        
+        Player player = GetPlayerWithId(playerRef);
+        for (int i = 0; i < player.PlayerToeList.Count; i++)
+        {
+            player.PlayerToeList[i].Object.RequestStateAuthority();
+            WaitUntilHasAuthorityAndDespawn(runner, player.PlayerToeList[i].Object, playerRef);
+        }
+        
+        player.PlayerToeList.Clear();
     }
 
     public void DespawnNetworkObject(NetworkObject networkObject)
@@ -154,7 +179,14 @@ public class PlayerManagerScript : NetworkBehaviour
     {
         var player = GetPlayerWithId(playerRef);
         if (!player.PlayerCubeList.Contains(networkHandColliderGrabbableCube)) {
-            player.PlayerCubeList.Add(networkHandColliderGrabbableCube);
+            if (networkHandColliderGrabbableCube.GetComponent<ToeCubeElement>())
+            {
+                player.PlayerToeList.Add(networkHandColliderGrabbableCube);
+            }
+            else
+            {
+                player.PlayerCubeList.Add(networkHandColliderGrabbableCube);
+            }
         }
 
         player.UpdatePlayerCubesMaterials();
@@ -207,5 +239,17 @@ public class PlayerManagerScript : NetworkBehaviour
             return freePlayer;
         }
         return null;
+    }
+
+    public void SetTickForPlayer()
+    {
+        playerUsesTick = true;
+        TickPlayerSpot = true;
+    }
+
+    public void SetToeForPlayer()
+    {
+        playerUsesToe = true;
+        ToePlayerSpot = true;
     }
 }

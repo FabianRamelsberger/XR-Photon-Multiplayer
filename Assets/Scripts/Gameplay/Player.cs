@@ -14,7 +14,8 @@ public class Player
     [SerializeField, ReadOnly] private string _debugPlayerRef;
     private PlayerRef _playerRef;
     [SerializeField] private Material _playerMaterial;
-    [SerializeField] private List<NetworkHandColliderGrabbableCube> _playerCubeList;
+    [SerializeField, ReadOnly] private List<NetworkHandColliderGrabbableCube> _playerCubeList;
+    [SerializeField, ReadOnly] private List<NetworkHandColliderGrabbableCube> _playerToeList;
     [SerializeField] private List<Transform> _cubeSpawnPoints;
     [SerializeField] private Transform _playerSpawnPoint;
 
@@ -28,6 +29,8 @@ public class Player
     public Transform PlayerSpawnPoint => _playerSpawnPoint;
 
     public List<Transform> ToeSpawnPoints => _toeSpawnPoints;
+    public List<NetworkHandColliderGrabbableCube> PlayerToeList => _playerToeList;
+
 
     public void SetPlayerRef(PlayerRef playerRef)
     {

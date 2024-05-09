@@ -5,12 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f246162-8a23-453d-aa9d-98983cbf20c9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/TickTacToeGame/Scripts/GrabberIsLocalPlayerCondition.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Events/ClearTickTackToeFieldEvent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Events/ClearTickTackToeFieldEvent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/FusionHelpers/FusionRunnerSingletons.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/FusionHelpers/FusionRunnerSingletons.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.XR Multiplayer Assesment/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XR Multiplayer Assesment/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/FREngine" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FREngine" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Player_Material_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Player_Material_1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Player_Material_2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Player_Material_2.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Events/DisableGrabableEvent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/DisableGrabableEvent.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Events/DistributeCubesEvent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/DistributeCubesEvent.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Events/RemoveNetworkPlayerEvent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/RemoveNetworkPlayerEvent.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FusionHelpers/Singleton.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FusionHelpers/Singleton/FusionRunnerSingletons.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FusionHelpers/Singleton/FusionRunnerSingletons.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PlayerCubeSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PlayerPropertySpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PlayerCubeSpawner.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PlayerPropertySpawner.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PlayerManagerScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PlayerManagerScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TickTacToeGame/Prefabs/TickGrabbableCube Variant Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TickTacToeGame/Prefabs/TickGrabbableCube Variant Variant.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TickTacToeGame/Prefabs/ToeGrabbableCube Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TickTacToeGame/Prefabs/ToeGrabbableCube Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TickTacToeGame/Scripts/GrabberIsLocalPlayerCondition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TickTacToeGame/Scripts/GrabberIsLocalPlayerCondition.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TickTacToeGame/Scripts/SetTransformToAnchorTransformEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TickTacToeGame/Scripts/SetTransformToAnchorTransformEvent.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +55,8 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/228a75ed9d5b4a658c89f48527e7e2e0175400/33/be15e70c/Component.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/4b234520e36749be9cf6b053d911690f46ac00/1e/057005ca/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/e2/e6e5235d/Action`1.cs" root0="SKIP_HIGHLIGHTING" />
@@ -66,8 +85,8 @@
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/f67debe1efd242948106f1922bfac1c7176c00/df/89df4246/EventDispatcher.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/FREngine/Events/Scripts/Events/EnableComponentEvent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/FREngine/Events/Scripts/Events/SetTransformToAnchorTransformEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Photon/Fusion/Editor/Fusion.Unity.Editor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Events/ClearTickTackToeFieldEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/PlayerManagerScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TickTacToeGame/Scripts/GrabbableIsReleasedCondition.cs" root0="FORCE_HIGHLIGHTING" />
@@ -90,7 +109,7 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "XThreadsFramesViewSplitterKey": "0.3155505",
+    "XThreadsFramesViewSplitterKey": "0.19750284",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "C:/XR-Photon-Multiplayer/XR Multiplayer Assesment",
     "node.js.detected.package.eslint": "true",
@@ -136,10 +155,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="17560">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="33628">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="17560" />
+      <option name="pid" value="33628" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -176,6 +195,7 @@
       <workItem from="1715097204822" duration="172000" />
       <workItem from="1715163369079" duration="10720000" />
       <workItem from="1715178773818" duration="4128000" />
+      <workItem from="1715246470155" duration="3382000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit, gitignore">
       <option name="closed" value="true" />
@@ -566,43 +586,17 @@
           <option name="timeStamp" value="57" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Gameplay/PlayerManagerScript.cs</url>
-          <line>132</line>
-          <properties documentPath="C:\XR-Photon-Multiplayer\XR Multiplayer Assesment\Assets\Scripts\Gameplay\PlayerManagerScript.cs" containingFunctionPresentation="Method 'WaitUntilHasAuthorityAndDespawn'">
-            <startOffsets>
-              <option value="4825" />
-            </startOffsets>
-            <endOffsets>
-              <option value="4855" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="59" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/TickTacToeGame/Scripts/GrabberIsLocalPlayerCondition.cs</url>
-          <line>14</line>
+          <line>18</line>
           <properties documentPath="C:\XR-Photon-Multiplayer\XR Multiplayer Assesment\Assets\TickTacToeGame\Scripts\GrabberIsLocalPlayerCondition.cs" containingFunctionPresentation="Method 'Execute'">
             <startOffsets>
-              <option value="488" />
+              <option value="587" />
             </startOffsets>
             <endOffsets>
-              <option value="542" />
+              <option value="641" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="60" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/UI/BillboardUI.cs</url>
-          <line>40</line>
-          <properties documentPath="C:\XR-Photon-Multiplayer\XR Multiplayer Assesment\Assets\Scripts\UI\BillboardUI.cs" containingFunctionPresentation="Method 'Start'">
-            <startOffsets>
-              <option value="1235" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1298" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="61" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

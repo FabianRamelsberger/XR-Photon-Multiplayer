@@ -12,6 +12,10 @@ public class GrabberIsLocalPlayerCondition : ICondition
     {
         var grabbable = emitter.GetComponentInParent<NetworkHandColliderGrabbable>();
         PlayerRef localPlayer = PlayerManagerScript.Instance.Runner.LocalPlayer;
+        if (grabbable == null || localPlayer == null)
+        {
+           return false;
+        }
         return localPlayer == grabbable.Object.StateAuthority;
     }
 }

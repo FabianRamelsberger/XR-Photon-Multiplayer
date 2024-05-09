@@ -53,6 +53,10 @@ PrefabInstance:
       value: TickGrabbableCube Variant Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6274272540596902255, guid: 9f2abfab3bee2de4ca98522b75a20afc, type: 3}
+      propertyPath: Flags
+      value: 526593
+      objectReference: {fileID: 0}
+    - target: {fileID: 6274272540596902255, guid: 9f2abfab3bee2de4ca98522b75a20afc, type: 3}
       propertyPath: SortKey
       value: 832212000
       objectReference: {fileID: 0}

@@ -9,19 +9,20 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 
 //<summary>
-//The PlayerCubeSpawner is responsible for spawning cubes specific to each player in a networked game.
+//The PlayerPropertySpawner is responsible for spawning cubes, and play material (Tick Tack Toe)
+//specific to each player in a networked game.
 //It uses a list of NetworkHandColliderGrabbable prefabs to spawn a predetermined number
 //of cubes for each player at designated spawn points.
 //	</summary>
 [RequireComponent(typeof(PlayerManagerScript))]
-public class PlayerCubeSpawner : MonoBehaviour
+public class PlayerPropertySpawner : MonoBehaviour
 {
     [SerializeField] private List<NetworkHandColliderGrabbable> _playerCubeToSpawnList;
     [Range(1,6)]
     [SerializeField] private int _amountOfCubesPerPlayerToSpawn;
     [SerializeField] private ConnectionManager _connectionManager;
     
-     [Header("Tick tock toe")]
+     [Header("Tick tack toe")]
      [SerializeField] private NetworkHandColliderGrabbable _playerToeObject;
      [SerializeField] private NetworkHandColliderGrabbable _playerTickObject;
      [Range(1,6)]
@@ -52,7 +53,24 @@ public class PlayerCubeSpawner : MonoBehaviour
                 randomPlayerCube, cubeSpawnPoints[i].position, Quaternion.identity, playerRef, InitializeObjBeforeSpawn);
         }
 
-        NetworkHandColliderGrabbable  grabbable = player.PlayerRef.PlayerId % 2 == 0 ? _playerTickObject : _playerToeObject;
+        NetworkHandColliderGrabbable grabbable = null; 
+        if (PlayerManagerScript.Instance.TickPlayerSpot == false)
+        {
+            grabbable = _playerTickObject;
+            PlayerManagerScript.Instance.SetTickForPlayer();
+        }
+        else if(PlayerManagerScript.Instance.ToePlayerSpot == false)
+        {
+            grabbable = _playerToeObject;
+            PlayerManagerScript.Instance.SetToeForPlayer();
+        }
+
+        //Currently there are no more than two players allowed.
+        if (grabbable == null)
+        {
+            return;
+        }
+        
         List<Transform> toeSpawnPoints = player.ToeSpawnPoints;
         for (int i = 0; i < _amountOfTicksPerPlayerToSpawn; i++)
         {
