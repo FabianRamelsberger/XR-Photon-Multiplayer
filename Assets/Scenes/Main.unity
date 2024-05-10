@@ -7777,7 +7777,7 @@ MonoBehaviour:
   _playerLeftEvents:
   - rid: 5169710372590452736
   - rid: 5169710331737669640
-  - rid: 5169710331737669641
+  - rid: 5169710394717241344
   _onShutDownEvents:
   - rid: 5169710331737669644
   references:
@@ -7830,6 +7830,13 @@ MonoBehaviour:
     - rid: 5169710372590452736
       type: {class: ClearTickTackToeFieldEvent, ns: , asm: Assembly-CSharp}
       data: 
+    - rid: 5169710394717241344
+      type: {class: DelayEvent, ns: , asm: Assembly-CSharp}
+      data:
+        _waitForSeconds: 1
+        _eventsToExecuteAfterWait: []
+        _networkPlayerEvents:
+        - rid: 5169710331737669641
 --- !u!1 &1475566528
 GameObject:
   m_ObjectHideFlags: 0
@@ -8532,6 +8539,7 @@ MonoBehaviour:
     - {fileID: 717898702}
     - {fileID: 1501110626}
     _playerSpawnPoint: {fileID: 1881025803}
+    _tickTackToeGameObject: {fileID: 7152303852384202077, guid: 5d87e5426a53aba4b8d632042785e303, type: 3}
     _toeSpawnPoints:
     - {fileID: 946189150}
     - {fileID: 1971702647}
@@ -8547,6 +8555,7 @@ MonoBehaviour:
     - {fileID: 2122864872}
     - {fileID: 1530565743}
     _playerSpawnPoint: {fileID: 546470601}
+    _tickTackToeGameObject: {fileID: 1300129996097293415, guid: 9f2abfab3bee2de4ca98522b75a20afc, type: 3}
     _toeSpawnPoints:
     - {fileID: 1545986561}
     - {fileID: 965370306}
@@ -8557,8 +8566,6 @@ MonoBehaviour:
   _sharedCubeSpawnPoint: {fileID: 454312184}
   _sharedCubePrefab: {fileID: 842953290498200545, guid: 0fbb9a06b435e7b419825310df9e948b, type: 3}
   _connectionManager: {fileID: 1470876663}
-  _TickPlayerSpot: 0
-  _ToePlayerSpot: 0
 --- !u!114 &1775053758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8593,9 +8600,7 @@ MonoBehaviour:
   - {fileID: 880167981752953282, guid: 3efa5b3c8228828499c6d994930e2cf5, type: 3}
   _amountOfCubesPerPlayerToSpawn: 2
   _connectionManager: {fileID: 1470876663}
-  _playerToeObject: {fileID: 1300129996097293415, guid: 9f2abfab3bee2de4ca98522b75a20afc, type: 3}
-  _playerTickObject: {fileID: 6652644798423611702, guid: a00ba898dc6704a448576d3a0354f22d, type: 3}
-  _amountOfTicksPerPlayerToSpawn: 5
+  _amountOfTickTackToesPerPlayerToSpawn: 5
 --- !u!1 &1788337709
 GameObject:
   m_ObjectHideFlags: 0

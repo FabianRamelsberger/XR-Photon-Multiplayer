@@ -6,6 +6,7 @@
 using System;
 using System.Collections.Generic;
 using Fusion;
+using Fusion.XR.Shared.Grabbing.NetworkHandColliderBased;
 using UnityEngine;
 
 [Serializable]
@@ -20,8 +21,11 @@ public class Player
     [SerializeField] private Transform _playerSpawnPoint;
 
     [Header("Tick Tack Toe Gameplay")]
+    [SerializeField]
+    private NetworkHandColliderGrabbable _tickTackToeGameObject;
     [SerializeField] private List<Transform> _toeSpawnPoints;
-    
+    public NetworkHandColliderGrabbable TickTackToeGameObject => _tickTackToeGameObject;
+
     public PlayerRef PlayerRef => _playerRef;
     public Material PlayerMaterial => _playerMaterial;
     public List<NetworkHandColliderGrabbableCube> PlayerCubeList => _playerCubeList;

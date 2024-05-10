@@ -31,7 +31,7 @@ namespace Fusion.XR.Shared
             await o.EnsureHasStateAuthority(PlayerRef.None);
         }
 
-        public async static Task EnsureHasStateAuthority(this NetworkObject o, PlayerRef originalOwner)
+        public static async Task EnsureHasStateAuthority(this NetworkObject o, PlayerRef originalOwner)
         {
             int i = 0;
             const int maxAttempts = 1_000;

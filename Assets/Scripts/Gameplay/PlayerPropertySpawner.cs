@@ -23,10 +23,8 @@ public class PlayerPropertySpawner : MonoBehaviour
     [SerializeField] private ConnectionManager _connectionManager;
     
      [Header("Tick tack toe")]
-     [SerializeField] private NetworkHandColliderGrabbable _playerToeObject;
-     [SerializeField] private NetworkHandColliderGrabbable _playerTickObject;
      [Range(1,6)]
-     [SerializeField] private int _amountOfTicksPerPlayerToSpawn;
+     [SerializeField] private int _amountOfTickTackToesPerPlayerToSpawn;
 
      private PlayerManagerScript _playerManagerScript;
     public delegate void OnBeforeSpawned(NetworkRunner runner, NetworkObject obj);
@@ -53,18 +51,13 @@ public class PlayerPropertySpawner : MonoBehaviour
                 randomPlayerCube, cubeSpawnPoints[i].position, Quaternion.identity, playerRef, InitializeObjBeforeSpawn);
         }
 
-        NetworkHandColliderGrabbable grabbable = null; 
-        if (PlayerManagerScript.Instance.TickPlayerSpot == false)
-        {
-            grabbable = _playerTickObject;
-            PlayerManagerScript.Instance.SetTickForPlayer();
-        }
-        else if(PlayerManagerScript.Instance.ToePlayerSpot == false)
-        {
-            grabbable = _playerToeObject;
-            PlayerManagerScript.Instance.SetToeForPlayer();
-        }
+        SpawnTickTackToeElements(playerRef, player);
+    }
 
+    private void SpawnTickTackToeElements(PlayerRef playerRef, Player player)
+    {
+        NetworkHandColliderGrabbable grabbable = null;
+        grabbable = player.TickTackToeGameObject;
         //Currently there are no more than two players allowed.
         if (grabbable == null)
         {
@@ -72,7 +65,7 @@ public class PlayerPropertySpawner : MonoBehaviour
         }
         
         List<Transform> toeSpawnPoints = player.ToeSpawnPoints;
-        for (int i = 0; i < _amountOfTicksPerPlayerToSpawn; i++)
+        for (int i = 0; i < _amountOfTickTackToesPerPlayerToSpawn; i++)
         {
             _connectionManager.Runner.Spawn(
                 grabbable, toeSpawnPoints[i].position, Quaternion.identity, playerRef, InitializeObjBeforeSpawn);

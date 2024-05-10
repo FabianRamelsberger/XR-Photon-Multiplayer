@@ -2,6 +2,8 @@
 # Created by: Fabian Ramelsberger
 # Created Date: 2024
 # --------------------------------------------------------------------------------*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Fusion;
@@ -42,11 +44,6 @@ public class PlayerManagerScript : NetworkBehaviour
     [Header("References")]
     [SerializeField] private ConnectionManager _connectionManager;
 
-    [Tooltip("This game can only be played with up to 2 players.")]
-    [Networked] public bool TickPlayerSpot { get; set; }
-    [Networked] public bool ToePlayerSpot { get; set; }
-    [SerializeField, ReadOnly] private bool playerUsesTick = false;
-    [SerializeField, ReadOnly] private bool playerUsesToe = false;
     private struct PlayerRefPlaceInPlayerListNetworkStruct : INetworkStruct
     {
         [Networked, Capacity(16)]
@@ -125,15 +122,7 @@ public class PlayerManagerScript : NetworkBehaviour
     // is called on Network Event Component in the Connection Manager GameObject
     public void PlayerLeftClearTickTackToe(NetworkRunner runner, PlayerRef playerRef)
     {
-        if (playerUsesTick)
-        {
-            TickPlayerSpot = false;
-            playerUsesTick = false;
-        } else if (playerUsesToe)
-        {
-            ToePlayerSpot = false;
-            playerUsesToe = false;
-        }
+        Player pl = GetPlayerWithId(playerRef);
         
         Player player = GetPlayerWithId(playerRef);
         for (int i = 0; i < player.PlayerToeList.Count; i++)
@@ -154,8 +143,14 @@ public class PlayerManagerScript : NetworkBehaviour
     private async void WaitUntilHasAuthorityAndDespawn(NetworkRunner runner, NetworkObject networkObject,
         PlayerRef playerRef)
     {
-        await networkObject.EnsureHasStateAuthority(playerRef);
-        runner.Despawn(networkObject);
+        try {
+                await networkObject.EnsureHasStateAuthority(playerRef);
+                runner.Despawn(networkObject);
+        }
+        catch
+        {
+            // Sometimes players despawn objects before the host can act, as clients destroy their objects upon leaving
+        }
     }
 
     public Material GetPlayerMaterial(PlayerRef playerRef)
@@ -213,8 +208,8 @@ public class PlayerManagerScript : NetworkBehaviour
             Player freePlayer =AssignPlayerToList(player, nonePlayer);
             if (freePlayer != null)
             {
-                 int index = _playerList.IndexOf(freePlayer);
-                 PlayerPlaceStructRef.DictOfPlaces.Set(player, index);
+                int index = _playerList.IndexOf(freePlayer);
+                PlayerPlaceStructRef.DictOfPlaces.Set(player, index);
             }
         }
     }
@@ -239,17 +234,5 @@ public class PlayerManagerScript : NetworkBehaviour
             return freePlayer;
         }
         return null;
-    }
-
-    public void SetTickForPlayer()
-    {
-        playerUsesTick = true;
-        TickPlayerSpot = true;
-    }
-
-    public void SetToeForPlayer()
-    {
-        playerUsesToe = true;
-        ToePlayerSpot = true;
     }
 }
