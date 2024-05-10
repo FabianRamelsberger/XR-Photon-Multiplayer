@@ -1,10 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using FREngine.Events;
 using Fusion;
 using Fusion.XR.Shared.Grabbing.NetworkHandColliderBased;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class GrabberIsLocalPlayerCondition : ICondition
 {

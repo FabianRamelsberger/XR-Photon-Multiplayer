@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using FREngine.Events;
 using Fusion.XR.Shared.Grabbing.NetworkHandColliderBased;
 using UnityEngine;

@@ -24,7 +24,7 @@ public class PlayerPropertySpawner : MonoBehaviour
     
      [Header("Tick tack toe")]
      [Range(1,6)]
-     [SerializeField] private int _amountOfTickTackToesPerPlayerToSpawn;
+     [SerializeField] private int _amountOfTickTackToesPerPlayerToSpawn = 5;
 
      private PlayerManagerScript _playerManagerScript;
     public delegate void OnBeforeSpawned(NetworkRunner runner, NetworkObject obj);

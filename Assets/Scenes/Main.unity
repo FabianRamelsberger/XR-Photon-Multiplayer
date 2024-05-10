@@ -620,7 +620,7 @@ GameObject:
   - component: {fileID: 125017758}
   - component: {fileID: 125017757}
   m_Layer: 0
-  m_Name: AnchorObject (10)
+  m_Name: AnchorFieldElement4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -743,7 +743,7 @@ MonoBehaviour:
         _ifConditions:
         - rid: 5169710351238037649
         _thenEvents:
-        - rid: 5169710351238037650
+        - rid: 5169710394717241350
         - rid: 5169710351238037651
         - rid: 5169710351238037652
         _elseEvents:
@@ -752,10 +752,6 @@ MonoBehaviour:
       type: {class: GrabbableIsReleasedCondition, ns: , asm: Assembly-CSharp}
       data:
         _isGrabbed: 0
-    - rid: 5169710351238037650
-      type: {class: SetTransformToAnchorTransformEvent, ns: FREngine.Events, asm: Assembly-CSharp}
-      data:
-        _anchorTransform: {fileID: 125017756}
     - rid: 5169710351238037651
       type: {class: DisableGameObjectEvent, ns: FREngine.Events, asm: FREvents}
       data:
@@ -770,6 +766,10 @@ MonoBehaviour:
       data:
         _gameObject: {fileID: 710134768}
         _invert: 0
+    - rid: 5169710394717241350
+      type: {class: SetGameObjectToAnchorTransformDisableGrabbableEvent, ns: FREngine.Events, asm: Assembly-CSharp}
+      data:
+        _anchorTransform: {fileID: 125017756}
 --- !u!1 &150514155
 GameObject:
   m_ObjectHideFlags: 0
@@ -964,7 +964,7 @@ GameObject:
   - component: {fileID: 177100488}
   - component: {fileID: 177100487}
   m_Layer: 0
-  m_Name: AnchorObject (11)
+  m_Name: AnchorFieldElement7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1087,7 +1087,7 @@ MonoBehaviour:
         _ifConditions:
         - rid: 5169710351238037649
         _thenEvents:
-        - rid: 5169710351238037650
+        - rid: 5169710394717241347
         - rid: 5169710351238037651
         - rid: 5169710351238037652
         _elseEvents:
@@ -1096,10 +1096,6 @@ MonoBehaviour:
       type: {class: GrabbableIsReleasedCondition, ns: , asm: Assembly-CSharp}
       data:
         _isGrabbed: 0
-    - rid: 5169710351238037650
-      type: {class: SetTransformToAnchorTransformEvent, ns: FREngine.Events, asm: Assembly-CSharp}
-      data:
-        _anchorTransform: {fileID: 177100486}
     - rid: 5169710351238037651
       type: {class: DisableGameObjectEvent, ns: FREngine.Events, asm: FREvents}
       data:
@@ -1114,6 +1110,10 @@ MonoBehaviour:
       data:
         _gameObject: {fileID: 938457855}
         _invert: 0
+    - rid: 5169710394717241347
+      type: {class: SetGameObjectToAnchorTransformDisableGrabbableEvent, ns: FREngine.Events, asm: Assembly-CSharp}
+      data:
+        _anchorTransform: {fileID: 177100486}
 --- !u!1 &189768348
 GameObject:
   m_ObjectHideFlags: 0
@@ -1455,7 +1455,7 @@ GameObject:
   - component: {fileID: 235584622}
   - component: {fileID: 235584621}
   m_Layer: 0
-  m_Name: AnchorObject (9)
+  m_Name: AnchorFieldElement1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1578,7 +1578,7 @@ MonoBehaviour:
         _ifConditions:
         - rid: 5169710351238037649
         _thenEvents:
-        - rid: 5169710351238037650
+        - rid: 5169710394717241353
         - rid: 5169710351238037651
         - rid: 5169710351238037652
         _elseEvents:
@@ -1587,10 +1587,6 @@ MonoBehaviour:
       type: {class: GrabbableIsReleasedCondition, ns: , asm: Assembly-CSharp}
       data:
         _isGrabbed: 0
-    - rid: 5169710351238037650
-      type: {class: SetTransformToAnchorTransformEvent, ns: FREngine.Events, asm: Assembly-CSharp}
-      data:
-        _anchorTransform: {fileID: 235584620}
     - rid: 5169710351238037651
       type: {class: DisableGameObjectEvent, ns: FREngine.Events, asm: FREvents}
       data:
@@ -1605,6 +1601,10 @@ MonoBehaviour:
       data:
         _gameObject: {fileID: 1290860753}
         _invert: 0
+    - rid: 5169710394717241353
+      type: {class: SetGameObjectToAnchorTransformDisableGrabbableEvent, ns: FREngine.Events, asm: Assembly-CSharp}
+      data:
+        _anchorTransform: {fileID: 235584620}
 --- !u!1 &244965226
 GameObject:
   m_ObjectHideFlags: 0
@@ -2639,7 +2639,7 @@ GameObject:
   - component: {fileID: 332740269}
   - component: {fileID: 332740268}
   m_Layer: 0
-  m_Name: Gaze Interactable Table (4)
+  m_Name: SideTable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2654,11 +2654,11 @@ Transform:
   m_GameObject: {fileID: 332740266}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: -0.0000002980232}
-  m_LocalPosition: {x: 1.846, y: 0.338, z: -0.416}
+  m_LocalPosition: {x: -0.26624227, y: -0.30047476, z: -0.10386011}
   m_LocalScale: {x: 0.28575, y: 0.6677509, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1487904462}
+  m_Father: {fileID: 1826890072}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!65 &332740268
 BoxCollider:
@@ -3222,7 +3222,7 @@ GameObject:
   - component: {fileID: 476458351}
   - component: {fileID: 476458350}
   m_Layer: 0
-  m_Name: AnchorObject (15)
+  m_Name: AnchorFieldElement6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3345,7 +3345,7 @@ MonoBehaviour:
         _ifConditions:
         - rid: 5169710351238037649
         _thenEvents:
-        - rid: 5169710351238037650
+        - rid: 5169710394717241348
         - rid: 5169710351238037651
         - rid: 5169710351238037652
         _elseEvents:
@@ -3354,10 +3354,6 @@ MonoBehaviour:
       type: {class: GrabbableIsReleasedCondition, ns: , asm: Assembly-CSharp}
       data:
         _isGrabbed: 0
-    - rid: 5169710351238037650
-      type: {class: SetTransformToAnchorTransformEvent, ns: FREngine.Events, asm: Assembly-CSharp}
-      data:
-        _anchorTransform: {fileID: 476458349}
     - rid: 5169710351238037651
       type: {class: DisableGameObjectEvent, ns: FREngine.Events, asm: FREvents}
       data:
@@ -3372,6 +3368,10 @@ MonoBehaviour:
       data:
         _gameObject: {fileID: 1290341707}
         _invert: 0
+    - rid: 5169710394717241348
+      type: {class: SetGameObjectToAnchorTransformDisableGrabbableEvent, ns: FREngine.Events, asm: Assembly-CSharp}
+      data:
+        _anchorTransform: {fileID: 476458349}
 --- !u!1 &487421386
 GameObject:
   m_ObjectHideFlags: 0
@@ -3385,7 +3385,7 @@ GameObject:
   - component: {fileID: 487421389}
   - component: {fileID: 487421388}
   m_Layer: 0
-  m_Name: Gaze Interactable Table
+  m_Name: Shared Cube Interactable Table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3756,7 +3756,7 @@ GameObject:
   - component: {fileID: 620518311}
   - component: {fileID: 620518310}
   m_Layer: 0
-  m_Name: HoverCube
+  m_Name: HoverCubeElement8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3995,7 +3995,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1487904462}
+  m_Father: {fileID: 825861358}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!114 &705507996
 MonoBehaviour:
@@ -4032,7 +4032,7 @@ GameObject:
   - component: {fileID: 710134771}
   - component: {fileID: 710134770}
   m_Layer: 0
-  m_Name: HoverCube
+  m_Name: HoverCubeElement4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4589,7 +4589,7 @@ GameObject:
   - component: {fileID: 785647671}
   - component: {fileID: 785647670}
   m_Layer: 0
-  m_Name: AnchorObject (14)
+  m_Name: AnchorFieldElement5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4712,7 +4712,7 @@ MonoBehaviour:
         _ifConditions:
         - rid: 5169710351238037649
         _thenEvents:
-        - rid: 5169710351238037650
+        - rid: 5169710394717241349
         - rid: 5169710351238037651
         - rid: 5169710351238037652
         _elseEvents:
@@ -4721,10 +4721,6 @@ MonoBehaviour:
       type: {class: GrabbableIsReleasedCondition, ns: , asm: Assembly-CSharp}
       data:
         _isGrabbed: 0
-    - rid: 5169710351238037650
-      type: {class: SetTransformToAnchorTransformEvent, ns: FREngine.Events, asm: Assembly-CSharp}
-      data:
-        _anchorTransform: {fileID: 785647669}
     - rid: 5169710351238037651
       type: {class: DisableGameObjectEvent, ns: FREngine.Events, asm: FREvents}
       data:
@@ -4739,6 +4735,10 @@ MonoBehaviour:
       data:
         _gameObject: {fileID: 1452561501}
         _invert: 0
+    - rid: 5169710394717241349
+      type: {class: SetGameObjectToAnchorTransformDisableGrabbableEvent, ns: FREngine.Events, asm: Assembly-CSharp}
+      data:
+        _anchorTransform: {fileID: 785647669}
 --- !u!1 &825861357
 GameObject:
   m_ObjectHideFlags: 0
@@ -4772,6 +4772,7 @@ Transform:
   - {fileID: 711512761}
   - {fileID: 91440376}
   - {fileID: 1815303740}
+  - {fileID: 705507995}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &938457855
@@ -4786,7 +4787,7 @@ GameObject:
   - component: {fileID: 938457858}
   - component: {fileID: 938457857}
   m_Layer: 0
-  m_Name: HoverCube
+  m_Name: HoverCubeElement7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4901,7 +4902,7 @@ GameObject:
   - component: {fileID: 946796325}
   - component: {fileID: 946796324}
   m_Layer: 0
-  m_Name: Gaze Interactable Table (1)
+  m_Name: PlayTable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4916,11 +4917,11 @@ Transform:
   m_GameObject: {fileID: 946796322}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 2.2465947, y: 0.49839163, z: 0.008876175}
+  m_LocalPosition: {x: 0.13435245, y: -0.14008313, z: 0.32101607}
   m_LocalScale: {x: 0.6, y: 1, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1487904462}
+  m_Father: {fileID: 1826890072}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &946796324
 BoxCollider:
@@ -5425,7 +5426,7 @@ GameObject:
   - component: {fileID: 1013814863}
   - component: {fileID: 1013814862}
   m_Layer: 0
-  m_Name: AnchorObject (13)
+  m_Name: AnchorFieldElement8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5548,7 +5549,7 @@ MonoBehaviour:
         _ifConditions:
         - rid: 5169710351238037649
         _thenEvents:
-        - rid: 5169710351238037650
+        - rid: 5169710394717241346
         - rid: 5169710351238037651
         - rid: 5169710351238037652
         _elseEvents:
@@ -5557,10 +5558,6 @@ MonoBehaviour:
       type: {class: GrabbableIsReleasedCondition, ns: , asm: Assembly-CSharp}
       data:
         _isGrabbed: 0
-    - rid: 5169710351238037650
-      type: {class: SetTransformToAnchorTransformEvent, ns: FREngine.Events, asm: Assembly-CSharp}
-      data:
-        _anchorTransform: {fileID: 1013814861}
     - rid: 5169710351238037651
       type: {class: DisableGameObjectEvent, ns: FREngine.Events, asm: FREvents}
       data:
@@ -5575,6 +5572,10 @@ MonoBehaviour:
       data:
         _gameObject: {fileID: 620518308}
         _invert: 0
+    - rid: 5169710394717241346
+      type: {class: SetGameObjectToAnchorTransformDisableGrabbableEvent, ns: FREngine.Events, asm: Assembly-CSharp}
+      data:
+        _anchorTransform: {fileID: 1013814861}
 --- !u!1 &1018904126
 GameObject:
   m_ObjectHideFlags: 0
@@ -5786,7 +5787,7 @@ GameObject:
   - component: {fileID: 1072807984}
   - component: {fileID: 1072807983}
   m_Layer: 0
-  m_Name: Gaze Interactable Table (5)
+  m_Name: SideTable2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5801,11 +5802,11 @@ Transform:
   m_GameObject: {fileID: 1072807981}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: -0.0000002980232}
-  m_LocalPosition: {x: 2.6430004, y: 0.338, z: 0.334}
+  m_LocalPosition: {x: 0.53075814, y: -0.30047476, z: 0.64613986}
   m_LocalScale: {x: 0.28575, y: 0.6677509, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1487904462}
+  m_Father: {fileID: 1826890072}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!65 &1072807983
 BoxCollider:
@@ -5888,7 +5889,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1095588770}
   m_Layer: 0
-  m_Name: ---- TickTackToe
+  m_Name: ---- TickTackToeGame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5908,6 +5909,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1044156193}
+  - {fileID: 1826890072}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1111848657
@@ -6120,7 +6122,7 @@ GameObject:
   - component: {fileID: 1159315999}
   - component: {fileID: 1159315998}
   m_Layer: 0
-  m_Name: HoverCube
+  m_Name: HoverCubeElement9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6816,7 +6818,7 @@ GameObject:
   - component: {fileID: 1234337635}
   - component: {fileID: 1234337634}
   m_Layer: 0
-  m_Name: HoverCube
+  m_Name: HoverCubeElement2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7165,7 +7167,7 @@ GameObject:
   - component: {fileID: 1290341710}
   - component: {fileID: 1290341709}
   m_Layer: 0
-  m_Name: HoverCube
+  m_Name: HoverCubeElement6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7248,7 +7250,7 @@ GameObject:
   - component: {fileID: 1290860756}
   - component: {fileID: 1290860755}
   m_Layer: 0
-  m_Name: HoverCube
+  m_Name: HoverCubeElement1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7442,7 +7444,7 @@ GameObject:
   - component: {fileID: 1376692114}
   - component: {fileID: 1376692113}
   m_Layer: 0
-  m_Name: AnchorObject (12)
+  m_Name: AnchorFieldElement2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7565,7 +7567,7 @@ MonoBehaviour:
         _ifConditions:
         - rid: 5169710351238037649
         _thenEvents:
-        - rid: 5169710351238037650
+        - rid: 5169710394717241352
         - rid: 5169710351238037651
         - rid: 5169710351238037652
         _elseEvents:
@@ -7574,10 +7576,6 @@ MonoBehaviour:
       type: {class: GrabbableIsReleasedCondition, ns: , asm: Assembly-CSharp}
       data:
         _isGrabbed: 0
-    - rid: 5169710351238037650
-      type: {class: SetTransformToAnchorTransformEvent, ns: FREngine.Events, asm: Assembly-CSharp}
-      data:
-        _anchorTransform: {fileID: 1376692112}
     - rid: 5169710351238037651
       type: {class: DisableGameObjectEvent, ns: FREngine.Events, asm: FREvents}
       data:
@@ -7592,6 +7590,10 @@ MonoBehaviour:
       data:
         _gameObject: {fileID: 1234337632}
         _invert: 0
+    - rid: 5169710394717241352
+      type: {class: SetGameObjectToAnchorTransformDisableGrabbableEvent, ns: FREngine.Events, asm: Assembly-CSharp}
+      data:
+        _anchorTransform: {fileID: 1376692112}
 --- !u!1 &1386933971
 GameObject:
   m_ObjectHideFlags: 0
@@ -7635,7 +7637,7 @@ GameObject:
   - component: {fileID: 1452561504}
   - component: {fileID: 1452561503}
   m_Layer: 0
-  m_Name: HoverCube
+  m_Name: HoverCubeElement5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7900,11 +7902,7 @@ Transform:
   - {fileID: 53641239}
   - {fileID: 1544832746}
   - {fileID: 487421387}
-  - {fileID: 946796323}
-  - {fileID: 332740267}
-  - {fileID: 1072807982}
   - {fileID: 314473386}
-  - {fileID: 705507995}
   - {fileID: 718186937}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8334,7 +8332,7 @@ GameObject:
   - component: {fileID: 1688940260}
   - component: {fileID: 1688940259}
   m_Layer: 0
-  m_Name: AnchorObject (17)
+  m_Name: AnchorFieldElement9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8457,7 +8455,7 @@ MonoBehaviour:
         _ifConditions:
         - rid: 5169710351238037649
         _thenEvents:
-        - rid: 5169710351238037650
+        - rid: 5169710394717241345
         - rid: 5169710351238037651
         - rid: 5169710351238037652
         _elseEvents:
@@ -8466,10 +8464,6 @@ MonoBehaviour:
       type: {class: GrabbableIsReleasedCondition, ns: , asm: Assembly-CSharp}
       data:
         _isGrabbed: 0
-    - rid: 5169710351238037650
-      type: {class: SetTransformToAnchorTransformEvent, ns: FREngine.Events, asm: Assembly-CSharp}
-      data:
-        _anchorTransform: {fileID: 1688940258}
     - rid: 5169710351238037651
       type: {class: DisableGameObjectEvent, ns: FREngine.Events, asm: FREvents}
       data:
@@ -8484,6 +8478,10 @@ MonoBehaviour:
       data:
         _gameObject: {fileID: 1159315996}
         _invert: 0
+    - rid: 5169710394717241345
+      type: {class: SetGameObjectToAnchorTransformDisableGrabbableEvent, ns: FREngine.Events, asm: Assembly-CSharp}
+      data:
+        _anchorTransform: {fileID: 1688940258}
 --- !u!1 &1775053755
 GameObject:
   m_ObjectHideFlags: 0
@@ -8823,6 +8821,40 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
+--- !u!1 &1826890071
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1826890072}
+  m_Layer: 0
+  m_Name: -- PlayTableElements
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1826890072
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826890071}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 332740267}
+  - {fileID: 946796323}
+  - {fileID: 1072807982}
+  m_Father: {fileID: 1095588770}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1848215041
 GameObject:
   m_ObjectHideFlags: 0
@@ -9133,7 +9165,7 @@ GameObject:
   - component: {fileID: 1932592279}
   - component: {fileID: 1932592278}
   m_Layer: 0
-  m_Name: HoverCube
+  m_Name: HoverCubeElement3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9751,7 +9783,7 @@ GameObject:
   - component: {fileID: 2108303217}
   - component: {fileID: 2108303216}
   m_Layer: 0
-  m_Name: AnchorObject (16)
+  m_Name: AnchorFieldElement3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9874,7 +9906,7 @@ MonoBehaviour:
         _ifConditions:
         - rid: 5169710351238037649
         _thenEvents:
-        - rid: 5169710351238037650
+        - rid: 5169710394717241351
         - rid: 5169710351238037651
         - rid: 5169710351238037652
         _elseEvents:
@@ -9883,10 +9915,6 @@ MonoBehaviour:
       type: {class: GrabbableIsReleasedCondition, ns: , asm: Assembly-CSharp}
       data:
         _isGrabbed: 0
-    - rid: 5169710351238037650
-      type: {class: SetTransformToAnchorTransformEvent, ns: FREngine.Events, asm: Assembly-CSharp}
-      data:
-        _anchorTransform: {fileID: 2108303215}
     - rid: 5169710351238037651
       type: {class: DisableGameObjectEvent, ns: FREngine.Events, asm: FREvents}
       data:
@@ -9901,6 +9929,10 @@ MonoBehaviour:
       data:
         _gameObject: {fileID: 1932592276}
         _invert: 0
+    - rid: 5169710394717241351
+      type: {class: SetGameObjectToAnchorTransformDisableGrabbableEvent, ns: FREngine.Events, asm: Assembly-CSharp}
+      data:
+        _anchorTransform: {fileID: 2108303215}
 --- !u!1 &2122864871
 GameObject:
   m_ObjectHideFlags: 0

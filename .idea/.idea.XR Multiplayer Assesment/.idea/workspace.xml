@@ -4,16 +4,50 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f246162-8a23-453d-aa9d-98983cbf20c9" name="Changes" comment="">
+    <list default="true" id="3f246162-8a23-453d-aa9d-98983cbf20c9" name="Changes" comment="bugfix: fixed rejoin bug by making tick tack toe stones synced to player one and two">
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/TickTackToe/TickGrabbableCube Variant Variant.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/TickTackToe/TickGrabbableCube.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.XR Multiplayer Assesment/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XR Multiplayer Assesment/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/FREngine" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FREngine" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Player_Material_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Player_Material_1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Player_Material_2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Player_Material_2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/FusionAddons/FusionXRShared/Scripts/Utils/SharedAuthorityExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/FusionAddons/FusionXRShared/Scripts/Utils/SharedAuthorityExtensions.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PlayerManagerScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PlayerManagerScript.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PlayerPropertySpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PlayerPropertySpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TickTacToeGame.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/TickTackToe.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TickTacToeGame/Materials.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/TickTackToe/TickGrabbableCube Variant Variant.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TickTacToeGame/Materials/PlayCubeMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/PlayCubeMaterial.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TickTacToeGame/Materials/PlayCubeMaterial.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/PlayCubeMaterial.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TickTacToeGame/Materials/PlayField-Texture.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/PlayField-Texture.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TickTacToeGame/Materials/PlayField-Texture.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/PlayField-Texture.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TickTacToeGame/Materials/PlayFieldHover.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/PlayFieldHover.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TickTacToeGame/Materials/PlayFieldHover.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/PlayFieldHover.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TickTacToeGame/Materials/TickCubeMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/TickCubeMaterial.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TickTacToeGame/Materials/TickCubeMaterial.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/TickCubeMaterial.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TickTacToeGame/Materials/ToeCubeMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/ToeCubeMaterial.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TickTacToeGame/Materials/ToeCubeMaterial.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/ToeCubeMaterial.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TickTacToeGame/Prefabs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/TickTackToe/TickGrabbableCube.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TickTacToeGame/Prefabs/TickGrabbableCube Variant Variant.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TickTacToeGame/Prefabs/TickGrabbableCube Variant Variant.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TickTacToeGame/Prefabs/TickGrabbableCube.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TickTacToeGame/Prefabs/TickGrabbableCube.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TickTacToeGame/Prefabs/ToeGrabbableCube Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/TickTackToe/ToeGrabbableCube Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TickTacToeGame/Prefabs/ToeGrabbableCube Variant.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/TickTackToe/ToeGrabbableCube Variant.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TickTacToeGame/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TickTacToeGame/Scripts/CreateToeVisualAndDestroyOld.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TickTacToeGame/Scripts/CreateToeVisualAndDestroyOld.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TickTacToeGame/Scripts/GrabbableIsReleasedCondition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/GrabbableIsReleasedCondition.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TickTacToeGame/Scripts/GrabbableIsReleasedCondition.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/GrabbableIsReleasedCondition.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TickTacToeGame/Scripts/GrabberIsLocalPlayerCondition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/GrabberIsLocalPlayerCondition.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TickTacToeGame/Scripts/GrabberIsLocalPlayerCondition.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/GrabberIsLocalPlayerCondition.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TickTacToeGame/Scripts/SetTransformToAnchorTransformEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/SetGameObjectToAnchorTransformDisableGrabbableEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TickTacToeGame/Scripts/SetTransformToAnchorTransformEvent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/SetGameObjectToAnchorTransformDisableGrabbableEvent.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TickTacToeGame/Scripts/ToeCubeElement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/ToeCubeElement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TickTacToeGame/Scripts/ToeCubeElement.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/ToeCubeElement.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TickTacToeGame/Textures.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TickTacToeGame/Textures/PlayField-Texture.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/PlayField-Texture.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TickTacToeGame/Textures/PlayField-Texture.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/PlayField-Texture.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TickTacToeGame/Textures/Tic-Texture.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Tic-Texture.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TickTacToeGame/Textures/Tic-Texture.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Tic-Texture.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TickTacToeGame/Textures/Toe-Texture.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Toe-Texture.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TickTacToeGame/Textures/Toe-Texture.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Toe-Texture.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,8 +112,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Events/ClearTickTackToeFieldEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/PlayerManagerScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TickTacToeGame/Scripts/GrabbableIsReleasedCondition.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TickTacToeGame/Scripts/ToeCubeElement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/TickTacToeGame/Scripts/ToeCubeElement.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../XR Multiplayer Assesment_clone_0/Assets/Scripts/Gameplay/PlayerManagerScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../XR Multiplayer Assesment_clone_0/Assets/Scripts/Network/NetworkUtility.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -187,7 +220,7 @@
       <workItem from="1715163369079" duration="10720000" />
       <workItem from="1715178773818" duration="4128000" />
       <workItem from="1715246470155" duration="4157000" />
-      <workItem from="1715329698796" duration="5271000" />
+      <workItem from="1715329698796" duration="7183000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit, gitignore">
       <option name="closed" value="true" />
@@ -493,7 +526,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715250634625</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="bugfix: fixed rejoin bug by making tick tack toe stones synced to player one and two">
+      <option name="closed" value="true" />
+      <created>1715335155485</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1715335155485</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -523,7 +564,6 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="SHELVE_DETAILS_PREVIEW_SHOWN" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="feature: rig performance optimization" />
     <MESSAGE value="bugfix: fixed cube Physics" />
     <MESSAGE value="feature: spawn shared cube by script" />
     <MESSAGE value="feature: camera follow will change depending on selected rig on ConstantSizeUI.cs" />
@@ -548,7 +588,8 @@
     <MESSAGE value="feature: added new tictactoe assets&#10;feature: added anchor mechanic" />
     <MESSAGE value="feature: added tick tack toe" />
     <MESSAGE value="feature: added rejoin distributing feature for tick tack toe" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature: added rejoin distributing feature for tick tack toe" />
+    <MESSAGE value="bugfix: fixed rejoin bug by making tick tack toe stones synced to player one and two" />
+    <option name="LAST_COMMIT_MESSAGE" value="bugfix: fixed rejoin bug by making tick tack toe stones synced to player one and two" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

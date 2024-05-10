@@ -10,7 +10,7 @@ using UnityEngine;
 
 namespace FREngine.Events
 {
-    public class SetTransformToAnchorTransformEvent : IEvent
+    public class SetGameObjectToAnchorTransformDisableGrabbableEvent : IEvent
     {
         [SerializeField] private Transform _anchorTransform;
         public void Execute(Transform emitter)
