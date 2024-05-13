@@ -1,0 +1,16 @@
+{
+    "name": "FREditorExtensions",
+    "rootNamespace": "",
+    "references": ["GUID:46e961d49fcc4923bdf1c3fa4a4e6dd1"],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
