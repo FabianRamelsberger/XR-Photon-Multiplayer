@@ -5,15 +5,15 @@
 
     public class RenameChildrenTool : EditorWindow
     {
-        string prefix = "";
-        bool includeNumbering = false;
+        [SerializeField] private string prefix = "";
+        [SerializeField] private bool includeNumbering = false;
 
         // Add menu named "Rename Children Tool" to the Unity "Tools" menu
         [MenuItem("Tools/Rename Children Tool")]
         public static void ShowWindow()
         {
             // Show existing window instance. If one doesn't exist, make one.
-            EditorWindow.GetWindow(typeof(RenameChildrenTool));
+            GetWindow(typeof(RenameChildrenTool));
         }
 
         void OnGUI()

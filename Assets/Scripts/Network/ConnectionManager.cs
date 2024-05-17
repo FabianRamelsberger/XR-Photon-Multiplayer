@@ -27,33 +27,31 @@ public class ConnectionManager : MonoBehaviour, INetworkRunnerCallbacks
         SessionProperties = 2
     }
 
-    [Header("Room configuration")] private GameMode gameMode = GameMode.Shared;
-    [SerializeField] private string roomName = "";
-    bool connectOnStart = false;
+    [Header("Room configuration")] private GameMode _gameMode = GameMode.Shared;
+     [SerializeField] private string _roomName = "";
+    private bool _connectOnStart = false;
 
     [Tooltip(
         "Set it to 0 to use the DefaultPlayers value, from the Global NetworkProjectConfig (simulation section)")]
-    [SerializeField]
-    private int playerCount = 0;
+    private int _playerCount = 0;
 
-    [Header("Room selection criteria")] private ConnectionCriterias connectionCriterias = ConnectionCriterias.RoomName;
+    [Header("Room selection criteria")]
+    private ConnectionCriterias _connectionCriterias = ConnectionCriterias.RoomName;
 
     [Header("Fusion settings")] [Tooltip("Fusion runner. Automatically created")] [SerializeField, ReadOnly]
     private NetworkRunner _runner;
-
     public NetworkRunner Runner => _runner;
-    private INetworkSceneManager sceneManager;
+    private INetworkSceneManager _sceneManager;
 
-    [Header("Local user spawner")] [SerializeField]
-    private NetworkObject userPrefab;
-
+    [Header("Local user spawner")] 
+    [SerializeField] private NetworkObject _userPrefab;
     [SerializeField] private List<Transform> _playerSpawnTransformList;
 
     // Dictionary of spawned user prefabs, to store them on the server for host topology, and destroy them on disconnection (for shared topology, use Network Objects's "Destroy When State Authority Leaves" option)
     public Action<PlayerRef> OnPlayerJoinedAction;
 
-    bool ShouldConnectWithRoomName => (connectionCriterias & ConnectionCriterias.RoomName) != 0;
-    bool ShouldConnectWithSessionProperties => (connectionCriterias & ConnectionCriterias.SessionProperties) != 0;
+    bool ShouldConnectWithRoomName => (_connectionCriterias & ConnectionCriterias.RoomName) != 0;
+    bool ShouldConnectWithSessionProperties => (_connectionCriterias & ConnectionCriterias.SessionProperties) != 0;
 
     private void Awake()
     {
@@ -73,7 +71,7 @@ public class ConnectionManager : MonoBehaviour, INetworkRunnerCallbacks
     private async void Start()
     {
         // Launch the connection at start
-        if (connectOnStart) await Connect();
+        if (_connectOnStart) await Connect();
     }
 
     // we launch via a button
@@ -124,19 +122,19 @@ public class ConnectionManager : MonoBehaviour, INetworkRunnerCallbacks
     public async Task Connect()
     {
         // Create the scene manager if it does not exist
-        if (sceneManager == null) sceneManager = gameObject.AddComponent<NetworkSceneManagerDefault>();
+        if (_sceneManager == null) _sceneManager = gameObject.AddComponent<NetworkSceneManagerDefault>();
 
         // Start or join (depends on gamemode) a session with a specific name
         var args = new StartGameArgs()
         {
-            GameMode = gameMode,
+            GameMode = _gameMode,
             Scene = CurrentSceneInfo(),
-            SceneManager = sceneManager
+            SceneManager = _sceneManager
         };
         // Connection criteria
         if (ShouldConnectWithRoomName)
         {
-            args.SessionName = roomName;
+            args.SessionName = _roomName;
         }
 
         if (ShouldConnectWithSessionProperties)
@@ -145,9 +143,9 @@ public class ConnectionManager : MonoBehaviour, INetworkRunnerCallbacks
         }
 
         // Room details
-        if (playerCount > 0)
+        if (_playerCount > 0)
         {
-            args.PlayerCount = playerCount;
+            args.PlayerCount = _playerCount;
         }
 
         await _runner.StartGame(args);
@@ -160,9 +158,9 @@ public class ConnectionManager : MonoBehaviour, INetworkRunnerCallbacks
         }
 
         Debug.Log($"Session info: Room name {_runner.SessionInfo.Name}. Region: {_runner.SessionInfo.Region}. {prop}");
-        if ((connectionCriterias & ConnectionCriterias.RoomName) == 0)
+        if ((_connectionCriterias & ConnectionCriterias.RoomName) == 0)
         {
-            roomName = _runner.SessionInfo.Name;
+            _roomName = _runner.SessionInfo.Name;
         }
     }
 
@@ -170,10 +168,10 @@ public class ConnectionManager : MonoBehaviour, INetworkRunnerCallbacks
 
     private void OnPlayerJoinedSharedMode(NetworkRunner runner, PlayerRef player)
     {
-        if (player == runner.LocalPlayer && userPrefab != null)
+        if (player == runner.LocalPlayer && _userPrefab != null)
         {
             // Spawn the user prefab for the local user
-            NetworkObject networkPlayerObject = runner.Spawn(userPrefab, Vector3.zero, Quaternion.identity, player,
+            NetworkObject networkPlayerObject = runner.Spawn(_userPrefab, Vector3.zero, Quaternion.identity, player,
                 (runner, obj) => { });
             runner.WaitForSingleton<PlayerManagerScript>(
                 cubeManager =>

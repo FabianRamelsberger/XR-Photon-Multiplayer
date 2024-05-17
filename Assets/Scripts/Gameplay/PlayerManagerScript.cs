@@ -23,7 +23,6 @@ using Random = UnityEngine.Random;
 //and cube objects within the game.+
 //</summary>
 
-//	</summary>
 public class PlayerManagerScript : NetworkBehaviour
 {
     public static PlayerManagerScript Instance;

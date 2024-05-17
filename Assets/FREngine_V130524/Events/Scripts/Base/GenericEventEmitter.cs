@@ -26,12 +26,7 @@ namespace FREngine.Events
         {
             ExecuteEvents(_events, customTransform);
         }
-
-        protected void Emit(List<IEvent> events)
-        {
-            ExecuteEvents(events, transform);
-        }
-
+        
         private void ExecuteEvents(List<IEvent> genericEvents, Transform t)
         {
             if (CheckEvents(genericEvents) == false)
