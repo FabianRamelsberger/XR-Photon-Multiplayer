@@ -7753,10 +7753,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3b2dfec39f015045b1dbe3b2d68d390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomName: FusionGrabRoom
-  playerCount: 0
+  _roomName: 
   _runner: {fileID: 0}
-  userPrefab: {fileID: 4645078151347934457, guid: fb7599a1fd7e5ab4fa00de951ad1d8c4, type: 3}
+  _userPrefab: {fileID: 4645078151347934457, guid: fb7599a1fd7e5ab4fa00de951ad1d8c4, type: 3}
   _playerSpawnTransformList:
   - {fileID: 1881025803}
   - {fileID: 546470601}
