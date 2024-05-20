@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f246162-8a23-453d-aa9d-98983cbf20c9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitmodules" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FREngine_V130524/Tools/Window/HierarchyProductivityTool.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FREngine_V130524/Tools/Window/HierarchyProduktivityFunctionality.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FREngine_V130524/Tools/Window/HierarchyProduktivityFunctionality.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.XR Multiplayer Assesment/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XR Multiplayer Assesment/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Odin Inspector/Config/Editor/InspectorConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Odin Inspector/Config/Editor/InspectorConfig.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Odin Inspector/Config/Editor/InspectorConfig.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Odin Inspector/Config/Editor/InspectorConfig.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/XR/Settings/OpenXR Package Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/XR/Settings/OpenXR Package Settings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FREngine_V130524/Tools/Window/RenameChildrenTool.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FREngine_V130524/Tools/Window/RenameChildrenTool.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FREngine_V130524/Tools/Window/HierarchyProductivityTool.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Player_Material_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Player_Material_1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Player_Material_2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Player_Material_2.mat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,13 +68,18 @@
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/dc753a1061284f8e971ee88ee4826eee46ac00/af/3b47d2f5/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/f67debe1efd242948106f1922bfac1c7176c00/df/89df4246/EventDispatcher.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/FREngine/Events/Scripts/Base/IEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/OneDrive/Dokumente/GatesOfPeril/Assets/Scripts/Progression/ProgressionManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/FREngine_V130524/Events/Scripts/Base/GenericEventEmitter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/FREngine_V130524/Tools/Window/RenameChildrenTool.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Photon/Fusion/Editor/Fusion.Unity.Editor.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Plugins/Sirenix/Odin Inspector/Config/Editor/InspectorConfig.asset" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Plugins/Sirenix/Odin Inspector/Config/Editor/InspectorConfig.asset" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Plugins/Sirenix/Odin Inspector/Config/Editor/InspectorConfig.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Scenes/Main.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Events/ClearTickTackToeFieldEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/PlayerManagerScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Scripts/Gameplay/PlayerManagerScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Scripts/Network/ConnectionManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Scripts/Network/ConnectionManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Scripts/Network/ConnectionManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/XR-Photon-Multiplayer/XR Multiplayer Assesment/Assets/Scripts/Network/ConnectionManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -180,6 +188,7 @@
       <workItem from="1715246470155" duration="4157000" />
       <workItem from="1715329698796" duration="7183000" />
       <workItem from="1715599521060" duration="300000" />
+      <workItem from="1716234926013" duration="1847000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit, gitignore">
       <option name="closed" value="true" />
@@ -493,7 +502,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715335155485</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="bugfix: readded unassigned prefab in ConnectionManager">
+      <option name="closed" value="true" />
+      <created>1715939862592</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1715939862592</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -534,7 +551,6 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="SHELVE_DETAILS_PREVIEW_SHOWN" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="bugfix: fixed cube Physics" />
     <MESSAGE value="feature: spawn shared cube by script" />
     <MESSAGE value="feature: camera follow will change depending on selected rig on ConstantSizeUI.cs" />
     <MESSAGE value="refactoring: PlayerManagerScript.cs" />
@@ -559,7 +575,8 @@
     <MESSAGE value="feature: added tick tack toe" />
     <MESSAGE value="feature: added rejoin distributing feature for tick tack toe" />
     <MESSAGE value="bugfix: fixed rejoin bug by making tick tack toe stones synced to player one and two" />
-    <option name="LAST_COMMIT_MESSAGE" value="bugfix: fixed rejoin bug by making tick tack toe stones synced to player one and two" />
+    <MESSAGE value="bugfix: readded unassigned prefab in ConnectionManager" />
+    <option name="LAST_COMMIT_MESSAGE" value="bugfix: readded unassigned prefab in ConnectionManager" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
